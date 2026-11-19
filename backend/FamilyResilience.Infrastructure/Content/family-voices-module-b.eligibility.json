@@ -1,0 +1,12 @@
+{
+  "schema": "eligibility.v1",
+  "target": { "sectionCode": "B" },
+  "rule": {
+    "all": [
+      { "ageAtLeast": 25 },
+      { "ageAtMost": 55 },
+      { "employmentStatusIn": [ "employed" ] },
+      { "householdHasMemberYoungerThan": 18 }
+    ]
+  }
+}

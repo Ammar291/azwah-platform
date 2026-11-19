@@ -1,0 +1,57 @@
+{
+  "expo": {
+    "name": "Azwah",
+    "slug": "azwah",
+    "version": "0.1.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "scheme": "azwah",
+    "userInterfaceStyle": "light",
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "ae.azwah.mobile"
+    },
+    "android": {
+      "package": "ae.azwah.mobile",
+      "adaptiveIcon": {
+        "backgroundColor": "#FAF8F3",
+        "foregroundImage": "./assets/android-icon-foreground.png",
+        "backgroundImage": "./assets/android-icon-background.png",
+        "monochromeImage": "./assets/android-icon-monochrome.png"
+      },
+      "predictiveBackGestureEnabled": false,
+      "allowBackup": false
+    },
+    "plugins": [
+      "expo-router",
+      "expo-sqlite",
+      "expo-localization",
+      [
+        "expo-splash-screen",
+        {
+          "backgroundColor": "#FAF8F3",
+          "image": "./assets/brand/azwah-emblem.png",
+          "imageWidth": 160
+        }
+      ],
+      "expo-secure-store",
+      "expo-web-browser",
+      "expo-sharing",
+      "./plugins/withRecentsScreenshotDisabled",
+      [
+        "expo-local-authentication",
+        {
+          "faceIDPermission": "Azwah uses Face ID to unlock the app after it has been locked, so only you can see your answers."
+        }
+      ],
+      [
+        "expo-audio",
+        {
+          "microphonePermission": "Azwah uses the microphone only while you talk with the Azwah consultant.",
+          "enableBackgroundPlayback": false
+        }
+      ],
+      "expo-asset"
+    ]
+  }
+}

@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <ItemGroup>
+    <ProjectReference Include="..\FamilyResilience.Application\FamilyResilience.Application.csproj" />
+    <ProjectReference Include="..\FamilyResilience.Domain\FamilyResilience.Domain.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Relational" />
+    <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" />
+    <PackageReference Include="EFCore.NamingConventions" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Abstractions" />
+    <PackageReference Include="Microsoft.Extensions.Diagnostics.HealthChecks" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Content\*.json" LogicalName="FamilyResilience.Infrastructure.Content.%(Filename)%(Extension)" />
+  </ItemGroup>
+  <ItemGroup>
+    <!-- The demonstration population (Persistence/Seeding) is internal; its unit tests read the plan directly. -->
+    <InternalsVisibleTo Include="FamilyResilience.UnitTests" />
+  </ItemGroup>
+</Project>

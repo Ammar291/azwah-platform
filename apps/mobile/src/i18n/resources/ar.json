@@ -1,0 +1,1447 @@
+{
+  "app": {
+    "name": "عزوة",
+    "meaning": "الأهل والسند الذين يقفون إلى جانبك",
+    "tagline": "احتواء صحي • اجتماعي • إنساني"
+  },
+  "language": {
+    "title": "اللغة",
+    "switchHint": "يغيّر لغة التطبيق إلى الإنجليزية. يُعاد تشغيل التطبيق ليعرض المحتوى من اليسار إلى اليمين.",
+    "restartNote": "يُعاد تشغيل التطبيق للتبديل.",
+    "names": {
+      "en": "الإنجليزية",
+      "ar": "العربية"
+    }
+  },
+  "common": {
+    "back": "رجوع",
+    "cancel": "إلغاء",
+    "goHome": "الذهاب إلى الرئيسية",
+    "goToStart": "الذهاب إلى البداية",
+    "loading": "جارٍ التحميل…",
+    "next": "التالي",
+    "previous": "السابق",
+    "retry": "أعد المحاولة",
+    "listSeparator": "، "
+  },
+  "unsavedChanges": {
+    "title": "تجاهل التغييرات؟",
+    "message": "ستضيع التغييرات غير المحفوظة.",
+    "discard": "تجاهل",
+    "keepEditing": "متابعة التعديل"
+  },
+  "placeholder": {
+    "title": "بانتظار الاعتماد"
+  },
+  "errors": {
+    "boundary": {
+      "title": "حدث خطأ ما",
+      "message": "أعد المحاولة. الإجابات المحفوظة باقية."
+    },
+    "kinds": {
+      "not_configured": {
+        "title": "لا عنوان للخادم",
+        "message": "تواصل مع من زوّدك بالتطبيق."
+      },
+      "network": {
+        "title": "تعذّر الاتصال",
+        "message": "تحقق من اتصالك وأعد المحاولة."
+      },
+      "timeout": {
+        "title": "استغرق الأمر طويلًا",
+        "message": "أعد المحاولة."
+      },
+      "server": {
+        "title": "تواجه عزوة مشكلة",
+        "message": "أعد المحاولة بعد بضع دقائق."
+      },
+      "invalid_response": {
+        "title": "ردّ غير متوقع",
+        "message": "حاول لاحقًا، أو حدّث التطبيق."
+      },
+      "bad_request": {
+        "title": "تعذّر الحفظ",
+        "message": "راجع ما أدخلته وأعد المحاولة."
+      },
+      "unauthorized": {
+        "title": "انتهت الجلسة",
+        "message": "سجّل الدخول مرة أخرى."
+      },
+      "forbidden": {
+        "title": "غير متاح لك",
+        "message": "ليست لديك صلاحية لهذا."
+      },
+      "not_found": {
+        "title": "غير موجود",
+        "message": "غير موجود أو لا يخصّك."
+      },
+      "conflict": {
+        "title": "تغيّر شيء ما",
+        "message": "ارجع وأعد المحاولة."
+      },
+      "payload_too_large": {
+        "title": "حجم الإرسال كبير",
+        "message": "أعد المحاولة بعد قليل."
+      },
+      "rate_limited": {
+        "title": "طلبات كثيرة جدًا",
+        "message": "انتظر دقيقة ثم أعد المحاولة."
+      },
+      "unexpected": {
+        "title": "حدث خطأ ما",
+        "message": "أعد المحاولة، أو أعد تشغيل التطبيق."
+      }
+    }
+  },
+  "problems": {
+    "households": {
+      "already_member": "أنت في أسرة بالفعل.",
+      "manager_under_18": "يجب أن تبلغ 18 عامًا.",
+      "head_already_exists": "يوجد ربّ أسرة بالفعل.",
+      "primary_earner_already_exists": "يوجد معيل رئيسي بالفعل.",
+      "birth_month_in_future": "هذا الشهر في المستقبل.",
+      "head_has_relationship": "لا يحتاج ربّ الأسرة إلى صلة قرابة.",
+      "roster_full": "هذه الأسرة مكتملة العدد.",
+      "roster_empty": "أضف شخصًا واحدًا على الأقل.",
+      "roster_has_no_head": "اختر ربّ الأسرة أولًا.",
+      "roster_missing_relationship": "حدّد صلة القرابة للجميع أولًا.",
+      "roster_missing_employment_status": "حدّد الحالة الوظيفية لكل بالغ أولًا.",
+      "not_active": "لم تعد هذه الأسرة مشاركة.",
+      "already_withdrawn": "تم الانسحاب بالفعل.",
+      "household_not_found": "الأسرة غير موجودة.",
+      "member_not_found": "الشخص غير موجود.",
+      "member_has_consent": "أعطى موافقته، فلا يمكن جعل عمره دون 18. اسحب الموافقة أولًا.",
+      "member_is_manager": "لا يمكن إزالة مدير الأسرة.",
+      "head_under_18": "يجب أن يبلغ ربّ الأسرة 18 عامًا.",
+      "primary_earner_under_18": "يجب أن يبلغ المعيل الرئيسي 18 عامًا.",
+      "account_holder_under_18": "يجب أن يبلغ صاحب الحساب 18 عامًا.",
+      "relationship_invalid": "اختر صلة قرابة من القائمة.",
+      "employment_status_invalid": "اختر حالة وظيفية من القائمة."
+    },
+    "consent": {
+      "member_under_18": "الموافقة للبالغين فقط.",
+      "policy_not_current": "تغيّرت الوثيقة. ارجع وأعد المحاولة.",
+      "policy_not_found": "وثيقة الموافقة غير موجودة.",
+      "member_not_active": "لم يعد ضمن الأسرة.",
+      "not_active": "لا توجد موافقة لسحبها.",
+      "already_active": "أُعطيت الموافقة بالفعل."
+    },
+    "assignments": {
+      "assignment_not_found": "الاستبيان غير موجود.",
+      "assignment_expired": "انتهت مدة الإجابة.",
+      "already_finished": "اكتمل بالفعل.",
+      "not_assigned": "لا يمكن بدؤه الآن.",
+      "wave_ambiguous": "تعذّر تعيين الاستبيانات الآن. حاول لاحقًا."
+    },
+    "sessions": {
+      "participation_consent_required": "أعطِ موافقتك على المشاركة أولًا.",
+      "required_items_unanswered": "أسئلة مطلوبة بلا إجابة.",
+      "session_already_exists": "بدأ بالفعل.",
+      "session_not_found": "الإجابات غير موجودة.",
+      "not_in_progress": "أُرسل؛ لا يمكن تغيير الإجابات.",
+      "not_submitted": "لم يُرسل بعد.",
+      "version_not_published": "غير متاح الآن.",
+      "item_not_in_version": "إحدى الإجابات لا تتوافق. ارجع وأعد المحاولة.",
+      "item_not_in_section": "إحدى الإجابات لا تتوافق. ارجع وأعد المحاولة.",
+      "option_not_in_item": "إحدى الإجابات غير صالحة. ارجع وأعد المحاولة.",
+      "duplicate_response": "أُجيب عن سؤال مرتين. أعد المحاولة.",
+      "version_mismatch": "الإجابات لإصدار آخر.",
+      "assignment_mismatch": "الإجابات لاستبيان آخر."
+    },
+    "requests": {
+      "idempotency_key_reused": "تعارض هذا مع محاولة سابقة. أعد المحاولة."
+    },
+    "questionnaires": {
+      "version_not_found": "الإصدار غير متاح."
+    },
+    "privacy": {
+      "request_already_open": "يوجد طلب مماثل مفتوح بالفعل."
+    }
+  },
+  "notFound": {
+    "title": "الصفحة غير موجودة",
+    "message": "هذه الصفحة غير موجودة."
+  },
+  "welcome": {
+    "intro": "متابعة لأحوال الأسرة كل ستة أشهر.",
+    "getStarted": "لنبدأ"
+  },
+  "signIn": {
+    "title": "تسجيل الدخول",
+    "action": "تسجيل الدخول",
+    "newHere": "مستخدم جديد؟ يُنشئ تسجيل الدخول حسابك أيضًا.",
+    "otherOptions": "خيارات أخرى لتسجيل الدخول",
+    "expired": {
+      "title": "انتهت الجلسة",
+      "message": "سجّل الدخول مرة أخرى. الإجابات المحفوظة باقية."
+    },
+    "unavailable": {
+      "title": "تسجيل الدخول غير متاح",
+      "message": "لم يُفعَّل تسجيل الدخول. لم يُرسل شيء."
+    },
+    "failures": {
+      "unsafe_response": {
+        "title": "أُوقف تسجيل الدخول للأمان",
+        "message": "لم يجتز الردّ فحص الأمان. أعد المحاولة."
+      },
+      "provider_unreachable": {
+        "title": "تعذّر الوصول لخدمة الدخول",
+        "message": "تحقق من اتصالك وأعد المحاولة."
+      },
+      "refused": {
+        "title": "لم ينجح تسجيل الدخول",
+        "message": "أعد المحاولة، أو تواصل مع من زوّدك بالتطبيق."
+      },
+      "unexpected": {
+        "title": "حدث خطأ ما",
+        "message": "تعذّر إكمال الدخول. أعد المحاولة."
+      }
+    },
+    "google": {
+      "signIn": "المتابعة باستخدام Google"
+    },
+    "uaePass": {
+      "name": "الهوية الرقمية UAE PASS",
+      "signIn": "تسجيل الدخول بالهوية الرقمية",
+      "connecting": {
+        "title": "جارٍ الاتصال بالهوية الرقمية UAE PASS",
+        "message": "وافق في تطبيق UAE PASS.",
+        "secure": "لا تتلقى عزوة إلا ما تسمح لـ UAE PASS بمشاركته."
+      }
+    },
+    "simulated": {
+      "title": "اختر حسابًا",
+      "accountLabel": "حساب",
+      "approve": "متابعة"
+    }
+  },
+  "devFixtures": {
+    "personas": {
+      "household_lead": {
+        "name": "مدير أسرة",
+        "description": "أسرة من ثلاثة أفراد، واستبيان قيد الإجابة."
+      },
+      "new_participant": {
+        "name": "مشارك جديد",
+        "description": "ليست لديه أسرة بعد."
+      }
+    }
+  },
+  "home": {
+    "loading": "جارٍ تحميل الرئيسية",
+    "more": "المزيد",
+    "household": {
+      "create": "إنشاء بيانات الأسرة",
+      "open": "أسرتك"
+    },
+    "assessments": {
+      "seeAll": "كل الاستبيانات"
+    },
+    "greetings": {
+      "morning": "صباح الخير",
+      "afternoon": "طاب يومك",
+      "evening": "مساء الخير",
+      "morningNamed": "صباح الخير يا {{name}}",
+      "afternoonNamed": "طاب يومك يا {{name}}",
+      "eveningNamed": "مساء الخير يا {{name}}"
+    },
+    "path": {
+      "title": "مسار أسرتك",
+      "loading": "جارٍ تحميل مسارك",
+      "stepOf": "الخطوة {{number}} من {{total}}",
+      "state": {
+        "done": "تمّت",
+        "current": "الآن",
+        "upcoming": "لاحقًا"
+      },
+      "steps": {
+        "household": {
+          "title": "سجّل أسرتك"
+        },
+        "consent": {
+          "title": "قدّم موافقتك"
+        },
+        "checkIn": {
+          "title": "أجب عن استبيان الأسرة",
+          "body": "الخطوة الأهم: عليها تُبنى خطواتك التالية.",
+          "open": "بانتظار إجابتك: {{count}}",
+          "waiting": "لا يوجد استبيان مفتوح الآن."
+        },
+        "nextSteps": {
+          "title": "اطّلع على خطواتك التالية"
+        },
+        "nextCheckIn": {
+          "title": "الاستبيان التالي بعد نحو ستة أشهر"
+        }
+      },
+      "actions": {
+        "createHousehold": "سجّل أسرتك",
+        "confirmHousehold": "راجع أسرتك",
+        "giveConsent": "راجع الموافقة",
+        "start": "ابدأ الاستبيان",
+        "continue": "تابع الاستبيان",
+        "openResult": "اعرض الخطوات"
+      }
+    },
+    "nextSteps": {
+      "title": "خطواتك التالية",
+      "loading": "جارٍ تحميل الخطوات التالية",
+      "empty": "تظهر بعد الاستبيان.",
+      "emptyAfterSurvey": "لم يُوجَّه دعم بعد.",
+      "referral": {
+        "open": "الإحالة مفتوحة",
+        "in_progress": "الإحالة قيد التنفيذ",
+        "resolved": "اكتملت الإحالة",
+        "cancelled": "أُلغيت الإحالة"
+      },
+      "openReport": "افتح التقرير",
+      "withResult": "تجدونها مع نتيجتكم.",
+      "openResult": "اعرض النتيجة"
+    },
+    "actions": {
+      "emergency": "SOS",
+      "emergencyLabel": "SOS، أرقام الطوارئ",
+      "emergencyHint": "يعرض أرقام الطوارئ والدعم في الإمارات",
+      "assistant": "اسأل عزوة",
+      "assistantHint": "يفتح المساعد"
+    }
+  },
+  "household": {
+    "title": "أسرتك",
+    "loading": "جارٍ تحميل بيانات أسرتك",
+    "reference": "المرجع: {{reference}}",
+    "confirmed": "مؤكَّدة",
+    "notConfirmed": "غير مؤكَّدة",
+    "confirmedOn": "أُكّدت في {{date}}",
+    "createdOn": "أُنشئت في {{date}}",
+    "withdrawn": {
+      "title": "انسحبت الأسرة",
+      "message": "البيانات محفوظة لكن لا يمكن تغييرها."
+    },
+    "summary": {
+      "title": "ملخّص",
+      "people": "الأفراد",
+      "head": "ربّ الأسرة",
+      "primaryEarner": "المعيل الرئيسي",
+      "notChosen": "لم يُحدَّد"
+    },
+    "nextStep": {
+      "confirmTitle": "التالي: أكّد بيانات أسرتك",
+      "confirmAction": "مراجعة الأسرة",
+      "confirmAgain": "إعادة التأكيد"
+    },
+    "links": {
+      "title": "البيانات",
+      "people": "الأفراد",
+      "assignments": "الاستبيانات"
+    },
+    "start": {
+      "title": "إنشاء بيانات الأسرة",
+      "checking": "جارٍ التحقق من حسابك",
+      "heading": "من يعيش في منزلك؟",
+      "stepsTitle": "ثلاث خطوات",
+      "stepNumber": "الخطوة {{number}}: {{title}}",
+      "steps": {
+        "aboutYou": {
+          "title": "بياناتك"
+        },
+        "people": {
+          "title": "الأشخاص الذين تعيش معهم"
+        },
+        "confirm": {
+          "title": "المراجعة والتأكيد"
+        }
+      },
+      "privacy": "لا أسماء ولا أرقام هوية إماراتية أبدًا.",
+      "begin": "ابدأ",
+      "existingTitle": "لديك أسرة مسجّلة بالفعل",
+      "openExisting": "فتح الأسرة",
+      "demo": {
+        "action": "تعبئة تلقائية"
+      }
+    },
+    "aboutYou": {
+      "title": "بياناتك",
+      "intro": "أنت أولًا، ثم الآخرون.",
+      "submit": "متابعة"
+    },
+    "form": {
+      "birthYear": "سنة الميلاد",
+      "birthYearHint": "مثل 1985",
+      "birthMonth": "شهر الميلاد",
+      "birthMonthHint": "من 1 إلى 12",
+      "isHead": {
+        "self": "أنا ربّ الأسرة",
+        "other": "ربّ الأسرة"
+      },
+      "isHeadHint": "شخص واحد لكل أسرة",
+      "takesOverHead": "يحلّ محلّ {{member}} ربًّا للأسرة. راجِع صلات القرابة.",
+      "relationship": {
+        "self": "صلة قرابتك بربّ الأسرة",
+        "other": "صلة القرابة بربّ الأسرة"
+      },
+      "employment": {
+        "self": "حالتك الوظيفية",
+        "other": "الحالة الوظيفية"
+      },
+      "employmentOptional": {
+        "self": "حالتك الوظيفية (اختيارية دون 18 عامًا)",
+        "other": "الحالة الوظيفية (اختيارية دون 18 عامًا)"
+      },
+      "isPrimaryEarner": {
+        "self": "أنا المعيل الرئيسي",
+        "other": "المعيل الرئيسي"
+      },
+      "isPrimaryEarnerHint": "صاحب الدخل الأعلى",
+      "takesOverEarner": "يحلّ محلّ {{member}} معيلًا رئيسيًا.",
+      "under18": {
+        "self": "مَن دون 18 عامًا لا يكون ربَّ الأسرة ولا المعيلَ الرئيسي.",
+        "other": "مَن دون 18 عامًا لا يكون ربَّ الأسرة ولا المعيلَ الرئيسي."
+      },
+      "errors": {
+        "birthYear": "أدخل سنة من 1900 حتى الآن.",
+        "birthMonth": "أدخل من 1 إلى 12.",
+        "birthMonthFuture": "هذا الشهر في المستقبل.",
+        "selfUnder18": "يجب أن تبلغ 18 عامًا.",
+        "headUnder18": "يجب أن يبلغ ربّ الأسرة 18 عامًا.",
+        "primaryEarnerUnder18": "يجب أن يبلغ المعيل الرئيسي 18 عامًا.",
+        "relationshipRequired": "اختر صلة القرابة.",
+        "relationshipRequiredSelf": "اختر صلة قرابتك.",
+        "employmentRequired": "اختر الحالة الوظيفية.",
+        "employmentRequiredSelf": "اختر حالتك الوظيفية."
+      }
+    },
+    "review": {
+      "title": "مراجعة بيانات أسرتك",
+      "intro": "هل الجميع مدرجون؟",
+      "confirmedTitle": "أُكّدت بيانات الأسرة",
+      "peopleTitle": "الأفراد",
+      "issuesTitle": "قبل التأكيد",
+      "issuesMessage": "أضف البيانات الناقصة.",
+      "issues": {
+        "no_head": "اختر ربّ الأسرة.",
+        "missing_relationship": "{{member}}: أضف صلة القرابة.",
+        "missing_employment": "{{member}}: أضف الحالة الوظيفية."
+      },
+      "fix": "إصلاح",
+      "fixLabel": "إصلاح: {{issue}}",
+      "everyoneListed": "كل من في المنزل مدرج",
+      "addMissing": "إضافة شخص",
+      "continue": "متابعة",
+      "confirmAgain": "أعد التأكيد بعد أي تغيير."
+    },
+    "confirm": {
+      "title": "تأكيد بيانات أسرتك",
+      "decidesTitle": "ماذا يحدث بعد ذلك",
+      "decides": "تعيّن عزوة الاستبيانات وفق قواعد معتمدة.",
+      "action": "تأكيد بيانات الأسرة",
+      "missingTitle": "بيانات ناقصة",
+      "backToReview": "مراجعة الأسرة"
+    },
+    "assignments": {
+      "title": "استبيانات الأسرة",
+      "loading": "جارٍ تحميل الاستبيانات",
+      "confirmedTitle": "أُكّدت بيانات الأسرة",
+      "refreshFailed": "تعذّر تحميل آخر التفاصيل.",
+      "noWave": {
+        "title": "لا جولة مفتوحة",
+        "message": "تصل الاستبيانات مع الجولة التالية."
+      },
+      "noneEligible": {
+        "title": "لا شيء هذه الجولة",
+        "message": "لا أحد يجيب في الجولة {{wave}}."
+      },
+      "notConfirmed": {
+        "title": "لم تُؤكَّد بعد",
+        "message": "أكّد بيانات أسرتك أولًا.",
+        "action": "مراجعة الأسرة"
+      },
+      "none": {
+        "title": "لا استبيانات بعد",
+        "message": "لا شيء للإجابة عنه بعد."
+      },
+      "count": "الاستبيانات: {{count}}",
+      "unknownMember": "أحد أفراد الأسرة",
+      "ownAccount": "يجيب في حسابه الخاص.",
+      "detailsUnavailable": "تعذّر تحميل التفاصيل.",
+      "done": "العودة إلى الأسرة"
+    }
+  },
+  "householdStatus": {
+    "active": "مشاركة",
+    "withdrawn": "منسحبة"
+  },
+  "relationship": {
+    "spouse": "الزوج أو الزوجة",
+    "child": "الابن أو الابنة",
+    "parent": "الأب أو الأم",
+    "sibling": "الأخ أو الأخت",
+    "grandchild": "الحفيد أو الحفيدة",
+    "grandparent": "الجد أو الجدة",
+    "other_relative": "قريب آخر",
+    "non_relative": "ليس من الأقارب"
+  },
+  "employmentStatus": {
+    "employed": "موظف",
+    "self_employed": "يعمل لحسابه الخاص",
+    "unemployed": "لا يعمل",
+    "student": "طالب",
+    "homemaker": "ربّ أو ربّة منزل",
+    "retired": "متقاعد",
+    "other": "أخرى"
+  },
+  "members": {
+    "title": "الأفراد",
+    "loading": "جارٍ تحميل الأفراد",
+    "listTitle": "المدرجون",
+    "you": "أنت",
+    "head": "ربّ الأسرة",
+    "primaryEarner": "المعيل الرئيسي",
+    "managesHousehold": "مدير الأسرة",
+    "ownAccount": "حساب خاص",
+    "inactive": "غادر الأسرة",
+    "relationshipNotRecorded": "صلة القرابة غير مسجّلة",
+    "employmentNotRecorded": "الحالة الوظيفية غير مسجّلة",
+    "bornAndAge": "مواليد {{date}} · العمر {{age}}",
+    "bornIn": "مواليد {{year}}",
+    "born": "مواليد {{date}}",
+    "describe": "{{member}}، مواليد {{date}}",
+    "gaps": {
+      "missing_relationship": "صلة القرابة مطلوبة",
+      "missing_employment": "الحالة الوظيفية مطلوبة"
+    },
+    "edit": "تعديل",
+    "editLabel": "تعديل {{member}}",
+    "remove": "إزالة",
+    "removeLabel": "إزالة {{member}}",
+    "reviewAction": "المراجعة والتأكيد",
+    "removedTitle": "غادروا الأسرة",
+    "removedNotice": "أُزيل {{member}}. أعد التأكيد.",
+    "notices": {
+      "created": {
+        "title": "أُنشئت بيانات الأسرة",
+        "message": "أضف الآن كل من تعيش معهم."
+      },
+      "alreadySetUp": {
+        "title": "لديك أسرة مسجّلة بالفعل",
+        "message": "راجِع بياناتها."
+      },
+      "demoCreated": {
+        "message": "راجِع ثم أكّد."
+      }
+    },
+    "add": {
+      "action": "إضافة شخص",
+      "title": "إضافة شخص",
+      "intro": "لا حاجة إلى الأسماء.",
+      "submit": "إضافة",
+      "full": "الحد الأقصى {{max}} شخصًا."
+    },
+    "editScreen": {
+      "title": "تعديل البيانات",
+      "submit": "حفظ",
+      "remove": "إزالة من الأسرة",
+      "notFoundTitle": "لم يعد مدرجًا",
+      "notFoundMessage": "ربما أُزيل.",
+      "backToRoster": "العودة إلى القائمة"
+    },
+    "removeDialog": {
+      "title": "إزالة هذا الشخص؟",
+      "message": "سيُزال {{member}}. تبقى إجاباته السابقة محفوظة.",
+      "confirm": "إزالة"
+    }
+  },
+  "consent": {
+    "title": "الموافقة",
+    "loading": "جارٍ تحميل الموافقات",
+    "review": "مراجعة الموافقة",
+    "give": "إعطاء الموافقة",
+    "withdraw": "سحب",
+    "keep": "الإبقاء على الموافقة",
+    "given": "مُعطاة",
+    "notGiven": "غير مُعطاة",
+    "givenOn": "أُعطيت في {{date}}",
+    "documentReference": "الوثيقة {{reference}}، الإصدار {{version}}",
+    "forWhom": "لمن الموافقة؟",
+    "withdrawTitle": "سحب الموافقة على {{purpose}}؟",
+    "noHousehold": {
+      "title": "أنشئ بيانات أسرتك أولًا",
+      "message": "الموافقة لكل فرد."
+    },
+    "none": {
+      "title": "لا وثائق موافقة بعد",
+      "message": "لا يتوفر أي منها بعد."
+    },
+    "types": {
+      "participation": {
+        "title": "المشاركة",
+        "purpose": "الإجابة عن استبيانات عزوة حول أحوال أسرتك.",
+        "withdrawMessage": "لا يمكنك الإجابة حتى توافق مرة أخرى. تبقى الإجابات المرسلة محفوظة."
+      },
+      "research_use": {
+        "title": "الاستخدام البحثي",
+        "purpose": "إجاباتك، دون اسمك، ضمن نتائج بحثية مجمّعة.",
+        "withdrawMessage": "لن تُدرج إجاباتك في الأبحاث القادمة."
+      },
+      "referral": {
+        "title": "الإحالة إلى الدعم",
+        "purpose": "قد يحيلك منسّق الدعم إلى جهة شريكة.",
+        "withdrawMessage": "تُلغى الإحالات المفتوحة."
+      }
+    }
+  },
+  "assignmentStatus": {
+    "assigned": "لم يبدأ",
+    "in_progress": "قيد الإجابة",
+    "completed": "مكتمل",
+    "expired": "منتهي المدة",
+    "cancelled": "ملغى"
+  },
+  "assessments": {
+    "title": "الاستبيانات",
+    "detailTitle": "الاستبيان",
+    "loading": "جارٍ تحميل الاستبيانات",
+    "loadingOne": "جارٍ تحميل الاستبيان",
+    "toDo": "المطلوب",
+    "finished": "المكتملة أو المغلقة",
+    "allDone": "أنهيت كل شيء حاليًا",
+    "wave": "الجولة {{wave}}",
+    "dueBy": "آخر موعد {{date}}",
+    "beforeYouStart": "تُحفظ الإجابات أولًا بأول.",
+    "actions": {
+      "start": "ابدأ",
+      "continue": "متابعة",
+      "view": "التفاصيل",
+      "viewResult": "عرض النتيجة"
+    },
+    "facts": {
+      "wave": "الجولة",
+      "assigned": "تاريخ التعيين",
+      "due": "آخر موعد",
+      "completed": "تاريخ الإكمال",
+      "questions": "عدد الأسئلة",
+      "optionalQuestions": "اختيارية"
+    },
+    "closed": {
+      "expired": "انتهت مدة الإجابة.",
+      "cancelled": "لم يعد مطلوبًا."
+    },
+    "none": {
+      "title": "لا استبيانات بعد",
+      "message": "تصل بعد تأكيد بيانات أسرتك."
+    },
+    "intro": {
+      "purpose": "نبذة",
+      "privacyTitle": "إجاباتك",
+      "privacy": "تُرسل إجاباتك إلى عزوة. لا يراها الموظفون فرادى أبدًا، ولا يرى الباحثون إلا بيانات مجهولة الهوية، وبموافقتك.",
+      "privacyOnPhone": {
+        "device": "تُحفظ مشفّرة على هذا الهاتف حتى الإرسال أو تسجيل الخروج.",
+        "memory": "لا يُحفظ شيء على هذا الهاتف."
+      },
+      "awaitingSubmission": "ستُرسل الإجابات حين يتوفر الاتصال.",
+      "viewSubmission": "عرض"
+    }
+  },
+  "session": {
+    "title": "الاستبيان",
+    "loading": "جارٍ تحميل الأسئلة",
+    "progress": "السؤال {{current}} من {{total}}",
+    "optional": "اختياري",
+    "reviewAnswers": "مراجعة",
+    "saveStatus": {
+      "savedOnDevice": "حُفظت على هذا الهاتف",
+      "keptInMemory": "لم تُرسل بعد. أبقِ التطبيق مفتوحًا.",
+      "saving": "جارٍ الحفظ…",
+      "saved": "حُفظت جميع الإجابات",
+      "notSaved": "لم تُحفظ. تحقق من اتصالك.",
+      "rejected": "لم تُقبل بعض الإجابات.",
+      "offlineOnDevice": "غير متصل. حُفظت على هذا الهاتف.",
+      "offlineInMemory": "غير متصل. أبقِ التطبيق مفتوحًا.",
+      "retrying": "إعادة المحاولة…",
+      "conflict": "تغيّرت إجابات من مكان آخر."
+    },
+    "alreadySubmitted": {
+      "title": "أُرسل بالفعل",
+      "message": "لا يمكن تغيير الإجابات."
+    },
+    "noQuestions": {
+      "title": "لا أسئلة",
+      "message": "حاول لاحقًا."
+    },
+    "abandoned": {
+      "title": "أُغلق الاستبيان",
+      "message": "أُغلق دون إرسال، فلا توجد نتيجة."
+    },
+    "lastSynced": "حُفظ في عزوة {{time}}",
+    "required": "مطلوب",
+    "requiredMissing": "أجب عنه للإرسال.",
+    "answerRefused": "لم تُقبل. أعد الاختيار.",
+    "locked": {
+      "title": "بانتظار الإرسال",
+      "message": "ألغِ الإرسال لتعديل الإجابات.",
+      "action": "الذهاب إلى المراجعة"
+    },
+    "offlineCopy": {
+      "title": "أنت غير متصل",
+      "message": "نسخة محفوظة في {{date}}."
+    },
+    "lost": {
+      "title": "تعذّرت قراءة بعض الإجابات",
+      "message": "حُذفت إجابات غير مُرسلة: {{count}}. الإجابات المحفوظة سليمة."
+    },
+    "offlineNoCopy": {
+      "title": "أنت غير متصل",
+      "message": "اتصل بالإنترنت لفتح هذا الاستبيان."
+    },
+    "versionUnavailable": {
+      "title": "الإصدار غير متاح",
+      "message": "لم يتغير شيء. حاول لاحقًا."
+    },
+    "unavailable": {
+      "title": "لم يعد متاحًا",
+      "message": "سُحب أو تغيّرت صلاحية وصولك."
+    },
+    "notIncluded": {
+      "title": "لم تُضمَّن بعض الإجابات",
+      "message": "لم تُرسل قبل الإغلاق: {{count}}."
+    },
+    "demo": {
+      "low": "منخفضة",
+      "medium": "متوسطة",
+      "high": "مرتفعة",
+      "lowLabel": "منخفضة: الإجابة والإرسال لنتيجة مرونة منخفضة",
+      "mediumLabel": "متوسطة: الإجابة والإرسال لنتيجة مرونة متوسطة",
+      "highLabel": "مرتفعة: الإجابة والإرسال لنتيجة مرونة مرتفعة",
+      "failed": "تعذّر الإكمال. أعد المحاولة.",
+      "offline": "لا يوجد اتصال. أعد المحاولة."
+    }
+  },
+  "review": {
+    "title": "مراجعة الإجابات",
+    "submit": "إرسال",
+    "keepEditing": "متابعة التعديل",
+    "missingTitle": "إجابات مطلوبة",
+    "missingMessage": "مطلوبة بلا إجابة: {{count}}.",
+    "readyMessage": "الإجابات المرسلة نهائية.",
+    "notAnswered": "لم يُجب عنه",
+    "required": "مطلوب",
+    "questionNumber": "السؤال {{number}}",
+    "itemLabel": "السؤال {{number}}: {{prompt}} الإجابة: {{answer}}",
+    "changeHint": "يفتح السؤال لتغيير الإجابة",
+    "confirmTitle": "إرسال الإجابات؟",
+    "confirmMessage": "تصبح نهائية بعد الإرسال.",
+    "summary": "أُجيب عن {{answered}} من {{total}}",
+    "cancelSubmission": "إلغاء الإرسال",
+    "submitting": "جارٍ الإرسال…",
+    "answerMissing": "الذهاب إلى أولها",
+    "conflictsTitle": "اختر ما تحتفظ به",
+    "conflictsMessage": "غُيّرت من مكان آخر: {{count}}.",
+    "resolveConflict": "الذهاب إلى أولها",
+    "conflicted": "غُيّرت من مكان آخر"
+  },
+  "result": {
+    "title": "النتيجة",
+    "loading": "جارٍ تحميل النتيجة",
+    "state": {
+      "pending": "بانتظار النتيجة",
+      "complete": "سُجّلت النتيجة",
+      "incomplete": "نتيجة غير مكتملة"
+    },
+    "submittedOn": "أُرسلت في {{date}}",
+    "pendingTitle": "النتيجة ليست جاهزة بعد",
+    "incompleteTitle": "لا نتيجة",
+    "incompleteMessage": "الإجابات غير كافية.",
+    "incompleteReasons": {
+      "non_substantive_share_exceeded": "إجابات كثيرة خارج المقياس."
+    },
+    "scale": {
+      "title": "أين تقف درجتك",
+      "summary": "درجة أسرتك {{total}}، على مقياس من {{minimum}} إلى {{maximum}}. وهي ضمن مستوى {{band}}.",
+      "range": "من {{min}} إلى {{max}}",
+      "yourFamily": "أسرتك: {{total}}"
+    },
+    "totalScore": "مجموع الدرجات",
+    "category": "الفئة {{code}}",
+    "computedOn": "احتُسبت في {{date}}",
+    "backToQuestionnaires": "الاستبيانات",
+    "submitted": "أُرسلت",
+    "thanks": "شكرًا لك!",
+    "notIncludedTitle": "لم تُضمَّن بعض التغييرات",
+    "notIncludedMessage": "تغييرات بعد الإرسال: {{count}}.",
+    "notDisclosed": "سُجّلت نتيجتك.",
+    "unavailableTitle": "أُرسلت الإجابات",
+    "unavailableMessage": "تعذّر تحميل النتيجة الآن. حاول قريبًا.",
+    "checkAgain": "إعادة التحقق",
+    "recommendationsTitle": "الدعم المقترح",
+    "recommendationCategory": "فئة الدعم",
+    "headOnlyTitle": "لربّ الأسرة",
+    "headOnly": "الدرجة لربّ الأسرة فقط.",
+    "valuesTitle": "نتيجة أسرتك",
+    "tier": "المستوى",
+    "tiers": {
+      "vulnerable": "هشّ",
+      "transitional": "انتقالي",
+      "flourishing": "مزدهر"
+    }
+  },
+  "history": {
+    "title": "الاستبيانات السابقة",
+    "loading": "جارٍ تحميل السجل",
+    "openResult": "يفتح النتيجة",
+    "submittedOn": "أُرسل في {{date}} · الجولة {{wave}}",
+    "questionnaire": "استبيان",
+    "result": {
+      "pending": "بانتظار النتيجة",
+      "complete": "سُجّلت النتيجة",
+      "incomplete": "نتيجة غير مكتملة"
+    },
+    "none": {
+      "title": "لم يُرسل شيء بعد",
+      "message": "تظهر هنا الاستبيانات المرسلة."
+    }
+  },
+  "profile": {
+    "account": "الحساب",
+    "signedIn": "مسجّل الدخول",
+    "more": "المزيد",
+    "signOut": "تسجيل الخروج",
+    "signOutTitle": "تسجيل الخروج؟",
+    "signOutMessage": "ستُفقد الإجابات غير المرسلة.",
+    "signOutMessageDevice": "ستُحذف الإجابات غير المرسلة من هذا الهاتف.",
+    "data": {
+      "title": "بياناتك",
+      "export": {
+        "title": "نسخة من بياناتك",
+        "contents": "الأسرة والموافقات والاستبيانات والإجابات، دون الدرجات أو الاقتراحات.",
+        "yourChoice": "يستطيع قراءته كل من تشاركه معه.",
+        "action": "تنزيل بياناتي",
+        "shareTitle": "بياناتك في عزوة",
+        "unavailableTitle": "لا يمكن المشاركة من هذا الهاتف",
+        "unavailable": "المشاركة غير متاحة هنا.",
+        "rateLimited": "تنزيلات كثيرة خلال هذه الساعة. حاول لاحقًا.",
+        "interrupted": "لم تتم مشاركة شيء. أعد المحاولة."
+      },
+      "requests": {
+        "title": "اسأل عن بياناتك",
+        "intro": "اطّلع على ما تحفظه عزوة أو صحّحه أو احذفه.",
+        "typeLabel": "الطلب",
+        "types": {
+          "access": {
+            "title": "الاطلاع على المعلومات",
+            "description": "ما تحفظه عزوة."
+          },
+          "correction": {
+            "title": "تصحيح المعلومات",
+            "description": "شيء ما غير صحيح."
+          },
+          "erasure": {
+            "title": "حذف المعلومات",
+            "description": "إزالتها من عزوة."
+          }
+        },
+        "memberLabel": "يخص",
+        "errors": {
+          "type": "اختر طلبًا.",
+          "member": "اختر من يخصّه الطلب."
+        },
+        "submit": "إرسال الطلب",
+        "confirm": {
+          "title": "إرسال هذا الطلب؟",
+          "message": "{{type}}، يخص {{member}}.",
+          "confirm": "إرسال"
+        },
+        "sent": {
+          "title": "أُرسل الطلب",
+          "message": "تابعه أدناه."
+        },
+        "listTitle": "طلباتك",
+        "loading": "جارٍ تحميل الطلبات",
+        "none": "لا طلبات بعد.",
+        "for": "يخص",
+        "sentOn": "تاريخ الإرسال",
+        "closedOn": "تاريخ الإغلاق",
+        "status": {
+          "open": "مفتوح",
+          "closed": "مغلق"
+        },
+        "resolution": {
+          "completed": "مغلق: تم التنفيذ",
+          "declined": "مغلق: مرفوض",
+          "withdrawn": "مغلق: سُحب الطلب"
+        },
+        "unknownMember": "أحد أفراد الأسرة",
+        "showMore": "عرض المزيد",
+        "noHousehold": "أنشئ بيانات أسرتك أولًا."
+      }
+    },
+    "devTools": {
+      "resetData": "إعادة ضبط البيانات",
+      "resetTitle": "إعادة ضبط كل البيانات؟",
+      "resetMessage": "يُحذف كل ما على هذا الهاتف، ويُسجَّل خروجك.",
+      "resetDone": "أُعيد ضبط البيانات."
+    },
+    "signedInWithUaePass": "تم تسجيل الدخول بالهوية الرقمية UAE PASS"
+  },
+  "lock": {
+    "title": "عزوة مقفلة",
+    "message": "تُقفَل حفاظًا على خصوصية إجاباتك.",
+    "unlock": "فتح القفل",
+    "prompt": "فتح قفل عزوة",
+    "outcomes": {
+      "cancelled": "لا تزال مقفلة.",
+      "failed": "لم يتم التأكيد. أعد المحاولة أو سجّل الدخول من جديد."
+    },
+    "noDeviceLock": {
+      "title": "لا قفل للشاشة",
+      "message": "تُفتح عزوة بقفل الشاشة. سجّل الدخول من جديد بدلًا منه."
+    },
+    "signInAgain": "تسجيل الدخول من جديد",
+    "signInAgainNote": "يحذف الإجابات غير المرسلة من هذا الهاتف.",
+    "signOutFailed": "تعذّر تسجيل الخروج. أعد المحاولة.",
+    "confirm": {
+      "title": "تسجيل الخروج ثم الدخول من جديد؟",
+      "message": "ستُحذف الإجابات غير المرسلة.",
+      "confirm": "تسجيل الخروج"
+    }
+  },
+  "help": {
+    "title": "المساعدة",
+    "topics": {
+      "about": {
+        "title": "ما هي عزوة؟",
+        "body": "عزوة تعني الأهل والسند الذين يقفون إلى جانبك."
+      },
+      "answering": {
+        "title": "الإجابة",
+        "body": "اختر الإجابة الأنسب. الإجابات المرسلة نهائية."
+      },
+      "saving": {
+        "title": "الحفظ",
+        "body": "تُحفظ الإجابات فور اختيارها."
+      },
+      "language": {
+        "title": "اللغة",
+        "body": "العربية أو الإنجليزية، من الإعدادات."
+      },
+      "privacy": {
+        "title": "الخصوصية",
+        "body": "لا نطلب الأسماء. لا تستطيع الأسر الأخرى رؤية إجاباتك."
+      }
+    }
+  },
+  "designSystem": {
+    "title": "نظام التصميم",
+    "intro": "جميع المكونات، مباشرةً.",
+    "headerAction": "نافذة حوار",
+    "colours": "الألوان",
+    "typography": "الخطوط",
+    "sampleHeading": "عنوان",
+    "sampleStrong": "نص بارز",
+    "sampleLabel": "تسمية",
+    "sampleCaption": "نص توضيحي {{number}}",
+    "buttons": "الأزرار",
+    "primary": "رئيسي",
+    "secondary": "ثانوي",
+    "tertiary": "نصي",
+    "danger": "إجراء حذف",
+    "loading": "جارٍ التنفيذ",
+    "disabled": "غير متاح",
+    "inputs": "حقول الإدخال",
+    "nameLabel": "الاسم",
+    "nameHint": "تلميح",
+    "nameRequired": "أدخل اسماً",
+    "save": "حفظ",
+    "saved": "تم الحفظ: {{name}}",
+    "errorInput": "فيه خطأ",
+    "disabledInput": "معطّل",
+    "switchLabel": "إعداد",
+    "switchHint": "مفتاح واحد",
+    "cards": "البطاقات",
+    "cardDefault": "عادية",
+    "cardMuted": "هادئة",
+    "cardHighlight": "مميّزة",
+    "cardPressable": "بطاقة قابلة للضغط",
+    "status": "الحالة",
+    "dangerBadge": "انتباه",
+    "noticeInfo": "معلومات",
+    "noticeSuccess": "نجاح",
+    "noticeWarning": "تنبيه",
+    "noticeDanger": "خطأ",
+    "progress": "التقدّم",
+    "selection": "الاختيار",
+    "radioLabel": "بطاقات الاختيار",
+    "radioA": "الأول",
+    "radioB": "الثاني",
+    "radioC": "الثالث",
+    "radioHint": "وصف",
+    "agreementQuestion": "أربعة خيارات",
+    "frequencyQuestion": "خمسة خيارات",
+    "agreement": {
+      "1": "أعارض بشدة",
+      "2": "أعارض",
+      "3": "أوافق",
+      "4": "أوافق بشدة"
+    },
+    "frequency": {
+      "1": "أبداً",
+      "2": "نادراً",
+      "3": "أحياناً",
+      "4": "غالباً",
+      "5": "دائماً"
+    },
+    "outsideScale": "خارج المقياس",
+    "states": "الحالات",
+    "emptyTitle": "لا يوجد شيء هنا بعد",
+    "emptyMessage": "ما الخطوة التالية.",
+    "dialogTitle": "حذف هذا؟",
+    "dialogMessage": "لا يمكن التراجع عنه."
+  },
+  "questionnaire": {
+    "unsupported": {
+      "title": "حدّث التطبيق",
+      "message": "هذا الإصدار لا يعرض هذا الاستبيان."
+    }
+  },
+  "conflict": {
+    "title": "غُيّرت من مكان آخر",
+    "message": "المحفوظة: «{{server}}». هذا الهاتف: «{{local}}».",
+    "keepServer": "إبقاء المحفوظة: {{answer}}",
+    "keepLocal": "إبقاء إجابة الهاتف: {{answer}}",
+    "unknownAnswer": "إجابة غير معروفة"
+  },
+  "submission": {
+    "sending": {
+      "title": "جارٍ الإرسال…",
+      "message": "تُرسل إجاباتك."
+    },
+    "queued": {
+      "title": "لم تُرسل بعد",
+      "offline": "غير متصل. الإجابات {{where}}.",
+      "retrying": "تعذّر الوصول إلى عزوة. الإجابات {{where}}؛ نعيد المحاولة.",
+      "waiting": "تعذّر الوصول إلى عزوة. الإجابات {{where}}.",
+      "signed_out": "سجّل الدخول للإرسال. الإجابات {{where}}."
+    },
+    "where": {
+      "device": "محفوظة على هذا الهاتف",
+      "memory": "محفوظة ما دام التطبيق مفتوحًا"
+    },
+    "blocked": {
+      "title": "لم تُرسل",
+      "conflicts": "اختر ما تحتفظ به من الإجابات المغيّرة.",
+      "answers_rejected": "أجب مجددًا عن الأسئلة المرفوضة.",
+      "missing_answers": "أجب عن الأسئلة المطلوبة.",
+      "consent_required": "قدّم موافقتك على المشاركة أولًا.",
+      "not_available": "لم يعد متاحًا.",
+      "closed": "أُغلق قبل الإرسال."
+    }
+  },
+  "splash": {
+    "welcome": "أهلاً بك في عزوة",
+    "preparing": "نجهّز مساحتك…",
+    "accessibilityLabel": "أهلاً بك في عزوة. جارٍ فتح التطبيق."
+  },
+  "pillars": {
+    "title": "ما تمثّله عزوة",
+    "relationships": "العلاقات",
+    "care": "الرعاية",
+    "empowerment": "التمكين",
+    "hope": "الأمل"
+  },
+  "onboarding": {
+    "checking": "جارٍ التحقق من حسابك",
+    "step": "الخطوة {{current}} من {{total}}",
+    "confirm": {
+      "title": "أكّد بياناتك",
+      "intro": "هل هذه بياناتك؟",
+      "introNoDetails": "لم تُشارَك بيانات. هل الحساب لك؟",
+      "privacy": "لا تحتفظ عزوة بهذه البيانات، بل بمرجع خاص فقط.",
+      "agree": "هذه بياناتي وهي صحيحة",
+      "agreeNoDetails": "هذا الحساب لي",
+      "action": "تأكيد",
+      "notMine": "ليست بياناتي",
+      "notMineDialog": {
+        "title": "ليست بياناتك؟",
+        "message": "سجّل الخروج وادخل بحسابك أنت في UAE PASS. صحّح البيانات الخاطئة هناك.",
+        "signOut": "تسجيل الخروج"
+      },
+      "fields": {
+        "source": "المصدر",
+        "emiratesId": "رقم الهوية الإماراتية",
+        "nationality": "الجنسية",
+        "birthdate": "تاريخ الميلاد",
+        "gender": "الجنس",
+        "mobile": "رقم الهاتف المتحرك",
+        "email": "البريد الإلكتروني"
+      },
+      "gender": {
+        "male": "ذكر",
+        "female": "أنثى"
+      },
+      "source": {
+        "uae_pass": "الهوية الرقمية UAE PASS",
+        "google": "حساب Google",
+        "unverified": "تسجيل الدخول"
+      },
+      "failures": {
+        "network": {
+          "title": "أنت غير متصل",
+          "message": "اتصل بالإنترنت وأعد المحاولة."
+        },
+        "unexpected": {
+          "title": "حدث خطأ ما",
+          "message": "تعذّر إعداد الحساب. أعد المحاولة."
+        }
+      }
+    },
+    "ready": {
+      "overline": "حسابك جاهز",
+      "title": "أهلاً بك في عزوة",
+      "titleNamed": "أهلاً يا {{name}}",
+      "message": "التالي: أسرتك.",
+      "nextTitle": "الخطوات التالية",
+      "action": "متابعة",
+      "steps": {
+        "household": {
+          "title": "أضف أفراد أسرتك"
+        },
+        "consent": {
+          "title": "قدّم موافقتك"
+        },
+        "checkIn": {
+          "title": "أجب عن أول متابعة"
+        }
+      }
+    }
+  },
+  "safety": {
+    "crisisCard": {
+      "title": "لست وحدك في هذا",
+      "body": "إذا كنت قد تؤذي نفسك أو غيرك، أو كنت في خطر، فاتصل بالرقم 999 الآن.",
+      "dial999": "اتصل بالرقم 999",
+      "emergencyNumbers": "أرقام الطوارئ",
+      "teamNotified": "تم إبلاغ فريق الدعم في عزوة.",
+      "dismiss": "إغلاق",
+      "announcement": "المساعدة متاحة. اتصل بالرقم 999 إذا كنت في خطر."
+    }
+  },
+  "scoreReport": {
+    "ahead": {
+      "title": "هل نكتب تقريرك أثناء إجابتك؟",
+      "yes": "نعم",
+      "no": "لا، شكرًا",
+      "on": "يُكتب تقريرك أثناء إجابتك.",
+      "stop": "إيقاف"
+    },
+    "finishing": "جارٍ إنهاء تقريرك…",
+    "title": "تقرير أسرتك",
+    "badge": "كتبه الذكاء الاصطناعي",
+    "offer": "نقاط القوة والضعف ومن أين تبدؤون، بصيغة PDF.",
+    "create": "أنشئ تقريري",
+    "creating": "حتى دقيقة. أبقِ هذه الشاشة مفتوحة.",
+    "createAgain": "اكتب تقريرًا جديدًا",
+    "writtenOn": "كتبه الذكاء الاصطناعي، {{date}}",
+    "summary": "الملخص",
+    "strengths": "نقاط القوة",
+    "weaknesses": "نقاط الضعف",
+    "flow": {
+      "title": "خطواتكم التالية",
+      "step": "الخطوة {{number}}: {{area}}",
+      "whereToGo": "إلى أين تتوجهون",
+      "noAuthorities": "لا جهة مدرجة بعد.",
+      "need": "تساعد في: {{need}}",
+      "via": "يُقدَّم الطلب عبر {{name}}",
+      "procedure": "ما يجب فعله",
+      "procedureStep": "{{number}}. {{step}}",
+      "noProcedure": "لا خطوات منشورة. اسألوهم عما يجب فعله.",
+      "documents": "ما يجب إحضاره",
+      "website": "الموقع الإلكتروني",
+      "websiteLabel": "الموقع الإلكتروني:",
+      "servicePage": "صفحة الخدمة",
+      "servicePageLabel": "افتح صفحة {{name}}",
+      "call": "اتصل بالرقم {{phone}}",
+      "phoneLabel": "الهاتف:",
+      "checkedOn": "تم التحقق في {{date}}. تأكدوا قبل الذهاب.",
+      "notice": "تأكدوا قبل الذهاب. لا تتواصل عزوة مع هذه الجهات ولا تزكّيها ولا تشاركها إجاباتكم. وهي التي تقرر ما ينطبق عليكم.",
+      "checked": "تم التحقق في {{date}}"
+    },
+    "step": "• {{step}}",
+    "notice": "لا يغيّر درجتك، وليس مشورة مختص، وقد يحتوي على أخطاء.",
+    "emergency": "في حالات الطوارئ، اتصل بالرقم 999.",
+    "shareTitle": "تقريرك من عزوة",
+    "downloadNote": "يستطيع أي شخص لديه الملف قراءته.",
+    "download": {
+      "action": "تنزيل PDF",
+      "saved": "حُفظ التقرير.",
+      "interrupted": "لم يُحفظ. أعد المحاولة.",
+      "failed": "تعذّر الحفظ. أعد المحاولة.",
+      "unavailable": "لا يستطيع هذا الهاتف حفظ الملفات."
+    },
+    "problems": {
+      "unavailable": "التقارير غير متاحة حاليًا.",
+      "offline": "تعذّر الوصول إلى عزوة. تحقق من اتصالك.",
+      "rate_limited": "تقارير كثيرة خلال هذه الساعة. حاول لاحقًا.",
+      "failed": "تعذّرت الكتابة. أعد المحاولة."
+    }
+  },
+  "assistant": {
+    "title": "مساعد عزوة",
+    "badge": "مساعد بالذكاء الاصطناعي",
+    "unavailable": {
+      "title": "غير متاح بعد",
+      "message": "المساعدة تغطي الأسئلة الشائعة.",
+      "action": "افتح المساعدة"
+    },
+    "about": "يستعين بما تحفظه عزوة عن أسرتك. لا يمنح درجات ولا يقرّر شيئًا.",
+    "emergency": "في حالات الطوارئ، اتصل بالرقم 999.",
+    "emergencyLink": "أرقام الطوارئ",
+    "examples": {
+      "title": "جرّب أن تسأل",
+      "checkIn": "كيف تتم المتابعة الدورية؟",
+      "familyTime": "أفكار لوقت عائلي هذا الأسبوع",
+      "support": "أين أجد الدعم؟",
+      "hint": "يضع هذا السؤال في المربع أدناه"
+    },
+    "composer": {
+      "label": "سؤالك",
+      "placeholder": "اسأل ما شئت",
+      "privacy": "لا تشارك الأسماء أو الأرقام.",
+      "send": "إرسال"
+    },
+    "keptOnPhone": "تبقى المحادثة مشفّرة على هذا الهاتف.",
+    "keptInMemory": "تبقى المحادثة حتى تغلق التطبيق.",
+    "conversation": "المحادثة",
+    "thinking": "يفكّر…",
+    "you": "أنت",
+    "problems": {
+      "offline": "تعذّر الوصول إلى عزوة. تحقّق من اتصالك.",
+      "rate_limited": "أسئلة كثيرة. انتظر دقيقة.",
+      "failed": "تعذّرت الإجابة. أعد المحاولة.",
+      "unanswered": "لا إجابة بعد."
+    },
+    "clear": {
+      "action": "مسح",
+      "title": "مسح المحادثة؟",
+      "message": "تُحذف من هذا الهاتف.",
+      "confirm": "مسح"
+    },
+    "fromCall": "من مكالمة",
+    "actionsLabel": "أماكن مقترحة في التطبيق",
+    "actions": {
+      "sos": "SOS: الطوارئ",
+      "services": "جميع الخدمات",
+      "home": "الرئيسية",
+      "resilience": "مرونة الأسرة",
+      "help": "المساعدة",
+      "consultant": "المستشار",
+      "assistant": "المساعد"
+    },
+    "sources": {
+      "title": "من دليل الدعم",
+      "label": "{{name}}، {{provider}}",
+      "hint": "يفتح صفحتها في المتصفح"
+    }
+  },
+  "emergency": {
+    "title": "أرقام الطوارئ",
+    "intro": "اضغط لفتح لوحة الاتصال. لن يتم الاتصال حتى تضغط زر الاتصال.",
+    "danger": {
+      "title": "هل أنت في خطر الآن؟",
+      "message": "الشرطة 999، والإسعاف 998.",
+      "action": "اتصل بالرقم 999"
+    },
+    "groups": {
+      "emergency": "الطوارئ",
+      "support": "الأسرة والصحة النفسية",
+      "emirate": "في إمارتك"
+    },
+    "coverage": {
+      "uae": "في جميع أنحاء الدولة",
+      "abu_dhabi": "أبوظبي",
+      "dubai": "دبي",
+      "sharjah": "الشارقة",
+      "ajman": "عجمان",
+      "umm_al_quwain": "أم القيوين",
+      "ras_al_khaimah": "رأس الخيمة",
+      "fujairah": "الفجيرة"
+    },
+    "services": {
+      "police": {
+        "name": "الشرطة",
+        "description": "الجرائم والحوادث والخطر."
+      },
+      "ambulance": {
+        "name": "الإسعاف",
+        "description": "الحالات الطبية الطارئة."
+      },
+      "civilDefence": {
+        "name": "الدفاع المدني",
+        "description": "الحرائق والدخان وعمليات الإنقاذ."
+      },
+      "childProtection": {
+        "name": "حماية الطفل",
+        "description": "للإبلاغ عن طفل معرّض للخطر. للخطر الداهم: 999."
+      },
+      "ewaa": {
+        "name": "مراكز إيواء",
+        "description": "الإساءة إلى النساء والأطفال أو الاتجار بهم."
+      },
+      "dubaiFoundation": {
+        "name": "مؤسسة دبي لرعاية النساء والأطفال",
+        "description": "العنف ضد النساء والأطفال. على مدار الساعة."
+      },
+      "familyCareAuthority": {
+        "name": "هيئة الرعاية الأسرية",
+        "description": "الخلافات الأسرية؛ والأطفال والفئات الأكثر حاجة المعرّضون للخطر."
+      },
+      "sakina": {
+        "name": "خط سكينة للصحة النفسية 800",
+        "description": "على مدار الساعة، بالعربية والإنجليزية."
+      },
+      "sharjahProtection": {
+        "name": "مركز حماية الطفل والأسرة",
+        "description": "الأذى الذي يتعرض له الأطفال؛ وحماية المرأة."
+      },
+      "hemaya": {
+        "name": "مؤسسة حماية للمرأة والطفل",
+        "description": "العنف ضد المرأة والطفل."
+      },
+      "aman": {
+        "name": "مركز أمان لإيواء النساء والأطفال",
+        "description": "إيواء، عبر شرطة رأس الخيمة."
+      }
+    },
+    "dialLabel": "{{name}}، {{number}}",
+    "dialHint": "يفتح لوحة الاتصال في هاتفك والرقم مكتوب فيها",
+    "dialFailed": "يتعذّر الاتصال هنا. اتصل بالرقم {{number}} من هاتف.",
+    "footnote": "رُوجعت مع المصادر الرسمية، أكتوبر 2026. الفجيرة وأم القيوين: اتصل بالرقم 999 أو 116111.",
+    "search": {
+      "label": "ابحث في الخدمات",
+      "placeholder": "الاسم أو الإمارة أو الرقم",
+      "clear": "امسح البحث",
+      "count": "النتائج: {{count}}",
+      "none": "لا شيء يطابق \"{{query}}\". في خطر؟ اتصل بالرقم 999."
+    }
+  },
+  "menu": {
+    "open": "افتح القائمة",
+    "close": "أغلق القائمة",
+    "notOnYet": "غير متاح بعد",
+    "signOut": "تسجيل الخروج",
+    "items": {
+      "home": "الرئيسية",
+      "assistant": "مساعد عزوة",
+      "consultant": "مستشار عزوة",
+      "household": "أسرتك",
+      "resilience": "مرونة أسرتك",
+      "services": "جميع الخدمات",
+      "settings": "الإعدادات"
+    }
+  },
+  "consultant": {
+    "title": "مستشار عزوة",
+    "badge": "مستشار صوتي بالذكاء الاصطناعي",
+    "unavailable": {
+      "title": "غير متاح بعد",
+      "message": "المساعدة تغطي الأسئلة الشائعة.",
+      "action": "افتح المساعدة"
+    },
+    "about": "تحدّث بالعربية أو الإنجليزية؛ يستعين بما تحفظه عزوة عن أسرتك. لا يمنح درجات ولا يقرّر شيئًا.",
+    "start": "ابدأ المحادثة",
+    "emergency": "في حالات الطوارئ، اتصل بالرقم 999.",
+    "emergencyLink": "أرقام الطوارئ",
+    "startAgain": "تحدّث مرة أخرى",
+    "ready": "جاهز متى شئت",
+    "ended": "انتهت المكالمة",
+    "connecting": "جارٍ الاتصال…",
+    "privacy": "لا تسجيل. تُضاف الترجمة النصية إلى محادثتك على هذا الهاتف.",
+    "live": {
+      "listening": "يستمع…",
+      "hearing": "أنت تتحدث",
+      "speaking": "المستشار يتحدث",
+      "muted": "مكتوم"
+    },
+    "mute": "كتم",
+    "unmute": "إلغاء الكتم",
+    "end": "إنهاء",
+    "microphone": {
+      "title": "الميكروفون مطلوب",
+      "message": "اسمح به من إعدادات هاتفك.",
+      "action": "فتح الإعدادات"
+    },
+    "failed": {
+      "title": "توقفت المكالمة",
+      "connection": "تعذّر الاتصال. تحقّق من اتصالك.",
+      "message": "حدث خطأ. أعد المحاولة."
+    },
+    "captions": {
+      "title": "الترجمة النصية",
+      "you": "أنت",
+      "consultant": "المستشار"
+    },
+    "headphones": "استخدم السماعات لأفضل صوت.",
+    "suggested": "مقترح"
+  },
+  "resilience": {
+    "title": "مرونة أسرتك",
+    "results": "الدرجة لربّ الأسرة فقط.",
+    "trend": {
+      "title": "عبر الوقت",
+      "loading": "جارٍ تحميل المخطط",
+      "latest": "آخر جولة",
+      "selectedRound": "الجولة المختارة",
+      "roundOn": "الجولة {{wave}} · {{date}}",
+      "scoreWithBand": "{{score}}، {{band}}",
+      "chartLabel": "مخطط خطي لمجموع درجات أسرتك في {{count}} من الجولات، على مقياس من {{min}} إلى {{max}}. آخرها: {{value}}، أُرسلت في {{date}}.",
+      "point": "الجولة {{wave}}، أُرسلت في {{date}}: {{value}}",
+      "pointHint": "يعرض درجة هذه الجولة فوق المخطط",
+      "showList": "كل الجولات",
+      "hideList": "إخفاء القائمة",
+      "single": "يبدأ الخط في الجولة التالية.",
+      "rulesChanged": "تغيّرت القواعد، لذا لا تُوصَل بعض النقاط.",
+      "notShown": "خارج المخطط: {{count}}.",
+      "empty": {
+        "title": "لا درجات بعد",
+        "message": "يبدأ بعد أول جولة تُسجَّل لها درجة."
+      },
+      "headOnly": {
+        "title": "لربّ الأسرة",
+        "message": "المخطط لربّ الأسرة فقط."
+      }
+    }
+  },
+  "services": {
+    "title": "جميع الخدمات",
+    "authorities": {
+      "title": "جهات يمكنها المساعدة",
+      "description": "للعلم فقط: لا تحيلكم عزوة ولا تشارك أي شيء.",
+      "loading": "جارٍ تحميل الجهات",
+      "empty": "لا جهات مدرجة بعد.",
+      "none": "لا شيء يطابق «{{query}}».",
+      "separator": "، ",
+      "private": "جهة خاصة: قد تُطبَّق رسوم.",
+      "showServices": "الخدمات ({{total}})",
+      "hideServices": "إخفاء الخدمات",
+      "showServicesLabel": "عرض خدمات {{name}}",
+      "hideServicesLabel": "إخفاء خدمات {{name}}",
+      "symbols": "الرموز من عزوة، وليست شعارات الجهات."
+    },
+    "directory": {
+      "title": "دليل جهات الدعم",
+      "description": "اعتمدتها عزوة. للعلم فقط.",
+      "loading": "جارٍ تحميل الدليل",
+      "empty": "لا جهات مدرجة بعد.",
+      "none": "لا شيء يطابق «{{query}}».",
+      "visit": "الموقع",
+      "visitLabel": "زيارة موقع {{name}}"
+    }
+  },
+  "settings": {
+    "title": "الإعدادات"
+  },
+  "newCheckIn": {
+    "action": "استبيان جديد",
+    "label": "ابدأ استبيانًا جديدًا الآن",
+    "failed": "تعذّر البدء. أعد المحاولة.",
+    "offline": "لا يوجد اتصال. أعد المحاولة."
+  }
+}

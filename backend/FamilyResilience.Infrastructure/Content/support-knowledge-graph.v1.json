@@ -1,0 +1,870 @@
+{
+  "schema": "support-knowledge-graph.v1",
+  "needs": [
+    { "code": "family_counselling", "label": { "en": "Family counselling", "ar": "الإرشاد الأسري" } },
+    { "code": "mental_health", "label": { "en": "Mental health support", "ar": "دعم الصحة النفسية" } },
+    { "code": "physical_health", "label": { "en": "Health care", "ar": "الرعاية الصحية" } },
+    { "code": "disability_support", "label": { "en": "Support for People of Determination", "ar": "دعم أصحاب الهمم" } },
+    { "code": "child_development", "label": { "en": "Raising children", "ar": "تربية الأبناء" } },
+    { "code": "elderly_care", "label": { "en": "Care for older relatives", "ar": "رعاية كبار السن" } },
+    { "code": "family_violence_protection", "label": { "en": "Protection from harm", "ar": "الحماية من الأذى" } },
+    { "code": "financial_assistance", "label": { "en": "Financial support", "ar": "الدعم المالي" } },
+    { "code": "financial_planning", "label": { "en": "Budgeting and financial planning", "ar": "الميزانية والتخطيط المالي" } },
+    { "code": "housing", "label": { "en": "Housing", "ar": "السكن" } },
+    { "code": "employment", "label": { "en": "Work and training", "ar": "العمل والتدريب" } },
+    { "code": "work_life_balance", "label": { "en": "Balancing work and family", "ar": "التوازن بين العمل والأسرة" } },
+    { "code": "social_connection", "label": { "en": "Community and social ties", "ar": "المجتمع والروابط الاجتماعية" } },
+    { "code": "government_services_access", "label": { "en": "Finding government services", "ar": "الوصول إلى الخدمات الحكومية" } }
+  ],
+  "signals": {
+    "Q01": ["family_counselling"],
+    "Q02": ["family_counselling"],
+    "Q03": ["family_counselling"],
+    "Q04": ["family_counselling"],
+    "Q05": ["family_counselling"],
+    "Q06": ["family_counselling"],
+    "Q07": ["family_counselling"],
+    "Q08": ["family_counselling"],
+    "Q09": ["family_counselling"],
+    "Q10": ["family_counselling"],
+    "Q11": ["family_counselling", "mental_health"],
+    "Q12": ["family_counselling"],
+    "Q13": ["family_counselling", "mental_health"],
+    "Q14": ["family_counselling"],
+    "Q15": ["family_counselling"],
+    "Q16": ["family_counselling", "mental_health"],
+    "Q17": ["family_counselling", "mental_health"],
+    "Q18": ["social_connection"],
+    "Q19": ["social_connection"],
+    "Q20": ["family_counselling", "social_connection"],
+    "Q21": ["family_counselling"],
+    "Q22": ["social_connection"],
+    "Q23": ["financial_planning"],
+    "Q24": ["financial_planning", "financial_assistance"],
+    "Q25": ["financial_assistance"],
+    "Q26": ["financial_assistance"],
+    "Q27": ["family_counselling"],
+    "Q28": ["financial_planning"],
+    "Q29": ["elderly_care"],
+    "Q30": ["social_connection"],
+    "Q31": ["elderly_care", "social_connection"],
+    "Q32": ["elderly_care", "social_connection"],
+    "Q33": ["elderly_care", "physical_health"],
+    "Q34": ["work_life_balance"],
+    "Q35": ["work_life_balance", "family_counselling"],
+    "Q36": ["work_life_balance", "elderly_care", "child_development"],
+    "Q37": ["mental_health", "work_life_balance"],
+    "Q38": ["work_life_balance", "mental_health"],
+    "Q39": ["government_services_access", "elderly_care", "child_development", "disability_support"]
+  },
+  "authorities": [
+    {
+      "code": "family_care_authority",
+      "kind": "government",
+      "name": { "en": "Family Care Authority", "ar": "هيئة الرعاية الأسرية" },
+      "purpose": {
+        "en": "Free counselling and protection for family members in Abu Dhabi, including family disputes and problems affecting children and vulnerable people.",
+        "ar": "إرشاد وحماية مجانيان لأفراد الأسرة في أبوظبي، ويشمل ذلك الخلافات الأسرية والمشكلات التي تمس الأطفال والفئات الأكثر حاجة إلى الرعاية."
+      },
+      "emirates": ["abu_dhabi"],
+      "website": "https://addcd.gov.ae/FCA",
+      "phone": "800 444",
+      "services": [
+        {
+          "code": "fca_counselling",
+          "name": { "en": "Counselling and guidance", "ar": "الإرشاد والتوجيه" },
+          "summary": {
+            "en": "Counselling for family members, including support with mental health.",
+            "ar": "إرشاد لأفراد الأسرة، ويشمل دعم الصحة النفسية."
+          },
+          "needs": ["family_counselling", "mental_health"],
+          "procedure": [
+            { "en": "Call 800 444 and ask for counselling and guidance.", "ar": "اتصلوا بالرقم 800444 واطلبوا خدمة الإرشاد والتوجيه." }
+          ],
+          "documents": [],
+          "website": "https://addcd.gov.ae/en/FCA/FCA-Related-FAQs",
+          "via": null,
+          "evidence": "opened",
+          "sources": [
+            "https://addcd.gov.ae/en/FCA/FCA-Related-FAQs",
+            "https://www.mediaoffice.abudhabi/en/community/family-care-authority-advancing-provision-of-social-care-in-abu-dhabi-through-integrated-service-catalogue/"
+          ]
+        },
+        {
+          "code": "fca_protective_care",
+          "name": { "en": "Protective care", "ar": "الرعاية الحمائية" },
+          "summary": {
+            "en": "Safe, temporary support for people exposed to risk, abuse or violence. In danger now? Call 999.",
+            "ar": "دعم آمن ومؤقت للأشخاص المعرضين للخطر أو الإساءة أو العنف. إذا كان هناك خطر الآن فاتصلوا بالرقم 999."
+          },
+          "needs": ["family_violence_protection"],
+          "procedure": [
+            { "en": "Call 800 444 and say that you need protection.", "ar": "اتصلوا بالرقم 800444 وأخبروهم بحاجتكم إلى الحماية." }
+          ],
+          "documents": [],
+          "website": "https://addcd.gov.ae/en/FCA/FCA-Related-FAQs",
+          "via": null,
+          "evidence": "opened",
+          "sources": [
+            "https://www.mediaoffice.abudhabi/en/community/family-care-authority-advancing-provision-of-social-care-in-abu-dhabi-through-integrated-service-catalogue/"
+          ]
+        }
+      ],
+      "sources": ["https://addcd.gov.ae/en/FCA/FCA-Related-FAQs", "https://addcd.gov.ae/ar-AE/FCA/FCA-Related-FAQs"],
+      "approvalReference": "Named by the owner on 2026-11-06. Facts from public sources, not yet reviewed by the owner or the organisation (D-115, OQ 50).",
+      "checkedOn": "2026-11-06",
+      "reviewDue": "2027-05-06"
+    },
+    {
+      "code": "zayed_authority",
+      "kind": "government",
+      "name": { "en": "Zayed Authority for People of Determination", "ar": "هيئة زايد لأصحاب الهمم" },
+      "purpose": {
+        "en": "Assessment, care, rehabilitation, education and work for People of Determination in Abu Dhabi, with support and training for their families.",
+        "ar": "التقييم والرعاية والتأهيل والتعليم والعمل لأصحاب الهمم في أبوظبي، مع الدعم والتدريب لأسرهم."
+      },
+      "emirates": ["abu_dhabi"],
+      "website": "https://www.za.gov.ae/",
+      "phone": "800 555",
+      "services": [
+        {
+          "code": "za_comprehensive_assessment",
+          "name": { "en": "Comprehensive assessment", "ar": "التقييم الشامل" },
+          "summary": {
+            "en": "An assessment that covers autism, attention and learning difficulties, and intellectual, visual, physical and hearing disabilities, offered in Abu Dhabi, Al Ain and Al Dhafra.",
+            "ar": "تقييم يشمل التوحد وصعوبات الانتباه والتعلم والإعاقات الذهنية والبصرية والجسدية والسمعية، ويتوفر في أبوظبي والعين والظفرة."
+          },
+          "needs": ["disability_support", "child_development"],
+          "procedure": [
+            { "en": "Get a medical report from the competent authorities.", "ar": "الحصول على التقرير الطبي من الجهات المختصة بتقييم الحالة." },
+            { "en": "Attend a psychological or social assessment, and an assessment of physical abilities and functional skills.", "ar": "حضور التقييم النفسي أو الاجتماعي، وكذلك تقييم القدرات الجسدية والمهارات الوظيفية." },
+            { "en": "The main case report is issued and the case is referred to the relevant centre.", "ar": "يُستخرج التقرير الرئيسي للحالة وتُحوَّل إلى المركز المختص." },
+            { "en": "The People of Determination card and parking permit are issued.", "ar": "تصدر بطاقة أصحاب الهمم وتصريح مواقف السيارات الخاص بهم." }
+          ],
+          "documents": [{ "en": "A medical report.", "ar": "التقرير الطبي." }],
+          "website": "https://www.za.gov.ae/ar-AE/Media-Centre/News/Comprehensive-Assessment-at-Zayed-Authority-for-People-of-Determination",
+          "via": null,
+          "evidence": "opened",
+          "sources": ["https://www.za.gov.ae/ar-AE/Media-Centre/News/Comprehensive-Assessment-at-Zayed-Authority-for-People-of-Determination"]
+        },
+        {
+          "code": "za_determination_card",
+          "name": { "en": "People of Determination card", "ar": "بطاقة أصحاب الهمم" },
+          "summary": {
+            "en": "Issue or renew the card, applied for through TAMM.",
+            "ar": "إصدار البطاقة أو تجديدها، ويُقدَّم الطلب عبر منصة تم."
+          },
+          "needs": ["disability_support", "government_services_access"],
+          "procedure": [
+            { "en": "Log in to TAMM using UAE PASS.", "ar": "سجلوا الدخول إلى منصة تم باستخدام الهوية الرقمية." },
+            { "en": "Submit the application and the required documents.", "ar": "قدموا الطلب والمستندات المطلوبة." },
+            { "en": "Get the electronic version of the card.", "ar": "احصلوا على النسخة الإلكترونية من البطاقة." }
+          ],
+          "documents": [
+            { "en": "A medical report or comprehensive evaluation not more than one year old.", "ar": "تقرير طبي أو تقييم شامل لا يزيد عمره على سنة واحدة." }
+          ],
+          "website": "https://www.tamm.abudhabi/en/life-events/individual/SupportCommunityEnvironment/PoD-Support/requestpeopleofdeterminationid",
+          "via": "tamm",
+          "evidence": "search_extract",
+          "sources": ["https://www.tamm.abudhabi/en/life-events/individual/SupportCommunityEnvironment/PoD-Support/requestpeopleofdeterminationid"]
+        }
+      ],
+      "sources": ["https://www.za.gov.ae/en/About-ZHO/About-Us", "https://www.za.gov.ae/Contactus", "https://www.za.gov.ae/ar-AE"],
+      "approvalReference": "Named by the owner on 2026-11-06. Facts from public sources, not yet reviewed by the owner or the organisation (D-115, OQ 50).",
+      "checkedOn": "2026-11-06",
+      "reviewDue": "2027-05-06"
+    },
+    {
+      "code": "sahatna",
+      "kind": "government",
+      "name": { "en": "Sahatna", "ar": "صحتنا" },
+      "purpose": {
+        "en": "The Department of Health – Abu Dhabi's app: book doctors and see health records for yourself and your dependants in one place.",
+        "ar": "تطبيق دائرة الصحة في أبوظبي: حجز مواعيد الأطباء والاطلاع على السجلات الصحية لكم ولمن تعولون في مكان واحد."
+      },
+      "emirates": ["abu_dhabi"],
+      "website": "https://sahatna-app.doh.gov.ae/",
+      "phone": "+971 2 404 5550",
+      "services": [
+        {
+          "code": "sahatna_book_doctor",
+          "name": { "en": "Book a doctor", "ar": "حجز موعد مع طبيب" },
+          "summary": {
+            "en": "Book in person or online. Not every Abu Dhabi facility is connected, so a clinic may not appear.",
+            "ar": "احجزوا حضوريًا أو عبر الإنترنت. لا ترتبط بالتطبيق جميع المنشآت الصحية في أبوظبي، فقد لا تظهر بعض العيادات."
+          },
+          "needs": ["physical_health"],
+          "procedure": [
+            { "en": "Download Sahatna and sign in with UAE PASS.", "ar": "حمّلوا تطبيق صحتنا وسجلوا الدخول بالهوية الرقمية." },
+            { "en": "Find a health facility.", "ar": "ابحثوا عن المنشأة الصحية." },
+            { "en": "Select a doctor.", "ar": "اختاروا الطبيب." },
+            { "en": "Choose the appointment type.", "ar": "حددوا نوع الموعد." },
+            { "en": "Pick a date and time, and confirm.", "ar": "اختاروا التاريخ والوقت، ثم أكدوا." }
+          ],
+          "documents": [],
+          "website": "https://sahatna-app.doh.gov.ae/",
+          "via": null,
+          "evidence": "opened",
+          "sources": ["https://sahatna-app.doh.gov.ae/", "https://sahatna-app.doh.gov.ae/ar/"]
+        },
+        {
+          "code": "sahatna_add_family",
+          "name": { "en": "Add a family member", "ar": "إضافة فرد من العائلة" },
+          "summary": {
+            "en": "Manage the health records and bookings of your dependants, including children.",
+            "ar": "إدارة السجلات الصحية والمواعيد لمن تعولون، بمن فيهم الأطفال."
+          },
+          "needs": ["physical_health"],
+          "procedure": [
+            { "en": "Go to My Profile.", "ar": "انتقلوا إلى ملفي الشخصي." },
+            { "en": "Select My Dependents.", "ar": "حددوا أفراد عائلتكم." },
+            { "en": "Tap Add Family Member.", "ar": "اضغطوا إضافة فرد من العائلة." },
+            { "en": "Enter their Emirates ID.", "ar": "أدخلوا رقم الهوية الإماراتية." }
+          ],
+          "documents": [{ "en": "The family member's Emirates ID number.", "ar": "رقم الهوية الإماراتية لفرد العائلة." }],
+          "website": "https://sahatna-app.doh.gov.ae/",
+          "via": null,
+          "evidence": "opened",
+          "sources": ["https://sahatna-app.doh.gov.ae/", "https://sahatna-app.doh.gov.ae/ar/"]
+        }
+      ],
+      "sources": ["https://sahatna-app.doh.gov.ae/", "https://sahatna-app.doh.gov.ae/en/contact-us/"],
+      "approvalReference": "Named by the owner on 2026-11-06. Facts from public sources, not yet reviewed by the owner or the organisation (D-115, OQ 50).",
+      "checkedOn": "2026-11-06",
+      "reviewDue": "2027-05-06"
+    },
+    {
+      "code": "seha",
+      "kind": "public_provider",
+      "name": { "en": "SEHA – Abu Dhabi Health Services Co.", "ar": "صحة (شركة أبوظبي للخدمات الصحية)" },
+      "purpose": {
+        "en": "Runs the public hospitals and clinics of Abu Dhabi, for adults and children.",
+        "ar": "تدير المستشفيات والعيادات الحكومية في أبوظبي، للكبار والأطفال."
+      },
+      "emirates": ["abu_dhabi"],
+      "website": "https://www.seha.ae",
+      "phone": "80050",
+      "services": [
+        {
+          "code": "seha_psychiatry",
+          "name": { "en": "Psychiatry", "ar": "الطب النفسي" },
+          "summary": {
+            "en": "Specialist care for children and adolescents, adults and older people. Which hospital offers each is not confirmed: ask when you book.",
+            "ar": "رعاية متخصصة للأطفال والمراهقين والبالغين وكبار السن. لم نتأكد من المستشفى الذي يقدم كل تخصص، فاسألوا عند الحجز."
+          },
+          "needs": ["mental_health"],
+          "procedure": [
+            { "en": "Call 80050 or use the SEHA app to book an appointment.", "ar": "اتصلوا بالرقم 80050 أو استخدموا تطبيق صحة لحجز موعد." }
+          ],
+          "documents": [],
+          "website": "https://www.seha.ae/our-specialties",
+          "via": null,
+          "evidence": "opened",
+          "sources": ["https://www.seha.ae/our-specialties", "https://www.seha.ae/faq"]
+        },
+        {
+          "code": "seha_general_care",
+          "name": { "en": "Hospitals and clinics", "ar": "المستشفيات والعيادات" },
+          "summary": {
+            "en": "Book with a doctor across SEHA's hospitals and clinics, including physical and rehabilitation medicine.",
+            "ar": "احجزوا موعدًا مع طبيب في مستشفيات صحة وعياداتها، ويشمل ذلك الطب الطبيعي وإعادة التأهيل."
+          },
+          "needs": ["physical_health"],
+          "procedure": [
+            { "en": "Open the doctors page and set your location.", "ar": "افتحوا صفحة الأطباء وحددوا موقعكم." },
+            { "en": "Select a doctor and book from the doctor's page, or call 80050.", "ar": "اختاروا الطبيب واحجزوا من صفحته، أو اتصلوا بالرقم 80050." }
+          ],
+          "documents": [],
+          "website": "https://www.seha.ae/our-doctors",
+          "via": null,
+          "evidence": "opened",
+          "sources": ["https://www.seha.ae", "https://www.seha.ae/our-doctors"]
+        },
+        {
+          "code": "seha_child_development",
+          "name": { "en": "Children's behaviour and development", "ar": "سلوك الأطفال ونموهم" },
+          "summary": {
+            "en": "Pediatric behavioural development and neurodevelopment specialists.",
+            "ar": "أخصائيون في النمو السلوكي للأطفال والنمو العصبي."
+          },
+          "needs": ["child_development"],
+          "procedure": [
+            { "en": "Call 80050 or use the SEHA app to book an appointment.", "ar": "اتصلوا بالرقم 80050 أو استخدموا تطبيق صحة لحجز موعد." }
+          ],
+          "documents": [],
+          "website": "https://www.seha.ae/our-specialties",
+          "via": null,
+          "evidence": "opened",
+          "sources": ["https://www.seha.ae/our-specialties"]
+        }
+      ],
+      "sources": ["https://www.seha.ae/about-us", "https://www.seha.ae/faq", "https://apps.apple.com/ae/app/seha/id436297690?l=ar"],
+      "approvalReference": "Named by the owner on 2026-11-06. Facts from public sources, not yet reviewed by the owner or the organisation (D-115, OQ 50).",
+      "checkedOn": "2026-11-06",
+      "reviewDue": "2027-05-06"
+    },
+    {
+      "code": "tamm",
+      "kind": "government",
+      "name": { "en": "TAMM", "ar": "تم" },
+      "purpose": {
+        "en": "Abu Dhabi's government services platform: one app and portal for social, family, marriage and disability services run by several government bodies.",
+        "ar": "منصة الخدمات الحكومية في أبوظبي: تطبيق وبوابة واحدة للخدمات الاجتماعية والأسرية وخدمات الزواج وأصحاب الهمم التي تقدمها جهات حكومية عدة."
+      },
+      "emirates": ["abu_dhabi"],
+      "website": "https://www.tamm.abudhabi/en",
+      "phone": "800 555",
+      "services": [
+        {
+          "code": "tamm_family_space",
+          "name": { "en": "Family Space", "ar": "مساحة الأسرة" },
+          "summary": {
+            "en": "A dashboard on TAMM for documents, school registration, marriage and family well-being, and services for seniors and People of Determination.",
+            "ar": "لوحة في منصة تم للوثائق وتسجيل المدارس وخدمات الزواج ورفاه الأسرة، وخدمات كبار المواطنين وأصحاب الهمم."
+          },
+          "needs": ["government_services_access"],
+          "procedure": [],
+          "documents": [],
+          "website": null,
+          "via": null,
+          "evidence": "opened",
+          "sources": ["https://www.mediaoffice.abudhabi/en/community/department-of-community-development-launches-family-space-project-at-gitex-global-2025/"]
+        },
+        {
+          "code": "tamm_solving_social_problems",
+          "name": { "en": "Request for solving social problems", "ar": "طلب حل المشكلات الاجتماعية" },
+          "summary": {
+            "en": "Disputing parties ask a Social Support Centre to help reach an amicable solution. Who can apply is not confirmed.",
+            "ar": "يطلب أطراف الخلاف من مركز الدعم الاجتماعي المساعدة في الوصول إلى حل ودي. لم نتأكد من الفئات التي يحق لها التقديم."
+          },
+          "needs": ["family_counselling"],
+          "procedure": [
+            { "en": "Visit a Social Support Centre.", "ar": "زوروا أحد مراكز الدعم الاجتماعي." },
+            { "en": "Meet a specialist, who assesses the case.", "ar": "قابلوا أخصائيًا يقيّم الحالة." },
+            { "en": "Attend sessions with the specialist.", "ar": "احضروا الجلسات مع الأخصائي." }
+          ],
+          "documents": [{ "en": "Original Emirates ID.", "ar": "الهوية الإماراتية الأصلية." }],
+          "website": "https://www.tamm.abudhabi/en/aspects-of-life/benefits-for-emiratis/socialsupport/SocialServices/RequestforSolvingSocialProblems",
+          "via": null,
+          "evidence": "search_extract",
+          "sources": ["https://www.tamm.abudhabi/en/aspects-of-life/benefits-for-emiratis/socialsupport/SocialServices/RequestforSolvingSocialProblems"]
+        },
+        {
+          "code": "tamm_social_support",
+          "name": { "en": "Social support", "ar": "الدعم الاجتماعي" },
+          "summary": {
+            "en": "Listed under benefits for Emiratis: one renewable year, with the amount depending on family size, and about 45 working days to decide.",
+            "ar": "مدرج ضمن مزايا المواطنين: سنة واحدة قابلة للتجديد، ويعتمد المبلغ على حجم الأسرة، ويستغرق القرار نحو 45 يوم عمل."
+          },
+          "needs": ["financial_assistance"],
+          "procedure": [],
+          "documents": [],
+          "website": "https://www.tamm.abudhabi/ar-AE/aspects-of-life/benefits-for-emiratis/socialsupport/SocialServices/RequestforSocialSupport",
+          "via": null,
+          "evidence": "search_extract",
+          "sources": ["https://www.tamm.abudhabi/ar-AE/aspects-of-life/benefits-for-emiratis/socialsupport/SocialServices/RequestforSocialSupport"]
+        }
+      ],
+      "sources": ["https://dge.gov.ae/en/news/dge-abu-dhabi-launches-tamm-3/", "https://www.tamm.abudhabi/en/support"],
+      "approvalReference": "Named by the owner on 2026-11-06. Facts from public sources, not yet reviewed by the owner or the organisation (D-115, OQ 50).",
+      "checkedOn": "2026-11-06",
+      "reviewDue": "2027-05-06"
+    },
+    {
+      "code": "community_development_authority",
+      "kind": "government",
+      "name": { "en": "Community Development Authority", "ar": "هيئة تنمية المجتمع" },
+      "purpose": {
+        "en": "Dubai's authority for counselling on family and marital problems, financial and housing benefits, and services for seniors, People of Determination and minors.",
+        "ar": "هيئة دبي للإرشاد في المشكلات الأسرية والزوجية، والمزايا المالية والسكنية، والخدمات المقدمة لكبار المواطنين وأصحاب الهمم والقُصّر."
+      },
+      "emirates": ["dubai"],
+      "website": "https://www.cda.gov.ae/",
+      "phone": "800 2121",
+      "services": [
+        {
+          "code": "cda_family_counselling",
+          "name": { "en": "Family counselling", "ar": "الاستشارات الأسرية" },
+          "summary": {
+            "en": "For individuals and couples with family and marital problems.",
+            "ar": "للأفراد والأزواج الذين يواجهون مشكلات أسرية وزوجية."
+          },
+          "needs": ["family_counselling"],
+          "procedure": [
+            { "en": "Reach the service through the Dubai Now app, a customer happiness centre or the call centre on 800 2121.", "ar": "الوصول إلى الخدمة عبر تطبيق \"دبي الآن\" أو مراكز إسعاد المتعاملين أو مركز الاتصال 8002121." }
+          ],
+          "documents": [],
+          "website": "https://www.cda.gov.ae/en/services/family-developments/family-counselling",
+          "via": null,
+          "evidence": "opened",
+          "sources": ["https://www.cda.gov.ae/en/services", "https://www.emaratalyoum.com/local-section/other/2026-09-21-1.2085036"]
+        },
+        {
+          "code": "cda_periodic_benefit",
+          "name": { "en": "Periodic benefit", "ar": "المزايا الدورية" },
+          "summary": {
+            "en": "Temporary cash support that supplements a head of household's income, listed for Dubai nationals.",
+            "ar": "دعم نقدي مؤقت يكمّل دخل رب الأسرة، ومدرج لمواطني دبي."
+          },
+          "needs": ["financial_assistance"],
+          "procedure": [],
+          "documents": [],
+          "website": "https://www.cda.gov.ae/en/services/financial-social-benefits/periodic-benefit",
+          "via": null,
+          "evidence": "opened",
+          "sources": ["https://www.cda.gov.ae/en/services"]
+        },
+        {
+          "code": "cda_temporary_housing",
+          "name": { "en": "Temporary housing benefit", "ar": "مزايا السكن المؤقت" },
+          "summary": {
+            "en": "For eligible beneficiaries who do not have a home.",
+            "ar": "للمستفيدين المؤهلين الذين ليس لديهم مسكن."
+          },
+          "needs": ["housing"],
+          "procedure": [],
+          "documents": [],
+          "website": "https://www.cda.gov.ae/en/services/financial-social-benefits/temporary-housing-benefit",
+          "via": null,
+          "evidence": "opened",
+          "sources": ["https://www.cda.gov.ae/en/services"]
+        },
+        {
+          "code": "cda_seniors",
+          "name": { "en": "Services for seniors", "ar": "خدمات كبار المواطنين" },
+          "summary": {
+            "en": "A category of services for seniors, and a protection hotline. Azwah could not read the details.",
+            "ar": "فئة من الخدمات لكبار المواطنين وخط ساخن للحماية. لم تتمكن عزوة من الاطلاع على التفاصيل."
+          },
+          "needs": ["elderly_care"],
+          "procedure": [],
+          "documents": [],
+          "website": "https://www.cda.gov.ae/en/services",
+          "via": null,
+          "evidence": "opened",
+          "sources": ["https://www.cda.gov.ae/en/services", "https://www.cda.gov.ae/en/hotline"]
+        },
+        {
+          "code": "cda_determined_ones",
+          "name": { "en": "Services for People of Determination", "ar": "خدمات أصحاب الهمم" },
+          "summary": {
+            "en": "A category of services for People of Determination, and a protection hotline. Azwah could not read the details.",
+            "ar": "فئة من الخدمات لأصحاب الهمم وخط ساخن للحماية. لم تتمكن عزوة من الاطلاع على التفاصيل."
+          },
+          "needs": ["disability_support"],
+          "procedure": [],
+          "documents": [],
+          "website": "https://www.cda.gov.ae/en/services",
+          "via": null,
+          "evidence": "opened",
+          "sources": ["https://www.cda.gov.ae/en/services", "https://www.cda.gov.ae/en/hotline"]
+        },
+        {
+          "code": "cda_child_protection",
+          "name": { "en": "Protection hotlines", "ar": "خطوط الحماية الساخنة" },
+          "summary": {
+            "en": "Hotlines for protecting children, seniors and People of Determination. In danger now? Call 999.",
+            "ar": "خطوط ساخنة لحماية الأطفال وكبار المواطنين وأصحاب الهمم. إذا كان هناك خطر الآن فاتصلوا بالرقم 999."
+          },
+          "needs": ["family_violence_protection"],
+          "procedure": [
+            { "en": "Call 800 2121.", "ar": "اتصلوا بالرقم 8002121." }
+          ],
+          "documents": [],
+          "website": "https://www.cda.gov.ae/en/hotline",
+          "via": null,
+          "evidence": "opened",
+          "sources": ["https://www.cda.gov.ae/en/hotline"]
+        },
+        {
+          "code": "cda_community_programs",
+          "name": { "en": "Community programmes and volunteering", "ar": "البرامج المجتمعية والتطوع" },
+          "summary": {
+            "en": "Categories of community programmes and volunteering. Azwah could not read the details.",
+            "ar": "فئات من البرامج المجتمعية والتطوع. لم تتمكن عزوة من الاطلاع على التفاصيل."
+          },
+          "needs": ["social_connection"],
+          "procedure": [],
+          "documents": [],
+          "website": "https://www.cda.gov.ae/en/services",
+          "via": null,
+          "evidence": "opened",
+          "sources": ["https://www.cda.gov.ae/en/services"]
+        }
+      ],
+      "sources": ["https://www.cda.gov.ae/en/contact-us", "https://www.cda.gov.ae/ar/contact-us"],
+      "approvalReference": "Named by the owner on 2026-11-06. Facts from public sources, not yet reviewed by the owner or the organisation (D-115, OQ 50).",
+      "checkedOn": "2026-11-06",
+      "reviewDue": "2027-05-06"
+    },
+    {
+      "code": "sharjah_statistics_community_development",
+      "kind": "government",
+      "name": { "en": "Department of Statistics and Community Development", "ar": "دائرة الإحصاء والتنمية المجتمعية" },
+      "purpose": {
+        "en": "Sharjah's statistics department: censuses, household surveys and studies that support family and development policy. Azwah found no service here that helps individual families.",
+        "ar": "دائرة الإحصاء في الشارقة: التعدادات والمسوح الأسرية والدراسات الداعمة لسياسات الأسرة والتنمية. لم تجد عزوة خدمة تقدمها الدائرة لمساعدة الأسر مباشرة."
+      },
+      "emirates": ["sharjah"],
+      "website": null,
+      "phone": null,
+      "services": [],
+      "sources": [
+        "https://sharjah24.ae/en/Articles/2025/05/15/SCC-cmte-DSCD-discuss-ways-to-support-family-policies",
+        "https://sharjah24.ae/ar/Articles/2025/05/15/SCC-cmte-DSCD-discuss-ways-to-support-family-policies",
+        "https://www.khaleejtimes.com/local-business/sharjahs-dscd-reinforces-commitment-to-quality-with-four-iso-certifications"
+      ],
+      "approvalReference": "Named by the owner on 2026-11-06. Facts from public sources, not yet reviewed by the owner or the organisation (D-115, OQ 50).",
+      "checkedOn": "2026-11-06",
+      "reviewDue": "2027-05-06"
+    },
+    {
+      "code": "family_development_foundation",
+      "kind": "government",
+      "name": { "en": "Family Development Foundation", "ar": "مؤسسة التنمية الأسرية" },
+      "purpose": {
+        "en": "Family guidance and awareness in Abu Dhabi, and care for older people and those who look after them.",
+        "ar": "الإرشاد والتوعية الأسرية في أبوظبي، ورعاية كبار السن ومن يقومون على رعايتهم."
+      },
+      "emirates": ["abu_dhabi"],
+      "website": "https://www.fdf.gov.ae/",
+      "phone": "800 555",
+      "services": [
+        {
+          "code": "fdf_social_counselling",
+          "name": { "en": "Register for social counselling", "ar": "التسجيل في الإرشاد الاجتماعي" },
+          "summary": {
+            "en": "Listed by the foundation on TAMM. Azwah could not read the details.",
+            "ar": "مدرجة ضمن خدمات المؤسسة في منصة تم. لم تتمكن عزوة من الاطلاع على التفاصيل."
+          },
+          "needs": ["family_counselling"],
+          "procedure": [],
+          "documents": [],
+          "website": "https://www.tamm.abudhabi/ar-AE/aspects-of-life/familycommunity/socialservices/FamilySupport",
+          "via": "tamm",
+          "evidence": "search_extract",
+          "sources": ["https://www.tamm.abudhabi/ar-AE/aspects-of-life/familycommunity/socialservices/FamilySupport"]
+        },
+        {
+          "code": "fdf_primary_caregiver_certificate",
+          "name": { "en": "Primary caregiver certificate", "ar": "شهادة مقدم الرعاية الأساسي" },
+          "summary": {
+            "en": "Lets eligible Abu Dhabi government employees caring at home for an Emirati parent aged 60 or over ask for flexible work. The parent needs continuous care at home.",
+            "ar": "تتيح لموظفي حكومة أبوظبي المؤهلين الذين يرعون في المنزل أحد الوالدين من المواطنين ممن بلغوا 60 عامًا فأكثر طلب العمل المرن. ويحتاج الوالد إلى رعاية منزلية مستمرة."
+          },
+          "needs": ["elderly_care", "work_life_balance"],
+          "procedure": [
+            { "en": "Log in to TAMM with a digital ID.", "ar": "سجلوا الدخول إلى منصة تم بالهوية الرقمية." },
+            { "en": "Submit the application and the required documents.", "ar": "قدموا الطلب والمستندات المطلوبة." },
+            { "en": "Receive an application confirmation.", "ar": "استلموا تأكيد الطلب." },
+            { "en": "Schedule a home visit by the foundation and wait for the date of the social assessment visit.", "ar": "حددوا موعد الزيارة المنزلية من المؤسسة، وانتظروا إشعارًا بموعد زيارة التقييم الاجتماعي." },
+            { "en": "Pass the evaluation to receive the certificate.", "ar": "اجتازوا التقييم لتحصلوا على الشهادة." }
+          ],
+          "documents": [
+            { "en": "A medical report from a licensed Abu Dhabi healthcare facility, dated within the past three months.", "ar": "تقرير طبي من منشأة صحية مرخصة في أبوظبي، صادر خلال الأشهر الثلاثة الماضية." },
+            { "en": "An Abu Dhabi Family Book.", "ar": "خلاصة قيد صادرة من أبوظبي." }
+          ],
+          "website": "https://www.mediaoffice.abudhabi/en/community/in-collaboration-with-department-of-community-development-family-development-foundation-and-department-of-government-enablement-empower-caregivers-to-benefit-from-flexible-work-systems-for-parental-care/",
+          "via": "tamm",
+          "evidence": "opened",
+          "sources": ["https://www.mediaoffice.abudhabi/en/community/in-collaboration-with-department-of-community-development-family-development-foundation-and-department-of-government-enablement-empower-caregivers-to-benefit-from-flexible-work-systems-for-parental-care/"]
+        },
+        {
+          "code": "fdf_home_care",
+          "name": { "en": "Home-based care for seniors", "ar": "الرعاية المنزلية لكبار المواطنين" },
+          "summary": {
+            "en": "Full-time or part-time help at home with mobility, dressing, daily tasks, light housework and nutrition.",
+            "ar": "مساعدة في المنزل بدوام كامل أو جزئي في الحركة وارتداء الملابس والمهام اليومية والأعمال المنزلية الخفيفة والتغذية."
+          },
+          "needs": ["elderly_care"],
+          "procedure": [],
+          "documents": [],
+          "website": "https://www.tamm.abudhabi/en/life-events/individual/SupportCommunityEnvironment/senior-citizens/ObtainingHome-BasedPersonalCareandAssistanceforSeniorCitizens",
+          "via": "tamm",
+          "evidence": "search_extract",
+          "sources": ["https://www.tamm.abudhabi/en/life-events/individual/SupportCommunityEnvironment/senior-citizens/ObtainingHome-BasedPersonalCareandAssistanceforSeniorCitizens"]
+        },
+        {
+          "code": "fdf_barakat_al_dar",
+          "name": { "en": "Barakat Al Dar club membership", "ar": "عضوية نادي بركة الدار" },
+          "summary": {
+            "en": "A club for older people, applied for through TAMM.",
+            "ar": "نادٍ لكبار السن، ويُقدَّم طلب العضوية عبر منصة تم."
+          },
+          "needs": ["social_connection", "elderly_care"],
+          "procedure": [],
+          "documents": [],
+          "website": "https://www.tamm.abudhabi/en/aspects-of-life/familycommunity/socialservices/FamilySupport/BarakatAlDarClubMembershipApplication",
+          "via": "tamm",
+          "evidence": "search_extract",
+          "sources": ["https://www.tamm.abudhabi/en/aspects-of-life/familycommunity/socialservices/FamilySupport/BarakatAlDarClubMembershipApplication"]
+        },
+        {
+          "code": "fdf_work_family_workshop",
+          "name": { "en": "Balancing family and work workshop", "ar": "ورشة التوازن بين الأسرة والعمل" },
+          "summary": {
+            "en": "A workshop you enrol in through TAMM.",
+            "ar": "ورشة يجري التسجيل فيها عبر منصة تم."
+          },
+          "needs": ["work_life_balance"],
+          "procedure": [],
+          "documents": [],
+          "website": "https://www.tamm.abudhabi/en/life-events/individual/SupportCommunityEnvironment/SocialCare/BalanceFamilyWorkWorkshopApplication",
+          "via": "tamm",
+          "evidence": "search_extract",
+          "sources": ["https://www.tamm.abudhabi/en/life-events/individual/SupportCommunityEnvironment/SocialCare/BalanceFamilyWorkWorkshopApplication"]
+        },
+        {
+          "code": "fdf_social_welfare",
+          "name": { "en": "Register for social welfare", "ar": "التسجيل في الرعاية الاجتماعية" },
+          "summary": {
+            "en": "\"To help maintain social stability\". Its page does not state what support it gives or who qualifies.",
+            "ar": "\"للمساعدة في الحفاظ على الاستقرار الاجتماعي\". لا تذكر صفحتها نوع الدعم الذي تقدمه ولا الفئات المؤهلة."
+          },
+          "needs": ["financial_assistance"],
+          "procedure": [
+            { "en": "Log in using UAE PASS or another listed channel.", "ar": "سجلوا الدخول بالهوية الرقمية أو عبر إحدى القنوات المتاحة." },
+            { "en": "Submit the application.", "ar": "قدموا الطلب." },
+            { "en": "Approval arrives by SMS.", "ar": "تصل الموافقة برسالة نصية." }
+          ],
+          "documents": [{ "en": "Original Emirates ID.", "ar": "الهوية الإماراتية الأصلية." }],
+          "website": "https://www.tamm.abudhabi/en/aspects-of-life/familycommunity/socialservices/FamilySupport/SocialWelfareApplication",
+          "via": "tamm",
+          "evidence": "search_extract",
+          "sources": ["https://www.tamm.abudhabi/en/aspects-of-life/familycommunity/socialservices/FamilySupport/SocialWelfareApplication"]
+        }
+      ],
+      "sources": ["https://www.emaratalyoum.com/local-section/other/2024-12-14-1.1904716", "https://www.mediaoffice.abudhabi/ar/community/new-family-development-foundation-centre-opens-in-al-ruwais/", "https://www.tamm.abudhabi/en/support"],
+      "approvalReference": "Named by the owner on 2026-11-06. Facts from public sources, not yet reviewed by the owner or the organisation (D-115, OQ 50).",
+      "checkedOn": "2026-11-06",
+      "reviewDue": "2027-05-06"
+    },
+    {
+      "code": "tarmeem",
+      "kind": "private",
+      "name": { "en": "Tarmeem Orthopedic and Spine Specialty Hospital", "ar": "مستشفى ترميم التخصصي لجراحة العظام والعمود الفقري" },
+      "purpose": {
+        "en": "A private hospital in Abu Dhabi and Al Ain for diagnosis, surgery and rehabilitation of bone, joint and spine problems.",
+        "ar": "مستشفى خاص في أبوظبي والعين لتشخيص مشكلات العظام والمفاصل والعمود الفقري وجراحتها وإعادة التأهيل منها."
+      },
+      "emirates": ["abu_dhabi"],
+      "website": "https://tarmeem.com",
+      "phone": "800 1599",
+      "services": [
+        {
+          "code": "tarmeem_orthopaedic_care",
+          "name": { "en": "Bone, joint and spine care", "ar": "رعاية العظام والمفاصل والعمود الفقري" },
+          "summary": {
+            "en": "Includes knee and hip, spine, pain management, and physiotherapy and rehabilitation.",
+            "ar": "تشمل الركبة والورك والعمود الفقري وعلاج الألم والعلاج الطبيعي وإعادة التأهيل."
+          },
+          "needs": ["physical_health"],
+          "procedure": [
+            { "en": "Fill in the online appointment form.", "ar": "املؤوا نموذج حجز الموعد عبر الإنترنت." },
+            { "en": "A representative calls back to schedule with an available doctor.", "ar": "يتصل بكم ممثل لتحديد موعد مع طبيب متاح." }
+          ],
+          "documents": [],
+          "website": "https://tarmeem.com/book-an-appointment/",
+          "via": null,
+          "evidence": "opened",
+          "sources": ["https://tarmeem.com", "https://tarmeem.com/book-an-appointment/"]
+        }
+      ],
+      "sources": ["https://tarmeem.com"],
+      "approvalReference": "Named by the owner on 2026-11-06. Facts from public sources, not yet reviewed by the owner or the organisation (D-115, OQ 50).",
+      "checkedOn": "2026-11-06",
+      "reviewDue": "2027-05-06"
+    },
+    {
+      "code": "supreme_council_motherhood_childhood",
+      "kind": "government",
+      "name": { "en": "Supreme Council for Motherhood and Childhood", "ar": "المجلس الأعلى للأمومة والطفولة" },
+      "purpose": {
+        "en": "A national body for programmes and awareness on motherhood, childhood and parenting. Azwah found no service here that takes cases from individual families.",
+        "ar": "جهة وطنية للبرامج والتوعية في مجالات الأمومة والطفولة والوالدية. لم تجد عزوة خدمة لدى المجلس تستقبل حالات الأسر مباشرة."
+      },
+      "emirates": ["uae"],
+      "website": null,
+      "phone": null,
+      "services": [],
+      "sources": [
+        "https://scmc.gov.ae/",
+        "https://www.mediaoffice.abudhabi/en/community/supreme-council-for-motherhood-and-childhoods-in-abu-dhabi-20-years-of-supporting-children-and-mothers-wellbeing-in-the-uae/",
+        "https://www.mediaoffice.abudhabi/ar/topic/supreme-council-for-motherhood-childhood"
+      ],
+      "approvalReference": "Named by the owner on 2026-11-06. Facts from public sources, not yet reviewed by the owner or the organisation (D-115, OQ 50).",
+      "checkedOn": "2026-11-06",
+      "reviewDue": "2027-05-06"
+    },
+    {
+      "code": "national_academy_childhood_development",
+      "kind": "government",
+      "name": { "en": "National Academy for Childhood Development", "ar": "الأكاديمية الوطنية لتنمية الطفولة" },
+      "purpose": {
+        "en": "An Abu Dhabi academy that trains parents, caregivers and professionals in raising children from birth to 18. It is a training body, not a clinic.",
+        "ar": "أكاديمية في أبوظبي تدرّب أولياء الأمور ومقدمي الرعاية والمهنيين على تربية الأطفال من الولادة حتى سن 18 عامًا. وهي جهة تدريب وليست عيادة."
+      },
+      "emirates": ["abu_dhabi"],
+      "website": "https://nacd.ac.ae/",
+      "phone": "+971 2 333 7400",
+      "services": [
+        {
+          "code": "nacd_parent_courses",
+          "name": { "en": "Short courses for parents", "ar": "دورات قصيرة لأولياء الأمور" },
+          "summary": {
+            "en": "Include positive parenting, screen time, parents' and children's mental and emotional health, and balancing work and personal life. Education, not treatment.",
+            "ar": "تشمل الوالدية الإيجابية وإدارة الوقت أمام الشاشة والصحة النفسية والعاطفية للوالدين والأبناء والتوازن بين الحياة المهنية والشخصية. وهي للتعليم لا للعلاج."
+          },
+          "needs": ["child_development", "work_life_balance"],
+          "procedure": [
+            { "en": "Open the academy's training programmes page and choose a course.", "ar": "افتحوا صفحة برامج التدريب في الأكاديمية واختاروا دورة." },
+            { "en": "For questions, email admissions@nacd.ac.ae.", "ar": "للاستفسار راسلوا admissions@nacd.ac.ae." }
+          ],
+          "documents": [],
+          "website": "https://nacd.ac.ae/training-and-continuing-eduction-programs/",
+          "via": null,
+          "evidence": "opened",
+          "sources": ["https://nacd.ac.ae/training-and-continuing-eduction-programs/"]
+        },
+        {
+          "code": "nacd_vocational_diploma",
+          "name": { "en": "Vocational diploma in childhood development", "ar": "الدبلوم المهني في تنمية الطفولة" },
+          "summary": {
+            "en": "An 18-month course in Arabic for people who want a career in caregiving. Registration for the fourth cohort has closed; ask about later intakes.",
+            "ar": "برنامج مدته 18 شهرًا باللغة العربية لمن يرغبون في العمل في مجال الرعاية. أُغلق باب التسجيل في الدفعة الرابعة، فاسألوا عن الدفعات اللاحقة."
+          },
+          "needs": ["employment"],
+          "procedure": [
+            { "en": "Apply through the application platform.", "ar": "قدموا طلب التسجيل الأولي من خلال منصة التقديم." },
+            { "en": "Attend the online seminar and take a short test.", "ar": "احضروا الندوة عبر الإنترنت وأدوا اختبارًا قصيرًا." },
+            { "en": "Sit entrance exams in Arabic, English and self-development.", "ar": "أدوا اختبارات القبول في اللغة العربية واللغة الإنجليزية وتطوير الذات." },
+            { "en": "Join a group assessment with three to five applicants.", "ar": "شاركوا في تقييم جماعي مع ثلاثة إلى خمسة متقدمين." }
+          ],
+          "documents": [
+            { "en": "A passport valid for 12 months.", "ar": "جواز سفر ساري المفعول لمدة 12 شهرًا." },
+            { "en": "An Emirates ID, and a family book extract for citizens.", "ar": "الهوية الإماراتية، وخلاصة القيد للمواطنين." },
+            { "en": "A criminal record certificate.", "ar": "شهادة حسن السيرة والسلوك." },
+            { "en": "A white-background photo and a CV.", "ar": "صورة بخلفية بيضاء وسيرة ذاتية." },
+            { "en": "An attested secondary certificate.", "ar": "شهادة ثانوية مصدقة." }
+          ],
+          "website": "https://nacd.ac.ae/professional-diploma-program/admission/",
+          "via": null,
+          "evidence": "opened",
+          "sources": ["https://nacd.ac.ae/professional-diploma-program/admission/"]
+        }
+      ],
+      "sources": ["https://nacd.ac.ae/", "https://nacd.ac.ae/en/", "https://nacd.ac.ae/contact-us/"],
+      "approvalReference": "Named by the owner on 2026-11-06. Facts from public sources, not yet reviewed by the owner or the organisation (D-115, OQ 50).",
+      "checkedOn": "2026-11-06",
+      "reviewDue": "2027-05-06"
+    },
+    {
+      "code": "acpn",
+      "kind": "private",
+      "name": { "en": "American Center for Psychiatry and Neurology (ACPN)", "ar": "المركز الأمريكي النفسي والعصبي" },
+      "purpose": {
+        "en": "A private specialist centre for psychiatric, psychological and neurological care at all ages, with branches in Abu Dhabi, Al Ain, Dubai and Sharjah.",
+        "ar": "مركز تخصصي خاص للرعاية النفسية والعصبية لجميع الأعمار، وله فروع في أبوظبي والعين ودبي والشارقة."
+      },
+      "emirates": ["abu_dhabi", "dubai", "sharjah"],
+      "website": "https://www.americancenteruae.com",
+      "phone": "800 2276",
+      "services": [
+        {
+          "code": "acpn_psychiatry",
+          "name": { "en": "Psychiatry", "ar": "الطب النفسي" },
+          "summary": {
+            "en": "For children, adolescents and adults, including age-related conditions and addiction recovery.",
+            "ar": "للأطفال والمراهقين والبالغين، ويشمل الحالات المرتبطة بالتقدم في العمر والتعافي من الإدمان."
+          },
+          "needs": ["mental_health"],
+          "procedure": [
+            { "en": "Complete the online form, choosing a branch and department.", "ar": "املؤوا النموذج عبر الإنترنت واختاروا الفرع والقسم." },
+            { "en": "The team replies within 24 hours.", "ar": "يرد عليكم الفريق خلال 24 ساعة." },
+            { "en": "The booking is final only after a confirmation call.", "ar": "لا يصبح الحجز نهائيًا إلا بعد مكالمة تأكيد." }
+          ],
+          "documents": [],
+          "website": "https://www.americancenteruae.com/services/psychiatry/",
+          "via": null,
+          "evidence": "opened",
+          "sources": ["https://www.americancenteruae.com/services/psychiatry/", "https://www.americancenteruae.com/contact-us/"]
+        },
+        {
+          "code": "acpn_family_therapy",
+          "name": { "en": "Couple's and family therapy", "ar": "العلاج الأسري وعلاج الأزواج" },
+          "summary": {
+            "en": "Also parenting skills training and parent-child relational therapy.",
+            "ar": "ويشمل أيضًا التدريب على مهارات الوالدية والعلاج الخاص بالعلاقة بين الوالدين والطفل."
+          },
+          "needs": ["family_counselling"],
+          "procedure": [
+            { "en": "Complete the online form, choosing a branch and department.", "ar": "املؤوا النموذج عبر الإنترنت واختاروا الفرع والقسم." },
+            { "en": "The team replies within 24 hours.", "ar": "يرد عليكم الفريق خلال 24 ساعة." },
+            { "en": "The booking is final only after a confirmation call.", "ar": "لا يصبح الحجز نهائيًا إلا بعد مكالمة تأكيد." }
+          ],
+          "documents": [],
+          "website": "https://www.americancenteruae.com/services/psychology/",
+          "via": null,
+          "evidence": "opened",
+          "sources": ["https://www.americancenteruae.com/services/psychology/", "https://www.americancenteruae.com/contact-us/"]
+        },
+        {
+          "code": "acpn_child_assessment",
+          "name": { "en": "Children's assessment and therapy", "ar": "تقييم الأطفال وعلاجهم" },
+          "summary": {
+            "en": "Assessments for autism, hyperactivity and learning disabilities, with therapy and social skills groups.",
+            "ar": "تقييمات للتوحد وفرط الحركة وصعوبات التعلم، مع جلسات علاج ومجموعات للمهارات الاجتماعية."
+          },
+          "needs": ["child_development", "disability_support"],
+          "procedure": [
+            { "en": "Complete the online form, choosing a branch and department.", "ar": "املؤوا النموذج عبر الإنترنت واختاروا الفرع والقسم." },
+            { "en": "The team replies within 24 hours.", "ar": "يرد عليكم الفريق خلال 24 ساعة." },
+            { "en": "The booking is final only after a confirmation call.", "ar": "لا يصبح الحجز نهائيًا إلا بعد مكالمة تأكيد." }
+          ],
+          "documents": [],
+          "website": "https://www.americancenteruae.com/services/psychology/",
+          "via": null,
+          "evidence": "opened",
+          "sources": ["https://www.americancenteruae.com/services/psychology/", "https://www.americancenteruae.com/contact-us/"]
+        }
+      ],
+      "sources": ["https://www.americancenteruae.com", "https://www.americancenteruae.com/ar/", "https://www.americancenteruae.com/contact-us/", "https://www.americancenteruae.com/insurance/"],
+      "approvalReference": "ACPN as named by the owner on 2026-11-06, taken to mean this centre; the owner has not confirmed it. Facts from public sources, not yet reviewed (D-115, OQ 50).",
+      "checkedOn": "2026-11-06",
+      "reviewDue": "2027-05-06"
+    },
+    {
+      "code": "municipal_presence_centres",
+      "kind": "government",
+      "name": { "en": "Municipal Presence Centres", "ar": "مراكز التواجد البلدي" },
+      "purpose": {
+        "en": "Neighbourhood centres of Abu Dhabi's Department of Municipalities and Transport: a local contact point for community needs, municipal rules and using TAMM.",
+        "ar": "مراكز في الأحياء تابعة لدائرة البلديات والنقل في أبوظبي: نقطة تواصل محلية لاحتياجات المجتمع والأنظمة البلدية واستخدام منصة تم."
+      },
+      "emirates": ["abu_dhabi"],
+      "website": "https://www.dmt.gov.ae/",
+      "phone": null,
+      "services": [
+        {
+          "code": "mpc_local_help",
+          "name": { "en": "Local guidance and community events", "ar": "الإرشاد المحلي والفعاليات المجتمعية" },
+          "summary": {
+            "en": "Records community needs, explains municipal procedures, helps residents use TAMM and holds community events. Azwah found no list of addresses.",
+            "ar": "توثق احتياجات المجتمع وتشرح الإجراءات البلدية وتساعد السكان على استخدام منصة تم وتنظم فعاليات مجتمعية. لم تجد عزوة قائمة بالعناوين."
+          },
+          "needs": ["government_services_access", "social_connection"],
+          "procedure": [],
+          "documents": [],
+          "website": "https://www.dmt.gov.ae/en/Media-Centre/News/DMT-Approves-Plan-to-Expand-Municipal-Presence-Centres",
+          "via": null,
+          "evidence": "opened",
+          "sources": ["https://www.dmt.gov.ae/en/Media-Centre/News/DMT-Approves-Plan-to-Expand-Municipal-Presence-Centres", "https://www.mediaoffice.abudhabi/ar/topic/municipal-presence-centres/"]
+        }
+      ],
+      "sources": ["https://www.dmt.gov.ae/en/Media-Centre/News/DMT-Approves-Plan-to-Expand-Municipal-Presence-Centres", "https://www.mediaoffice.abudhabi/ar/topic/municipal-presence-centres/"],
+      "approvalReference": "Named by the owner on 2026-11-06. Facts from public sources, not yet reviewed by the owner or the organisation (D-115, OQ 50).",
+      "checkedOn": "2026-11-06",
+      "reviewDue": "2027-05-06"
+    }
+  ]
+}

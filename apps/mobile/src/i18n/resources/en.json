@@ -1,0 +1,1447 @@
+{
+  "app": {
+    "name": "Azwah",
+    "meaning": "The family and kin who stand by you",
+    "tagline": "Health, social and human embrace."
+  },
+  "language": {
+    "title": "Language",
+    "switchHint": "Changes the app language to Arabic. The app restarts to lay out right to left.",
+    "restartNote": "The app restarts to switch.",
+    "names": {
+      "en": "English",
+      "ar": "Arabic"
+    }
+  },
+  "common": {
+    "back": "Back",
+    "cancel": "Cancel",
+    "goHome": "Go to Home",
+    "goToStart": "Go to start",
+    "loading": "Loading…",
+    "next": "Next",
+    "previous": "Previous",
+    "retry": "Try again",
+    "listSeparator": ", "
+  },
+  "unsavedChanges": {
+    "title": "Discard changes?",
+    "message": "Unsaved changes will be lost.",
+    "discard": "Discard",
+    "keepEditing": "Keep editing"
+  },
+  "placeholder": {
+    "title": "Awaiting approval"
+  },
+  "errors": {
+    "boundary": {
+      "title": "Something went wrong",
+      "message": "Try again. Saved answers are kept."
+    },
+    "kinds": {
+      "not_configured": {
+        "title": "No server address",
+        "message": "Contact whoever gave you the app."
+      },
+      "network": {
+        "title": "Can't connect",
+        "message": "Check your connection and try again."
+      },
+      "timeout": {
+        "title": "Taking too long",
+        "message": "Try again."
+      },
+      "server": {
+        "title": "Azwah has a problem",
+        "message": "Try again in a few minutes."
+      },
+      "invalid_response": {
+        "title": "Unexpected reply",
+        "message": "Try again later, or update the app."
+      },
+      "bad_request": {
+        "title": "Couldn't save",
+        "message": "Check your entries and try again."
+      },
+      "unauthorized": {
+        "title": "Session ended",
+        "message": "Sign in again."
+      },
+      "forbidden": {
+        "title": "Not available to you",
+        "message": "You don't have permission for this."
+      },
+      "not_found": {
+        "title": "Not found",
+        "message": "It doesn't exist or isn't yours."
+      },
+      "conflict": {
+        "title": "Something changed",
+        "message": "Go back and try again."
+      },
+      "payload_too_large": {
+        "title": "Too much to send",
+        "message": "Try again in a moment."
+      },
+      "rate_limited": {
+        "title": "Too many requests",
+        "message": "Wait a minute, then try again."
+      },
+      "unexpected": {
+        "title": "Something went wrong",
+        "message": "Try again, or restart the app."
+      }
+    }
+  },
+  "problems": {
+    "households": {
+      "already_member": "You're already in a household.",
+      "manager_under_18": "You must be 18 or older.",
+      "head_already_exists": "There's already a head of household.",
+      "primary_earner_already_exists": "There's already a main earner.",
+      "birth_month_in_future": "That month is in the future.",
+      "head_has_relationship": "The head needs no relationship.",
+      "roster_full": "This household is full.",
+      "roster_empty": "Add at least one person.",
+      "roster_has_no_head": "Choose a head of household first.",
+      "roster_missing_relationship": "Add every relationship first.",
+      "roster_missing_employment_status": "Add every adult's work status first.",
+      "not_active": "This household no longer takes part.",
+      "already_withdrawn": "Already withdrawn.",
+      "household_not_found": "Household not found.",
+      "member_not_found": "Person not found.",
+      "member_has_consent": "They've consented, so they must stay 18 or older. Withdraw consent first.",
+      "member_is_manager": "The household manager can't be removed.",
+      "head_under_18": "The head must be 18 or older.",
+      "primary_earner_under_18": "The main earner must be 18 or older.",
+      "account_holder_under_18": "Account holders must be 18 or older.",
+      "relationship_invalid": "Choose a relationship from the list.",
+      "employment_status_invalid": "Choose a work status from the list."
+    },
+    "consent": {
+      "member_under_18": "Only adults can consent.",
+      "policy_not_current": "The document changed. Go back and try again.",
+      "policy_not_found": "Consent document not found.",
+      "member_not_active": "No longer in the household.",
+      "not_active": "No consent to withdraw.",
+      "already_active": "Consent already given."
+    },
+    "assignments": {
+      "assignment_not_found": "Questionnaire not found.",
+      "assignment_expired": "The time to answer has passed.",
+      "already_finished": "Already finished.",
+      "not_assigned": "Can't be started now.",
+      "wave_ambiguous": "Can't assign questionnaires now. Try later."
+    },
+    "sessions": {
+      "participation_consent_required": "Give consent to take part first.",
+      "required_items_unanswered": "Required questions are unanswered.",
+      "session_already_exists": "Already started.",
+      "session_not_found": "Answers not found.",
+      "not_in_progress": "Already submitted; answers can't change.",
+      "not_submitted": "Not submitted yet.",
+      "version_not_published": "Not available now.",
+      "item_not_in_version": "An answer doesn't fit. Go back and try again.",
+      "item_not_in_section": "An answer doesn't fit. Go back and try again.",
+      "option_not_in_item": "An answer isn't valid. Go back and try again.",
+      "duplicate_response": "A question was answered twice. Try again.",
+      "version_mismatch": "Answers are for another version.",
+      "assignment_mismatch": "Answers are for another questionnaire."
+    },
+    "requests": {
+      "idempotency_key_reused": "This clashed with an earlier try. Try again."
+    },
+    "questionnaires": {
+      "version_not_found": "Version not available."
+    },
+    "privacy": {
+      "request_already_open": "A request like this is already open."
+    }
+  },
+  "notFound": {
+    "title": "Page not found",
+    "message": "It doesn't exist."
+  },
+  "welcome": {
+    "intro": "A family check-in every six months.",
+    "getStarted": "Get started"
+  },
+  "signIn": {
+    "title": "Sign in",
+    "action": "Sign in",
+    "newHere": "New here? This also creates your account.",
+    "otherOptions": "Other sign-in options",
+    "expired": {
+      "title": "Session ended",
+      "message": "Sign in again. Saved answers are kept."
+    },
+    "unavailable": {
+      "title": "Sign-in isn't available",
+      "message": "No sign-in is set up. Nothing was sent."
+    },
+    "failures": {
+      "unsafe_response": {
+        "title": "Sign-in stopped for safety",
+        "message": "The reply failed a safety check. Try again."
+      },
+      "provider_unreachable": {
+        "title": "Can't reach sign-in",
+        "message": "Check your connection and try again."
+      },
+      "refused": {
+        "title": "Sign-in didn't work",
+        "message": "Try again, or contact whoever gave you the app."
+      },
+      "unexpected": {
+        "title": "Something went wrong",
+        "message": "Sign-in couldn't finish. Try again."
+      }
+    },
+    "google": {
+      "signIn": "Continue with Google"
+    },
+    "uaePass": {
+      "name": "UAE PASS",
+      "signIn": "Sign in with UAE PASS",
+      "connecting": {
+        "title": "Connecting to UAE PASS",
+        "message": "Approve in the UAE PASS app.",
+        "secure": "Azwah gets only what you allow UAE PASS to share."
+      }
+    },
+    "simulated": {
+      "title": "Choose an account",
+      "accountLabel": "Account",
+      "approve": "Continue"
+    }
+  },
+  "devFixtures": {
+    "personas": {
+      "household_lead": {
+        "name": "Household lead",
+        "description": "Household of three, survey in progress."
+      },
+      "new_participant": {
+        "name": "New participant",
+        "description": "No household yet."
+      }
+    }
+  },
+  "home": {
+    "loading": "Loading Home",
+    "more": "More",
+    "household": {
+      "create": "Set up your household",
+      "open": "Your household"
+    },
+    "assessments": {
+      "seeAll": "All questionnaires"
+    },
+    "greetings": {
+      "morning": "Good morning",
+      "afternoon": "Good afternoon",
+      "evening": "Good evening",
+      "morningNamed": "Good morning, {{name}}",
+      "afternoonNamed": "Good afternoon, {{name}}",
+      "eveningNamed": "Good evening, {{name}}"
+    },
+    "path": {
+      "title": "Your family's path",
+      "loading": "Loading your path",
+      "stepOf": "Step {{number}} of {{total}}",
+      "state": {
+        "done": "Done",
+        "current": "Now",
+        "upcoming": "Later"
+      },
+      "steps": {
+        "household": {
+          "title": "Set up your household"
+        },
+        "consent": {
+          "title": "Give your consent"
+        },
+        "checkIn": {
+          "title": "Answer the family survey",
+          "body": "The key step: your next steps depend on it.",
+          "open": "To answer: {{count}}",
+          "waiting": "No survey open right now."
+        },
+        "nextSteps": {
+          "title": "See your next steps"
+        },
+        "nextCheckIn": {
+          "title": "Next survey in about six months"
+        }
+      },
+      "actions": {
+        "createHousehold": "Set up household",
+        "confirmHousehold": "Check household",
+        "giveConsent": "Review consent",
+        "start": "Start survey",
+        "continue": "Continue survey",
+        "openResult": "See next steps"
+      }
+    },
+    "nextSteps": {
+      "title": "Your next steps",
+      "loading": "Loading next steps",
+      "empty": "They appear after the survey.",
+      "emptyAfterSurvey": "No support routed yet.",
+      "referral": {
+        "open": "Referral open",
+        "in_progress": "Referral in progress",
+        "resolved": "Referral completed",
+        "cancelled": "Referral cancelled"
+      },
+      "openReport": "Open report",
+      "withResult": "They're with your result.",
+      "openResult": "See result"
+    },
+    "actions": {
+      "emergency": "SOS",
+      "emergencyLabel": "SOS, emergency numbers",
+      "emergencyHint": "Lists emergency and support numbers in the UAE",
+      "assistant": "Ask Azwah",
+      "assistantHint": "Opens the assistant"
+    }
+  },
+  "household": {
+    "title": "Your household",
+    "loading": "Loading your household",
+    "reference": "Ref. {{reference}}",
+    "confirmed": "Confirmed",
+    "notConfirmed": "Not confirmed",
+    "confirmedOn": "Confirmed {{date}}",
+    "createdOn": "Set up {{date}}",
+    "withdrawn": {
+      "title": "Household withdrawn",
+      "message": "Details are kept but can't change."
+    },
+    "summary": {
+      "title": "Summary",
+      "people": "People",
+      "head": "Head of household",
+      "primaryEarner": "Main earner",
+      "notChosen": "Not chosen"
+    },
+    "nextStep": {
+      "confirmTitle": "Next: confirm your household",
+      "confirmAction": "Check household",
+      "confirmAgain": "Confirm again"
+    },
+    "links": {
+      "title": "Details",
+      "people": "People",
+      "assignments": "Questionnaires"
+    },
+    "start": {
+      "title": "Set up your household",
+      "checking": "Checking your account",
+      "heading": "Who lives in your home?",
+      "stepsTitle": "Three steps",
+      "stepNumber": "{{number}}. {{title}}",
+      "steps": {
+        "aboutYou": {
+          "title": "About you"
+        },
+        "people": {
+          "title": "The people you live with"
+        },
+        "confirm": {
+          "title": "Check and confirm"
+        }
+      },
+      "privacy": "Never names or Emirates ID numbers.",
+      "begin": "Start",
+      "existingTitle": "You already have a household",
+      "openExisting": "Open household",
+      "demo": {
+        "action": "Auto-fill"
+      }
+    },
+    "aboutYou": {
+      "title": "About you",
+      "intro": "You first; others next.",
+      "submit": "Continue"
+    },
+    "form": {
+      "birthYear": "Year of birth",
+      "birthYearHint": "For example 1985",
+      "birthMonth": "Month of birth",
+      "birthMonthHint": "1 to 12",
+      "isHead": {
+        "self": "I'm the head of household",
+        "other": "Head of household"
+      },
+      "isHeadHint": "One per household",
+      "takesOverHead": "Replaces {{member}} as head. Then check relationships.",
+      "relationship": {
+        "self": "Your relationship to the head",
+        "other": "Relationship to the head"
+      },
+      "employment": {
+        "self": "Your work status",
+        "other": "Work status"
+      },
+      "employmentOptional": {
+        "self": "Your work status (optional under 18)",
+        "other": "Work status (optional under 18)"
+      },
+      "isPrimaryEarner": {
+        "self": "I'm the main earner",
+        "other": "Main earner"
+      },
+      "isPrimaryEarnerHint": "Earns the most",
+      "takesOverEarner": "Replaces {{member}} as main earner.",
+      "under18": {
+        "self": "Under 18s can't be head or main earner.",
+        "other": "Under 18s can't be head or main earner."
+      },
+      "errors": {
+        "birthYear": "Enter a year from 1900 to now.",
+        "birthMonth": "Enter 1 to 12.",
+        "birthMonthFuture": "That month is in the future.",
+        "selfUnder18": "You must be 18 or older.",
+        "headUnder18": "The head must be 18 or older.",
+        "primaryEarnerUnder18": "The main earner must be 18 or older.",
+        "relationshipRequired": "Choose a relationship.",
+        "relationshipRequiredSelf": "Choose your relationship.",
+        "employmentRequired": "Choose a work status.",
+        "employmentRequiredSelf": "Choose your work status."
+      }
+    },
+    "review": {
+      "title": "Check your household",
+      "intro": "Is everyone listed?",
+      "confirmedTitle": "Household confirmed",
+      "peopleTitle": "People",
+      "issuesTitle": "Before you confirm",
+      "issuesMessage": "Add the missing details.",
+      "issues": {
+        "no_head": "Choose the head of household.",
+        "missing_relationship": "{{member}}: add relationship.",
+        "missing_employment": "{{member}}: add work status."
+      },
+      "fix": "Fix",
+      "fixLabel": "Fix: {{issue}}",
+      "everyoneListed": "Everyone at home is listed",
+      "addMissing": "Add someone",
+      "continue": "Continue",
+      "confirmAgain": "Confirm again after any change."
+    },
+    "confirm": {
+      "title": "Confirm your household",
+      "decidesTitle": "What happens next",
+      "decides": "Azwah assigns questionnaires from approved rules.",
+      "action": "Confirm household",
+      "missingTitle": "Details missing",
+      "backToReview": "Check household"
+    },
+    "assignments": {
+      "title": "Household questionnaires",
+      "loading": "Loading questionnaires",
+      "confirmedTitle": "Household confirmed",
+      "refreshFailed": "Latest details didn't load.",
+      "noWave": {
+        "title": "No round open",
+        "message": "Questionnaires come with the next round."
+      },
+      "noneEligible": {
+        "title": "Nothing this round",
+        "message": "Nobody answers in round {{wave}}."
+      },
+      "notConfirmed": {
+        "title": "Not confirmed yet",
+        "message": "Confirm your household first.",
+        "action": "Check household"
+      },
+      "none": {
+        "title": "No questionnaires yet",
+        "message": "Nothing to answer yet."
+      },
+      "count": "Questionnaires: {{count}}",
+      "unknownMember": "A household member",
+      "ownAccount": "Answers in their own account.",
+      "detailsUnavailable": "Details didn't load.",
+      "done": "Back to household"
+    }
+  },
+  "householdStatus": {
+    "active": "Taking part",
+    "withdrawn": "Withdrawn"
+  },
+  "relationship": {
+    "spouse": "Spouse",
+    "child": "Son or daughter",
+    "parent": "Parent",
+    "sibling": "Brother or sister",
+    "grandchild": "Grandchild",
+    "grandparent": "Grandparent",
+    "other_relative": "Other relative",
+    "non_relative": "Not related"
+  },
+  "employmentStatus": {
+    "employed": "Employed",
+    "self_employed": "Self-employed",
+    "unemployed": "Not working",
+    "student": "Student",
+    "homemaker": "Homemaker",
+    "retired": "Retired",
+    "other": "Other"
+  },
+  "members": {
+    "title": "People",
+    "loading": "Loading people",
+    "listTitle": "Listed",
+    "you": "You",
+    "head": "Head",
+    "primaryEarner": "Main earner",
+    "managesHousehold": "Manager",
+    "ownAccount": "Own account",
+    "inactive": "Left",
+    "relationshipNotRecorded": "No relationship",
+    "employmentNotRecorded": "No work status",
+    "bornAndAge": "Born {{date}} · Age {{age}}",
+    "bornIn": "Born {{year}}",
+    "born": "Born {{date}}",
+    "describe": "{{member}}, born {{date}}",
+    "gaps": {
+      "missing_relationship": "Relationship needed",
+      "missing_employment": "Work status needed"
+    },
+    "edit": "Edit",
+    "editLabel": "Edit {{member}}",
+    "remove": "Remove",
+    "removeLabel": "Remove {{member}}",
+    "reviewAction": "Check and confirm",
+    "removedTitle": "Left the household",
+    "removedNotice": "{{member}} removed. Confirm again.",
+    "notices": {
+      "created": {
+        "title": "Household set up",
+        "message": "Now add everyone you live with."
+      },
+      "alreadySetUp": {
+        "title": "You already have a household",
+        "message": "Check its details."
+      },
+      "demoCreated": {
+        "message": "Check, then confirm."
+      }
+    },
+    "add": {
+      "action": "Add a person",
+      "title": "Add a person",
+      "intro": "No names needed.",
+      "submit": "Add",
+      "full": "{{max}} people at most."
+    },
+    "editScreen": {
+      "title": "Edit details",
+      "submit": "Save",
+      "remove": "Remove from household",
+      "notFoundTitle": "Not listed any more",
+      "notFoundMessage": "They may have been removed.",
+      "backToRoster": "Back to list"
+    },
+    "removeDialog": {
+      "title": "Remove this person?",
+      "message": "{{member}} will be removed. Past answers are kept.",
+      "confirm": "Remove"
+    }
+  },
+  "consent": {
+    "title": "Consent",
+    "loading": "Loading consent",
+    "review": "Review consent",
+    "give": "Give consent",
+    "withdraw": "Withdraw",
+    "keep": "Keep consent",
+    "given": "Given",
+    "notGiven": "Not given",
+    "givenOn": "Given {{date}}",
+    "documentReference": "Document {{reference}}, version {{version}}",
+    "forWhom": "Consent for",
+    "withdrawTitle": "Withdraw consent for {{purpose}}?",
+    "noHousehold": {
+      "title": "Set up your household first",
+      "message": "Consent is per person."
+    },
+    "none": {
+      "title": "No consent documents yet",
+      "message": "None are available yet."
+    },
+    "types": {
+      "participation": {
+        "title": "Taking part",
+        "purpose": "Answering Azwah's questionnaires about your family's wellbeing.",
+        "withdrawMessage": "You can't answer until you consent again. Submitted answers are kept."
+      },
+      "research_use": {
+        "title": "Research use",
+        "purpose": "Your answers, without your name, in grouped research results.",
+        "withdrawMessage": "Your answers leave future research."
+      },
+      "referral": {
+        "title": "Support referrals",
+        "purpose": "A coordinator may refer you to a partner organisation.",
+        "withdrawMessage": "Open referrals are cancelled."
+      }
+    }
+  },
+  "assignmentStatus": {
+    "assigned": "Not started",
+    "in_progress": "In progress",
+    "completed": "Completed",
+    "expired": "Expired",
+    "cancelled": "Cancelled"
+  },
+  "assessments": {
+    "title": "Questionnaires",
+    "detailTitle": "Questionnaire",
+    "loading": "Loading questionnaires",
+    "loadingOne": "Loading questionnaire",
+    "toDo": "To do",
+    "finished": "Done or closed",
+    "allDone": "All done for now",
+    "wave": "Round {{wave}}",
+    "dueBy": "Due {{date}}",
+    "beforeYouStart": "Answers save as you go.",
+    "actions": {
+      "start": "Start",
+      "continue": "Continue",
+      "view": "Details",
+      "viewResult": "View result"
+    },
+    "facts": {
+      "wave": "Round",
+      "assigned": "Assigned",
+      "due": "Due",
+      "completed": "Completed",
+      "questions": "Questions",
+      "optionalQuestions": "Optional"
+    },
+    "closed": {
+      "expired": "The time to answer has passed.",
+      "cancelled": "No longer needed."
+    },
+    "none": {
+      "title": "No questionnaires yet",
+      "message": "They come once your household is confirmed."
+    },
+    "intro": {
+      "purpose": "About",
+      "privacyTitle": "Your answers",
+      "privacy": "Your answers go to Azwah. Staff never see them one by one; researchers see only anonymous data, with your consent.",
+      "privacyOnPhone": {
+        "device": "Kept encrypted on this phone until sent or you sign out.",
+        "memory": "Nothing is saved on this phone."
+      },
+      "awaitingSubmission": "Answers will be submitted once you're online.",
+      "viewSubmission": "View"
+    }
+  },
+  "session": {
+    "title": "Questionnaire",
+    "loading": "Loading questions",
+    "progress": "Question {{current}} of {{total}}",
+    "optional": "Optional",
+    "reviewAnswers": "Review",
+    "saveStatus": {
+      "savedOnDevice": "Saved on this phone",
+      "keptInMemory": "Not sent yet. Keep the app open.",
+      "saving": "Saving…",
+      "saved": "All answers saved",
+      "notSaved": "Not saved. Check your connection.",
+      "rejected": "Some answers weren't accepted.",
+      "offlineOnDevice": "Offline. Saved on this phone.",
+      "offlineInMemory": "Offline. Keep the app open.",
+      "retrying": "Retrying…",
+      "conflict": "Some answers changed elsewhere."
+    },
+    "alreadySubmitted": {
+      "title": "Already submitted",
+      "message": "Answers can't be changed."
+    },
+    "noQuestions": {
+      "title": "No questions",
+      "message": "Try again later."
+    },
+    "abandoned": {
+      "title": "Questionnaire closed",
+      "message": "It closed unsubmitted, so there's no result."
+    },
+    "lastSynced": "Saved to Azwah {{time}}",
+    "required": "Required",
+    "requiredMissing": "Answer this to submit.",
+    "answerRefused": "Not accepted. Choose again.",
+    "locked": {
+      "title": "Waiting to submit",
+      "message": "Cancel the submission to edit.",
+      "action": "Go to review"
+    },
+    "offlineCopy": {
+      "title": "You're offline",
+      "message": "Copy saved {{date}}."
+    },
+    "lost": {
+      "title": "Some answers couldn't be read",
+      "message": "Unsent answers removed: {{count}}. Saved answers are safe."
+    },
+    "offlineNoCopy": {
+      "title": "You're offline",
+      "message": "Connect to open this questionnaire."
+    },
+    "versionUnavailable": {
+      "title": "Version not available",
+      "message": "Nothing changed. Try later."
+    },
+    "unavailable": {
+      "title": "No longer available",
+      "message": "It was withdrawn or your access changed."
+    },
+    "notIncluded": {
+      "title": "Some answers weren't included",
+      "message": "Unsent when it closed: {{count}}."
+    },
+    "demo": {
+      "low": "Low",
+      "medium": "Medium",
+      "high": "High",
+      "lowLabel": "Low: answer and send for a low resilience result",
+      "mediumLabel": "Medium: answer and send for a medium resilience result",
+      "highLabel": "High: answer and send for a high resilience result",
+      "failed": "Couldn't finish. Try again.",
+      "offline": "No connection. Try again."
+    }
+  },
+  "review": {
+    "title": "Review answers",
+    "submit": "Submit",
+    "keepEditing": "Keep editing",
+    "missingTitle": "Answers needed",
+    "missingMessage": "Required, unanswered: {{count}}.",
+    "readyMessage": "Submitted answers are final.",
+    "notAnswered": "Not answered",
+    "required": "Required",
+    "questionNumber": "Question {{number}}",
+    "itemLabel": "Question {{number}}: {{prompt}} Answer: {{answer}}",
+    "changeHint": "Opens the question so you can change the answer",
+    "confirmTitle": "Submit answers?",
+    "confirmMessage": "They're final once submitted.",
+    "summary": "Answered {{answered}} of {{total}}",
+    "cancelSubmission": "Cancel submission",
+    "submitting": "Submitting…",
+    "answerMissing": "Go to the first",
+    "conflictsTitle": "Choose answers to keep",
+    "conflictsMessage": "Changed elsewhere: {{count}}.",
+    "resolveConflict": "Go to the first",
+    "conflicted": "Changed elsewhere"
+  },
+  "result": {
+    "title": "Result",
+    "loading": "Loading result",
+    "state": {
+      "pending": "Awaiting result",
+      "complete": "Result recorded",
+      "incomplete": "Result incomplete"
+    },
+    "submittedOn": "Submitted {{date}}",
+    "pendingTitle": "Result not ready yet",
+    "incompleteTitle": "No result",
+    "incompleteMessage": "Not enough answers.",
+    "incompleteReasons": {
+      "non_substantive_share_exceeded": "Too many answers outside the scale."
+    },
+    "scale": {
+      "title": "Where your score stands",
+      "summary": "Your family's score is {{total}}, on a scale from {{minimum}} to {{maximum}}. It is in the {{band}} band.",
+      "range": "{{min}}–{{max}}",
+      "yourFamily": "Your family: {{total}}"
+    },
+    "totalScore": "Total score",
+    "category": "Category {{code}}",
+    "computedOn": "Calculated {{date}}",
+    "backToQuestionnaires": "Questionnaires",
+    "submitted": "Submitted",
+    "thanks": "Thank you!",
+    "notIncludedTitle": "Some changes weren't included",
+    "notIncludedMessage": "Made after submitting: {{count}}.",
+    "notDisclosed": "Your result is recorded.",
+    "unavailableTitle": "Answers submitted",
+    "unavailableMessage": "Result can't load now. Try again soon.",
+    "checkAgain": "Check again",
+    "recommendationsTitle": "Support suggested",
+    "recommendationCategory": "Support category",
+    "headOnlyTitle": "For the head of household",
+    "headOnly": "Only the head sees the score.",
+    "valuesTitle": "Your family's result",
+    "tier": "Band",
+    "tiers": {
+      "vulnerable": "Vulnerable",
+      "transitional": "Transitional",
+      "flourishing": "Flourishing"
+    }
+  },
+  "history": {
+    "title": "Past questionnaires",
+    "loading": "Loading history",
+    "openResult": "Opens the result",
+    "submittedOn": "Submitted {{date}} · Round {{wave}}",
+    "questionnaire": "Questionnaire",
+    "result": {
+      "pending": "Awaiting result",
+      "complete": "Result recorded",
+      "incomplete": "Result incomplete"
+    },
+    "none": {
+      "title": "Nothing submitted yet",
+      "message": "Submitted questionnaires appear here."
+    }
+  },
+  "profile": {
+    "account": "Account",
+    "signedIn": "Signed in",
+    "more": "More",
+    "signOut": "Sign out",
+    "signOutTitle": "Sign out?",
+    "signOutMessage": "Unsent answers will be lost.",
+    "signOutMessageDevice": "Unsent answers on this phone will be deleted.",
+    "data": {
+      "title": "Your data",
+      "export": {
+        "title": "A copy of your data",
+        "contents": "Household, consent, questionnaires and answers. No scores or suggestions.",
+        "yourChoice": "Anyone you share it with can read it.",
+        "action": "Download my data",
+        "shareTitle": "Your Azwah data",
+        "unavailableTitle": "Can't share from this phone",
+        "unavailable": "Sharing isn't available here.",
+        "rateLimited": "Too many downloads this hour. Try later.",
+        "interrupted": "Nothing shared. Try again."
+      },
+      "requests": {
+        "title": "Ask about your data",
+        "intro": "See, correct or delete what Azwah holds.",
+        "typeLabel": "Request",
+        "types": {
+          "access": {
+            "title": "See the information",
+            "description": "What Azwah holds."
+          },
+          "correction": {
+            "title": "Correct the information",
+            "description": "Something is wrong."
+          },
+          "erasure": {
+            "title": "Delete the information",
+            "description": "Remove it from Azwah."
+          }
+        },
+        "memberLabel": "About",
+        "errors": {
+          "type": "Choose a request.",
+          "member": "Choose who it's about."
+        },
+        "submit": "Send request",
+        "confirm": {
+          "title": "Send this request?",
+          "message": "{{type}}: {{member}}.",
+          "confirm": "Send"
+        },
+        "sent": {
+          "title": "Request sent",
+          "message": "Track it below."
+        },
+        "listTitle": "Your requests",
+        "loading": "Loading requests",
+        "none": "No requests yet.",
+        "for": "About",
+        "sentOn": "Sent",
+        "closedOn": "Closed",
+        "status": {
+          "open": "Open",
+          "closed": "Closed"
+        },
+        "resolution": {
+          "completed": "Closed: done",
+          "declined": "Closed: declined",
+          "withdrawn": "Closed: withdrawn"
+        },
+        "unknownMember": "A household member",
+        "showMore": "Show more",
+        "noHousehold": "Set up your household first."
+      }
+    },
+    "devTools": {
+      "resetData": "Reset data",
+      "resetTitle": "Reset all data?",
+      "resetMessage": "Everything on this phone is deleted, and you're signed out.",
+      "resetDone": "Data reset."
+    },
+    "signedInWithUaePass": "Signed in with UAE PASS"
+  },
+  "lock": {
+    "title": "Azwah is locked",
+    "message": "Locked to keep your answers private.",
+    "unlock": "Unlock",
+    "prompt": "Unlock Azwah",
+    "outcomes": {
+      "cancelled": "Still locked.",
+      "failed": "Not confirmed. Try again or sign in again."
+    },
+    "noDeviceLock": {
+      "title": "No screen lock",
+      "message": "Azwah unlocks with your phone's screen lock. Sign in again instead."
+    },
+    "signInAgain": "Sign in again",
+    "signInAgainNote": "Deletes unsent answers from this phone.",
+    "signOutFailed": "Couldn't sign out. Try again.",
+    "confirm": {
+      "title": "Sign out and in again?",
+      "message": "Unsent answers will be deleted.",
+      "confirm": "Sign out"
+    }
+  },
+  "help": {
+    "title": "Help",
+    "topics": {
+      "about": {
+        "title": "What is Azwah?",
+        "body": "Azwah (عزوة) means the family and kin who stand by you."
+      },
+      "answering": {
+        "title": "Answering",
+        "body": "Pick the best answer. Submitted answers are final."
+      },
+      "saving": {
+        "title": "Saving",
+        "body": "Answers save as you choose."
+      },
+      "language": {
+        "title": "Language",
+        "body": "Arabic or English, in Settings."
+      },
+      "privacy": {
+        "title": "Privacy",
+        "body": "No names asked. Other households can't see your answers."
+      }
+    }
+  },
+  "designSystem": {
+    "title": "Design system",
+    "intro": "Every component, live.",
+    "headerAction": "Dialog",
+    "colours": "Colours",
+    "typography": "Typography",
+    "sampleHeading": "Heading",
+    "sampleStrong": "Strong text",
+    "sampleLabel": "Label",
+    "sampleCaption": "Caption {{number}}",
+    "buttons": "Buttons",
+    "primary": "Primary",
+    "secondary": "Secondary",
+    "tertiary": "Text",
+    "danger": "Destructive",
+    "loading": "Working",
+    "disabled": "Unavailable",
+    "inputs": "Inputs",
+    "nameLabel": "Name",
+    "nameHint": "A hint",
+    "nameRequired": "Enter a name",
+    "save": "Save",
+    "saved": "Saved: {{name}}",
+    "errorInput": "With an error",
+    "disabledInput": "Disabled",
+    "switchLabel": "A setting",
+    "switchHint": "One switch",
+    "cards": "Cards",
+    "cardDefault": "Default",
+    "cardMuted": "Muted",
+    "cardHighlight": "Highlighted",
+    "cardPressable": "Pressable card",
+    "status": "Status",
+    "dangerBadge": "Attention",
+    "noticeInfo": "Information",
+    "noticeSuccess": "Success",
+    "noticeWarning": "Warning",
+    "noticeDanger": "Error",
+    "progress": "Progress",
+    "selection": "Selection",
+    "radioLabel": "Radio cards",
+    "radioA": "First",
+    "radioB": "Second",
+    "radioC": "Third",
+    "radioHint": "Description",
+    "agreementQuestion": "Four options",
+    "frequencyQuestion": "Five options",
+    "agreement": {
+      "1": "Strongly disagree",
+      "2": "Disagree",
+      "3": "Agree",
+      "4": "Strongly agree"
+    },
+    "frequency": {
+      "1": "Never",
+      "2": "Rarely",
+      "3": "Sometimes",
+      "4": "Often",
+      "5": "Always"
+    },
+    "outsideScale": "Outside the scale",
+    "states": "States",
+    "emptyTitle": "Nothing here yet",
+    "emptyMessage": "What to do next.",
+    "dialogTitle": "Delete this?",
+    "dialogMessage": "It can't be undone."
+  },
+  "questionnaire": {
+    "unsupported": {
+      "title": "Update the app",
+      "message": "This version can't show this questionnaire."
+    }
+  },
+  "conflict": {
+    "title": "Changed elsewhere",
+    "message": "Saved: “{{server}}”. This phone: “{{local}}”.",
+    "keepServer": "Keep saved: {{answer}}",
+    "keepLocal": "Keep this phone's: {{answer}}",
+    "unknownAnswer": "an unknown answer"
+  },
+  "submission": {
+    "sending": {
+      "title": "Submitting…",
+      "message": "Sending your answers."
+    },
+    "queued": {
+      "title": "Not submitted yet",
+      "offline": "Offline. Answers are {{where}}.",
+      "retrying": "Can't reach Azwah. Answers are {{where}}; retrying.",
+      "waiting": "Can't reach Azwah. Answers are {{where}}.",
+      "signed_out": "Sign in to submit. Answers are {{where}}."
+    },
+    "where": {
+      "device": "saved on this phone",
+      "memory": "kept while the app is open"
+    },
+    "blocked": {
+      "title": "Not submitted",
+      "conflicts": "Choose which changed answers to keep.",
+      "answers_rejected": "Answer the refused questions again.",
+      "missing_answers": "Answer the required questions.",
+      "consent_required": "Give consent to take part first.",
+      "not_available": "No longer available.",
+      "closed": "Closed before submission."
+    }
+  },
+  "splash": {
+    "welcome": "Welcome to Azwah",
+    "preparing": "Preparing your space…",
+    "accessibilityLabel": "Welcome to Azwah. Opening the app."
+  },
+  "pillars": {
+    "title": "What Azwah stands for",
+    "relationships": "Relationships",
+    "care": "Care",
+    "empowerment": "Empowerment",
+    "hope": "Hope"
+  },
+  "onboarding": {
+    "checking": "Checking your account",
+    "step": "Step {{current}} of {{total}}",
+    "confirm": {
+      "title": "Confirm your details",
+      "intro": "Are these details yours?",
+      "introNoDetails": "No details shared. Is this account yours?",
+      "privacy": "Azwah keeps only a private reference, not these details.",
+      "agree": "These details are mine and correct",
+      "agreeNoDetails": "This account is mine",
+      "action": "Confirm",
+      "notMine": "Not my details",
+      "notMineDialog": {
+        "title": "Not your details?",
+        "message": "Sign out and use your own UAE PASS. Fix wrong details in UAE PASS.",
+        "signOut": "Sign out"
+      },
+      "fields": {
+        "source": "Source",
+        "emiratesId": "Emirates ID",
+        "nationality": "Nationality",
+        "birthdate": "Date of birth",
+        "gender": "Gender",
+        "mobile": "Mobile",
+        "email": "Email"
+      },
+      "gender": {
+        "male": "Male",
+        "female": "Female"
+      },
+      "source": {
+        "uae_pass": "UAE PASS",
+        "google": "Google account",
+        "unverified": "Your sign-in"
+      },
+      "failures": {
+        "network": {
+          "title": "You’re offline",
+          "message": "Connect and try again."
+        },
+        "unexpected": {
+          "title": "Something went wrong",
+          "message": "Account setup failed. Try again."
+        }
+      }
+    },
+    "ready": {
+      "overline": "Account ready",
+      "title": "Welcome to Azwah",
+      "titleNamed": "Welcome, {{name}}",
+      "message": "Next: your household.",
+      "nextTitle": "What's next",
+      "action": "Continue",
+      "steps": {
+        "household": {
+          "title": "Add your household"
+        },
+        "consent": {
+          "title": "Give your consent"
+        },
+        "checkIn": {
+          "title": "Answer your first check-in"
+        }
+      }
+    }
+  },
+  "safety": {
+    "crisisCard": {
+      "title": "You don't have to face this alone",
+      "body": "If you might hurt yourself or someone else, or you are in danger, call 999 now.",
+      "dial999": "Dial 999",
+      "emergencyNumbers": "Emergency numbers",
+      "teamNotified": "We've told the Azwah support team.",
+      "dismiss": "Dismiss",
+      "announcement": "Help is available. Call 999 if you are in danger."
+    }
+  },
+  "scoreReport": {
+    "ahead": {
+      "title": "Write your report as you answer?",
+      "yes": "Yes",
+      "no": "No thanks",
+      "on": "Writing your report as you answer.",
+      "stop": "Stop"
+    },
+    "finishing": "Finishing your report…",
+    "title": "Your family's report",
+    "badge": "Written by AI",
+    "offer": "Strengths, weaknesses and where to start, as a PDF.",
+    "create": "Create my report",
+    "creating": "Up to a minute. Keep this screen open.",
+    "createAgain": "Write a new report",
+    "writtenOn": "Written by AI, {{date}}",
+    "summary": "Summary",
+    "strengths": "Strengths",
+    "weaknesses": "Weaknesses",
+    "flow": {
+      "title": "Your next steps",
+      "step": "Step {{number}}: {{area}}",
+      "whereToGo": "Where to go",
+      "noAuthorities": "None listed yet.",
+      "need": "Helps with: {{need}}",
+      "via": "Apply through {{name}}",
+      "procedure": "What to do",
+      "procedureStep": "{{number}}. {{step}}",
+      "noProcedure": "No published steps. Ask them what to do.",
+      "documents": "What to bring",
+      "website": "Website",
+      "websiteLabel": "Website:",
+      "servicePage": "Service page",
+      "servicePageLabel": "Open the page for {{name}}",
+      "call": "Call {{phone}}",
+      "phoneLabel": "Phone:",
+      "checkedOn": "Checked {{date}}. Confirm before you go.",
+      "notice": "Confirm before you go. Azwah doesn't contact or endorse them, or share your answers. They decide what applies to you.",
+      "checked": "Checked {{date}}"
+    },
+    "step": "• {{step}}",
+    "notice": "It doesn't change your score, isn't professional advice, and may be wrong.",
+    "emergency": "In an emergency, call 999.",
+    "shareTitle": "Your Azwah report",
+    "downloadNote": "Anyone with the file can read it.",
+    "download": {
+      "action": "Download PDF",
+      "saved": "Report saved.",
+      "interrupted": "Not saved. Try again.",
+      "failed": "Couldn't save. Try again.",
+      "unavailable": "This phone can't save files."
+    },
+    "problems": {
+      "unavailable": "Reports aren't available now.",
+      "offline": "Can't reach Azwah. Check your connection.",
+      "rate_limited": "Too many reports this hour. Try later.",
+      "failed": "Couldn't write it. Try again."
+    }
+  },
+  "assistant": {
+    "title": "Azwah assistant",
+    "badge": "AI assistant",
+    "unavailable": {
+      "title": "Not available yet",
+      "message": "Help covers common questions.",
+      "action": "Open Help"
+    },
+    "about": "Answers use what Azwah holds about your family. It never scores or decides.",
+    "emergency": "In an emergency, call 999.",
+    "emergencyLink": "Emergency numbers",
+    "examples": {
+      "title": "Try asking",
+      "checkIn": "How does a check-in work?",
+      "familyTime": "Family time ideas this week",
+      "support": "Where can I find support?",
+      "hint": "Puts this question in the box below"
+    },
+    "composer": {
+      "label": "Your question",
+      "placeholder": "Ask anything",
+      "privacy": "Don't share names or numbers.",
+      "send": "Send"
+    },
+    "keptOnPhone": "Chat stays encrypted on this phone.",
+    "keptInMemory": "Chat lasts until you close the app.",
+    "conversation": "Conversation",
+    "thinking": "Thinking…",
+    "you": "You",
+    "problems": {
+      "offline": "Can't reach Azwah. Check your connection.",
+      "rate_limited": "Too many questions. Wait a minute.",
+      "failed": "Couldn't answer. Try again.",
+      "unanswered": "No answer yet."
+    },
+    "clear": {
+      "action": "Clear",
+      "title": "Clear the chat?",
+      "message": "It's deleted from this phone.",
+      "confirm": "Clear"
+    },
+    "fromCall": "From a call",
+    "actionsLabel": "Suggested places in the app",
+    "actions": {
+      "sos": "SOS",
+      "services": "All services",
+      "home": "Home",
+      "resilience": "Family resilience",
+      "help": "Help",
+      "consultant": "Consultant",
+      "assistant": "Assistant"
+    },
+    "sources": {
+      "title": "From the support directory",
+      "label": "{{name}}, {{provider}}",
+      "hint": "Opens their page in the browser"
+    }
+  },
+  "emergency": {
+    "title": "Emergency numbers",
+    "intro": "Tap to open your dialler. Nothing is called until you press call.",
+    "danger": {
+      "title": "In danger now?",
+      "message": "Police 999, ambulance 998.",
+      "action": "Dial 999"
+    },
+    "groups": {
+      "emergency": "Emergencies",
+      "support": "Family and wellbeing",
+      "emirate": "In your emirate"
+    },
+    "coverage": {
+      "uae": "Across the UAE",
+      "abu_dhabi": "Abu Dhabi",
+      "dubai": "Dubai",
+      "sharjah": "Sharjah",
+      "ajman": "Ajman",
+      "umm_al_quwain": "Umm Al Quwain",
+      "ras_al_khaimah": "Ras Al Khaimah",
+      "fujairah": "Fujairah"
+    },
+    "services": {
+      "police": {
+        "name": "Police",
+        "description": "Crime, accidents, danger."
+      },
+      "ambulance": {
+        "name": "Ambulance",
+        "description": "Medical emergencies."
+      },
+      "civilDefence": {
+        "name": "Fire and civil defence",
+        "description": "Fire, smoke and rescue."
+      },
+      "childProtection": {
+        "name": "Child protection",
+        "description": "Report a child at risk. Immediate danger: 999."
+      },
+      "ewaa": {
+        "name": "Ewaa shelters",
+        "description": "Abuse or trafficking of women and children."
+      },
+      "dubaiFoundation": {
+        "name": "Dubai Foundation for Women and Children",
+        "description": "Violence against women and children. 24 hours."
+      },
+      "familyCareAuthority": {
+        "name": "Family Care Authority",
+        "description": "Family disputes; children or vulnerable people at risk."
+      },
+      "sakina": {
+        "name": "800 SAKINA mental health line",
+        "description": "24 hours, Arabic and English."
+      },
+      "sharjahProtection": {
+        "name": "Child and Family Protection Centre",
+        "description": "Harm to children; protection for women."
+      },
+      "hemaya": {
+        "name": "Hemaya Foundation for Women and Children",
+        "description": "Violence against women and children."
+      },
+      "aman": {
+        "name": "Aman Centre for Women and Children",
+        "description": "Shelter, through Ras Al Khaimah Police."
+      }
+    },
+    "dialLabel": "{{name}}, {{number}}",
+    "dialHint": "Opens your phone's dialler with the number filled in",
+    "dialFailed": "Can't dial here. Call {{number}} from a phone.",
+    "footnote": "Checked against official sources, October 2026. Fujairah, Umm Al Quwain: call 999 or 116111.",
+    "search": {
+      "label": "Search services",
+      "placeholder": "Name, emirate or number",
+      "clear": "Clear search",
+      "count": "Found: {{count}}",
+      "none": "No match for \"{{query}}\". In danger? Call 999."
+    }
+  },
+  "menu": {
+    "open": "Open the menu",
+    "close": "Close the menu",
+    "notOnYet": "Not available yet",
+    "signOut": "Sign out",
+    "items": {
+      "home": "Home",
+      "assistant": "Azwah assistant",
+      "consultant": "Azwah consultant",
+      "household": "Your household",
+      "resilience": "Your family resilience",
+      "services": "All services",
+      "settings": "Settings"
+    }
+  },
+  "consultant": {
+    "title": "Azwah consultant",
+    "badge": "Voice AI consultant",
+    "unavailable": {
+      "title": "Not available yet",
+      "message": "Help covers common questions.",
+      "action": "Open Help"
+    },
+    "about": "Talk in Arabic or English, using what Azwah holds about your family. It never scores or decides.",
+    "start": "Start talking",
+    "emergency": "In an emergency, call 999.",
+    "emergencyLink": "Emergency numbers",
+    "startAgain": "Talk again",
+    "ready": "Ready when you are",
+    "ended": "Call ended",
+    "connecting": "Connecting…",
+    "privacy": "Not recorded. Captions go to your chat on this phone.",
+    "live": {
+      "listening": "Listening…",
+      "hearing": "You're speaking",
+      "speaking": "Consultant speaking",
+      "muted": "Muted"
+    },
+    "mute": "Mute",
+    "unmute": "Unmute",
+    "end": "End",
+    "microphone": {
+      "title": "Microphone needed",
+      "message": "Allow it in your phone's settings.",
+      "action": "Open settings"
+    },
+    "failed": {
+      "title": "The call stopped",
+      "connection": "Couldn't connect. Check your connection.",
+      "message": "Something went wrong. Try again."
+    },
+    "captions": {
+      "title": "Captions",
+      "you": "You",
+      "consultant": "Consultant"
+    },
+    "headphones": "Headphones sound best.",
+    "suggested": "Suggested"
+  },
+  "resilience": {
+    "title": "Your family resilience",
+    "results": "Only the head sees the score.",
+    "trend": {
+      "title": "Over time",
+      "loading": "Loading the chart",
+      "latest": "Latest round",
+      "selectedRound": "Chosen round",
+      "roundOn": "Round {{wave}} · {{date}}",
+      "scoreWithBand": "{{score}} · {{band}}",
+      "chartLabel": "Line chart of your family's total score in {{count}} rounds, on a scale from {{min}} to {{max}}. Latest: {{value}}, sent on {{date}}.",
+      "point": "Round {{wave}}, sent on {{date}}: {{value}}",
+      "pointHint": "Shows this round's score above the chart",
+      "showList": "All rounds",
+      "hideList": "Hide list",
+      "single": "The line starts next round.",
+      "rulesChanged": "Rules changed, so some points aren't joined.",
+      "notShown": "Not charted: {{count}}.",
+      "empty": {
+        "title": "No scores yet",
+        "message": "It starts after your first scored round."
+      },
+      "headOnly": {
+        "title": "For the head of household",
+        "message": "Only the head sees this chart."
+      }
+    }
+  },
+  "services": {
+    "title": "All services",
+    "authorities": {
+      "title": "Organisations that can help",
+      "description": "Information only: Azwah doesn't refer you or share anything.",
+      "loading": "Loading organisations",
+      "empty": "None listed yet.",
+      "none": "No match for \"{{query}}\".",
+      "separator": ", ",
+      "private": "Private: fees may apply.",
+      "showServices": "Services ({{total}})",
+      "hideServices": "Hide services",
+      "showServicesLabel": "Show the services of {{name}}",
+      "hideServicesLabel": "Hide the services of {{name}}",
+      "symbols": "Symbols are Azwah's, not their logos."
+    },
+    "directory": {
+      "title": "Support directory",
+      "description": "Approved by Azwah. Information only.",
+      "loading": "Loading the directory",
+      "empty": "None listed yet.",
+      "none": "No match for \"{{query}}\".",
+      "visit": "Website",
+      "visitLabel": "Visit {{name}}'s website"
+    }
+  },
+  "settings": {
+    "title": "Settings"
+  },
+  "newCheckIn": {
+    "action": "New survey",
+    "label": "Start a new survey now",
+    "failed": "Couldn't start. Try again.",
+    "offline": "No connection. Try again."
+  }
+}

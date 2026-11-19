@@ -1,0 +1,82 @@
+{
+  "version": "crisis-signals.v1",
+  "status": "engineering_starting_list_not_clinically_reviewed",
+  "reviewQuestion": 58,
+  "rules": [
+    {
+      "code": "suicide.intent",
+      "concern": "suicide_or_self_harm",
+      "phrases": {
+        "en": ["kill myself", "killing myself", "thinking about killing myself", "end my life", "ending my life", "thinking about ending my life", "take my own life", "commit suicide", "end it all", "going to end it all", "gonna end it all", "hang myself"],
+        "ar": ["أقتل نفسي", "بقتل نفسي", "سأقتل نفسي", "أنهي حياتي", "أنتحر", "بنتحر", "سأنتحر", "راح أنتحر", "ابي انتحر"]
+      }
+    },
+    {
+      "code": "suicide.wish_to_die",
+      "concern": "suicide_or_self_harm",
+      "phrases": {
+        "en": ["want to die", "wanna die", "wish i was dead", "wish i were dead", "better off dead", "dont want to live", "no reason to live", "nothing to live for", "rather be dead"],
+        "ar": ["ابي اموت", "ابغى اموت", "ابغا اموت", "ودي اموت", "اريد ان اموت", "أتمنى الموت", "اتمنى اموت", "ما ابي اعيش", "ما ابغى اعيش", "لا اريد ان اعيش", "تعبت من الحياة"]
+      }
+    },
+    {
+      "code": "suicide.mention",
+      "concern": "suicide_or_self_harm",
+      "phrases": {
+        "en": ["suicide", "suicidal", "suicidal thoughts"],
+        "ar": ["انتحار", "الانتحار", "أفكار انتحارية"]
+      }
+    },
+    {
+      "code": "self_harm.act",
+      "concern": "suicide_or_self_harm",
+      "phrases": {
+        "en": ["hurt myself", "hurting myself", "harm myself", "self harm", "self harming", "cut myself", "cutting myself", "take an overdose", "took an overdose", "overdose on pills", "overdosed"],
+        "ar": ["اؤذي نفسي", "أجرح نفسي", "أضر نفسي"]
+      }
+    },
+    {
+      "code": "harm_others.intent",
+      "concern": "harm_to_others",
+      "phrases": {
+        "en": ["kill him", "kill her", "kill them", "going to hurt him", "going to hurt her", "might hurt someone", "kill my husband", "kill my wife"],
+        "ar": ["اقتله", "اقتلها", "بقتله", "بقتلها", "راح اقتله"]
+      }
+    },
+    {
+      "code": "harm_others.children",
+      "concern": "harm_to_others",
+      "phrases": {
+        "en": ["hurt my kids", "hurt my children", "hurt my child", "hurt my son", "hurt my daughter", "hurt my baby", "kill my kids", "kill my children"],
+        "ar": ["أؤذي أطفالي", "أؤذي عيالي", "اقتل عيالي"]
+      }
+    },
+    {
+      "code": "abuse.being_hurt",
+      "concern": "abuse_or_danger",
+      "phrases": {
+        "en": ["he hits me", "she hits me", "husband hits me", "wife hits me", "partner hits me", "father hits me", "mother hits me", "brother hits me", "dad hits me", "mum hits me", "mom hits me", "son hits me", "daughter hits me", "sister hits me", "uncle hits me", "aunt hits me", "stepdad hits me", "stepfather hits me", "stepmother hits me", "grandfather hits me", "grandmother hits me", "cousin hits me", "boyfriend hits me", "girlfriend hits me", "fiance hits me", "ex hits me", "keeps hitting me", "he hit me", "she hit me", "husband hit me", "wife hit me", "partner hit me", "father hit me", "mother hit me", "brother hit me", "dad hit me", "mum hit me", "mom hit me", "son hit me", "daughter hit me", "sister hit me", "uncle hit me", "aunt hit me", "stepdad hit me", "stepfather hit me", "stepmother hit me", "grandfather hit me", "grandmother hit me", "cousin hit me", "boyfriend hit me", "girlfriend hit me", "fiance hit me", "ex hit me", "he beats me", "she beats me", "husband beats me", "wife beats me", "partner beats me", "father beats me", "mother beats me", "brother beats me", "dad beats me", "mum beats me", "mom beats me", "son beats me", "daughter beats me", "sister beats me", "uncle beats me", "aunt beats me", "stepdad beats me", "stepfather beats me", "stepmother beats me", "grandfather beats me", "grandmother beats me", "cousin beats me", "boyfriend beats me", "girlfriend beats me", "fiance beats me", "ex beats me", "beats me up", "beat me again", "he hurts me", "she hurts me", "abusing me", "abuses me", "being abused", "hit me again"],
+        "ar": ["يضربني", "يعنفني", "تضربني", "زوجي يؤذيني", "زوجي ضربني", "ضربني زوجي", "أبوي ضربني", "ضربني أبوي", "أبي ضربني", "ضربني أبي", "والدي ضربني", "ضربني والدي", "أخوي ضربني", "ضربني أخوي", "أخي ضربني", "ضربني أخي", "ولدي ضربني", "ضربني ولدي", "ابني ضربني", "ضربني ابني", "عمي ضربني", "ضربني عمي", "خالي ضربني", "ضربني خالي", "جدي ضربني", "ضربني جدي", "خطيبي ضربني", "ضربني خطيبي", "طليقي ضربني", "ضربني طليقي", "زوج أمي ضربني", "ضربني زوج أمي", "زوجتي ضربتني", "ضربتني زوجتي", "أمي ضربتني", "ضربتني أمي", "والدتي ضربتني", "ضربتني والدتي", "أختي ضربتني", "ضربتني أختي", "بنتي ضربتني", "ضربتني بنتي", "عمتي ضربتني", "ضربتني عمتي", "خالتي ضربتني", "ضربتني خالتي", "جدتي ضربتني", "ضربتني جدتي", "خطيبتي ضربتني", "ضربتني خطيبتي", "طليقتي ضربتني", "ضربتني طليقتي", "زوجة أبوي ضربتني", "ضربتني زوجة أبوي", "زوجة أبي ضربتني", "ضربتني زوجة أبي", "مرت أبوي ضربتني", "ضربتني مرت أبوي"]
+      },
+      "except": {
+        "en": ["hits me up", "hit me up"]
+      }
+    },
+    {
+      "code": "abuse.child",
+      "concern": "abuse_or_danger",
+      "phrases": {
+        "en": ["hits my kids", "hits my children", "beats my kids", "abusing my child", "abuses my children"],
+        "ar": ["يضرب عيالي", "يضرب أطفالي", "يعنف أطفالي"]
+      }
+    },
+    {
+      "code": "danger.threatened",
+      "concern": "abuse_or_danger",
+      "phrases": {
+        "en": ["threatened to kill me", "threatens to kill me", "afraid he will kill me", "afraid she will kill me", "scared he will kill me", "not safe at home", "dont feel safe at home", "do not feel safe at home"],
+        "ar": ["هددني بالقتل", "يهددني بالقتل", "خايفه يقتلني", "خايف يقتلني", "خايفة انه يقتلني", "خايف انه يقتلني", "مو آمنة في البيت", "لست آمنة في البيت"]
+      }
+    }
+  ]
+}

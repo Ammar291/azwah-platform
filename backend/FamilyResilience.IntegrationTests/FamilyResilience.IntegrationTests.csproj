@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="xunit.v3" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Testing" />
+    <PackageReference Include="Testcontainers.PostgreSql" />
+  </ItemGroup>
+  <ItemGroup>
+    <Using Include="Xunit" />
+  </ItemGroup>
+  <ItemGroup>
+    <!-- The synthetic support-resource evaluation set, read from beside the test assembly. -->
+    <Content Include="SupportResources\Evaluation\*.json" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FamilyResilience.Api\FamilyResilience.Api.csproj" />
+    <!-- Only the tests reference the development identity provider: they run it on a test server. -->
+    <ProjectReference Include="..\FamilyResilience.IdentityProvider\FamilyResilience.IdentityProvider.csproj" />
+  </ItemGroup>
+</Project>

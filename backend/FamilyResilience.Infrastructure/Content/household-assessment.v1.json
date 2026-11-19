@@ -1,0 +1,2196 @@
+{
+  "instrument": {
+    "code": "household_assessment",
+    "kind": "household_assessment",
+    "name": {
+      "ar": "تقييم المرونة الأسرية (39 عبارة)",
+      "en": "Family Resilience Assessment (39 items)"
+    },
+    "description": {
+      "ar": "39 عبارة تغطي سبعة مجالات من الحياة الأسرية.",
+      "en": "39 statements across seven areas of family life."
+    }
+  },
+  "version": {
+    "contentReferenceAr": "Arabic questionnaire and answer labels of the earlier investor demo (not included in this repository), drafted by the demo team from the product brief; not approved (open question 1)",
+    "contentReferenceEn": "English questionnaire and answer labels of the earlier investor demo (not included in this repository), drafted by the demo team from the product brief; not approved (open question 1)",
+    "sections": [
+      {
+        "code": "communication",
+        "displayOrder": 1,
+        "title": {
+          "ar": "التواصل الأسري وحل المشكلات",
+          "en": "Family Communication & Problem Solving"
+        },
+        "items": [
+          {
+            "code": "Q01",
+            "displayOrder": 1,
+            "itemType": "single_choice",
+            "isRequired": true,
+            "scoringCategory": "communication",
+            "scoringDirection": "forward",
+            "prompt": {
+              "ar": "نتحدث بصراحة مع بعضنا عن الأمور المهمة لأسرتنا.",
+              "en": "We talk openly with one another about things that matter to our family."
+            },
+            "options": [
+              {
+                "code": "1",
+                "displayOrder": 1,
+                "value": 1,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "لا أوافق بشدة",
+                  "en": "Strongly Disagree"
+                }
+              },
+              {
+                "code": "2",
+                "displayOrder": 2,
+                "value": 2,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "لا أوافق",
+                  "en": "Disagree"
+                }
+              },
+              {
+                "code": "3",
+                "displayOrder": 3,
+                "value": 3,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "أوافق",
+                  "en": "Agree"
+                }
+              },
+              {
+                "code": "4",
+                "displayOrder": 4,
+                "value": 4,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "أوافق بشدة",
+                  "en": "Strongly Agree"
+                }
+              }
+            ]
+          },
+          {
+            "code": "Q02",
+            "displayOrder": 2,
+            "itemType": "single_choice",
+            "isRequired": true,
+            "scoringCategory": "communication",
+            "scoringDirection": "forward",
+            "prompt": {
+              "ar": "عندما تنشأ مشكلات، نعمل معًا لإيجاد حلول لها.",
+              "en": "When problems arise, we work together to find solutions."
+            },
+            "options": [
+              {
+                "code": "1",
+                "displayOrder": 1,
+                "value": 1,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "لا أوافق بشدة",
+                  "en": "Strongly Disagree"
+                }
+              },
+              {
+                "code": "2",
+                "displayOrder": 2,
+                "value": 2,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "لا أوافق",
+                  "en": "Disagree"
+                }
+              },
+              {
+                "code": "3",
+                "displayOrder": 3,
+                "value": 3,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "أوافق",
+                  "en": "Agree"
+                }
+              },
+              {
+                "code": "4",
+                "displayOrder": 4,
+                "value": 4,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "أوافق بشدة",
+                  "en": "Strongly Agree"
+                }
+              }
+            ]
+          },
+          {
+            "code": "Q03",
+            "displayOrder": 3,
+            "itemType": "single_choice",
+            "isRequired": true,
+            "scoringCategory": "communication",
+            "scoringDirection": "forward",
+            "prompt": {
+              "ar": "يستطيع أفراد الأسرة التعبير عن اختلافهم في الرأي دون أن يتصاعد الخلاف.",
+              "en": "Family members can express disagreement without the conflict escalating."
+            },
+            "options": [
+              {
+                "code": "1",
+                "displayOrder": 1,
+                "value": 1,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "لا أوافق بشدة",
+                  "en": "Strongly Disagree"
+                }
+              },
+              {
+                "code": "2",
+                "displayOrder": 2,
+                "value": 2,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "لا أوافق",
+                  "en": "Disagree"
+                }
+              },
+              {
+                "code": "3",
+                "displayOrder": 3,
+                "value": 3,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "أوافق",
+                  "en": "Agree"
+                }
+              },
+              {
+                "code": "4",
+                "displayOrder": 4,
+                "value": 4,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "أوافق بشدة",
+                  "en": "Strongly Agree"
+                }
+              }
+            ]
+          },
+          {
+            "code": "Q04",
+            "displayOrder": 4,
+            "itemType": "single_choice",
+            "isRequired": true,
+            "scoringCategory": "communication",
+            "scoringDirection": "reverse",
+            "prompt": {
+              "ar": "كثيرًا ما تبقى الخلافات في أسرتنا دون حل لفترات طويلة.",
+              "en": "Disagreements in our household often remain unresolved for long periods."
+            },
+            "options": [
+              {
+                "code": "1",
+                "displayOrder": 1,
+                "value": 1,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "لا أوافق بشدة",
+                  "en": "Strongly Disagree"
+                }
+              },
+              {
+                "code": "2",
+                "displayOrder": 2,
+                "value": 2,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "لا أوافق",
+                  "en": "Disagree"
+                }
+              },
+              {
+                "code": "3",
+                "displayOrder": 3,
+                "value": 3,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "أوافق",
+                  "en": "Agree"
+                }
+              },
+              {
+                "code": "4",
+                "displayOrder": 4,
+                "value": 4,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "أوافق بشدة",
+                  "en": "Strongly Agree"
+                }
+              }
+            ]
+          },
+          {
+            "code": "Q05",
+            "displayOrder": 5,
+            "itemType": "single_choice",
+            "isRequired": true,
+            "scoringCategory": "communication",
+            "scoringDirection": "forward",
+            "prompt": {
+              "ar": "نستطيع اتخاذ القرارات المهمة للأسرة معًا.",
+              "en": "We are able to make important household decisions together."
+            },
+            "options": [
+              {
+                "code": "1",
+                "displayOrder": 1,
+                "value": 1,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "لا أوافق بشدة",
+                  "en": "Strongly Disagree"
+                }
+              },
+              {
+                "code": "2",
+                "displayOrder": 2,
+                "value": 2,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "لا أوافق",
+                  "en": "Disagree"
+                }
+              },
+              {
+                "code": "3",
+                "displayOrder": 3,
+                "value": 3,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "أوافق",
+                  "en": "Agree"
+                }
+              },
+              {
+                "code": "4",
+                "displayOrder": 4,
+                "value": 4,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "أوافق بشدة",
+                  "en": "Strongly Agree"
+                }
+              }
+            ]
+          },
+          {
+            "code": "Q06",
+            "displayOrder": 6,
+            "itemType": "single_choice",
+            "isRequired": true,
+            "scoringCategory": "communication",
+            "scoringDirection": "forward",
+            "prompt": {
+              "ar": "يصغي بعضنا إلى وجهة نظر بعض، حتى عندما نختلف.",
+              "en": "We listen to each other's point of view, even when we disagree."
+            },
+            "options": [
+              {
+                "code": "1",
+                "displayOrder": 1,
+                "value": 1,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "لا أوافق بشدة",
+                  "en": "Strongly Disagree"
+                }
+              },
+              {
+                "code": "2",
+                "displayOrder": 2,
+                "value": 2,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "لا أوافق",
+                  "en": "Disagree"
+                }
+              },
+              {
+                "code": "3",
+                "displayOrder": 3,
+                "value": 3,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "أوافق",
+                  "en": "Agree"
+                }
+              },
+              {
+                "code": "4",
+                "displayOrder": 4,
+                "value": 4,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "أوافق بشدة",
+                  "en": "Strongly Agree"
+                }
+              }
+            ]
+          },
+          {
+            "code": "Q07",
+            "displayOrder": 7,
+            "itemType": "single_choice",
+            "isRequired": true,
+            "scoringCategory": "communication",
+            "scoringDirection": "reverse",
+            "prompt": {
+              "ar": "كثيرًا ما يعلم أفراد الأسرة بالقرارات المهمة بعد اتخاذها فقط.",
+              "en": "Family members often learn about important decisions only after they have been made."
+            },
+            "options": [
+              {
+                "code": "1",
+                "displayOrder": 1,
+                "value": 1,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "لا أوافق بشدة",
+                  "en": "Strongly Disagree"
+                }
+              },
+              {
+                "code": "2",
+                "displayOrder": 2,
+                "value": 2,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "لا أوافق",
+                  "en": "Disagree"
+                }
+              },
+              {
+                "code": "3",
+                "displayOrder": 3,
+                "value": 3,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "أوافق",
+                  "en": "Agree"
+                }
+              },
+              {
+                "code": "4",
+                "displayOrder": 4,
+                "value": 4,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "أوافق بشدة",
+                  "en": "Strongly Agree"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "code": "connectedness",
+        "displayOrder": 2,
+        "title": {
+          "ar": "الترابط والتماسك الأسري",
+          "en": "Family Connectedness & Cohesion"
+        },
+        "items": [
+          {
+            "code": "Q08",
+            "displayOrder": 1,
+            "itemType": "single_choice",
+            "isRequired": true,
+            "scoringCategory": "connectedness",
+            "scoringDirection": "forward",
+            "prompt": {
+              "ar": "نقضي بانتظام وقتًا ذا معنى معًا كأسرة.",
+              "en": "We regularly spend meaningful time together as a family."
+            },
+            "options": [
+              {
+                "code": "1",
+                "displayOrder": 1,
+                "value": 1,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "لا أوافق بشدة",
+                  "en": "Strongly Disagree"
+                }
+              },
+              {
+                "code": "2",
+                "displayOrder": 2,
+                "value": 2,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "لا أوافق",
+                  "en": "Disagree"
+                }
+              },
+              {
+                "code": "3",
+                "displayOrder": 3,
+                "value": 3,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "أوافق",
+                  "en": "Agree"
+                }
+              },
+              {
+                "code": "4",
+                "displayOrder": 4,
+                "value": 4,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "أوافق بشدة",
+                  "en": "Strongly Agree"
+                }
+              }
+            ]
+          },
+          {
+            "code": "Q09",
+            "displayOrder": 2,
+            "itemType": "single_choice",
+            "isRequired": true,
+            "scoringCategory": "connectedness",
+            "scoringDirection": "forward",
+            "prompt": {
+              "ar": "يشعر كل فرد في أسرتنا بانتماء قوي إليها.",
+              "en": "Every member of our household feels a strong sense of belonging."
+            },
+            "options": [
+              {
+                "code": "1",
+                "displayOrder": 1,
+                "value": 1,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "لا أوافق بشدة",
+                  "en": "Strongly Disagree"
+                }
+              },
+              {
+                "code": "2",
+                "displayOrder": 2,
+                "value": 2,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "لا أوافق",
+                  "en": "Disagree"
+                }
+              },
+              {
+                "code": "3",
+                "displayOrder": 3,
+                "value": 3,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "أوافق",
+                  "en": "Agree"
+                }
+              },
+              {
+                "code": "4",
+                "displayOrder": 4,
+                "value": 4,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "أوافق بشدة",
+                  "en": "Strongly Agree"
+                }
+              }
+            ]
+          },
+          {
+            "code": "Q10",
+            "displayOrder": 3,
+            "itemType": "single_choice",
+            "isRequired": true,
+            "scoringCategory": "connectedness",
+            "scoringDirection": "forward",
+            "prompt": {
+              "ar": "يساند بعضنا بعضًا في الأوقات الصعبة.",
+              "en": "We support each other through difficult times."
+            },
+            "options": [
+              {
+                "code": "1",
+                "displayOrder": 1,
+                "value": 1,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "لا أوافق بشدة",
+                  "en": "Strongly Disagree"
+                }
+              },
+              {
+                "code": "2",
+                "displayOrder": 2,
+                "value": 2,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "لا أوافق",
+                  "en": "Disagree"
+                }
+              },
+              {
+                "code": "3",
+                "displayOrder": 3,
+                "value": 3,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "أوافق",
+                  "en": "Agree"
+                }
+              },
+              {
+                "code": "4",
+                "displayOrder": 4,
+                "value": 4,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "أوافق بشدة",
+                  "en": "Strongly Agree"
+                }
+              }
+            ]
+          },
+          {
+            "code": "Q11",
+            "displayOrder": 4,
+            "itemType": "single_choice",
+            "isRequired": true,
+            "scoringCategory": "connectedness",
+            "scoringDirection": "reverse",
+            "prompt": {
+              "ar": "كثيرًا ما يشعر أفراد أسرتنا بالعزلة عن بعضهم.",
+              "en": "Members of our household often feel isolated from one another."
+            },
+            "options": [
+              {
+                "code": "1",
+                "displayOrder": 1,
+                "value": 1,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "لا أوافق بشدة",
+                  "en": "Strongly Disagree"
+                }
+              },
+              {
+                "code": "2",
+                "displayOrder": 2,
+                "value": 2,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "لا أوافق",
+                  "en": "Disagree"
+                }
+              },
+              {
+                "code": "3",
+                "displayOrder": 3,
+                "value": 3,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "أوافق",
+                  "en": "Agree"
+                }
+              },
+              {
+                "code": "4",
+                "displayOrder": 4,
+                "value": 4,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "أوافق بشدة",
+                  "en": "Strongly Agree"
+                }
+              }
+            ]
+          },
+          {
+            "code": "Q12",
+            "displayOrder": 5,
+            "itemType": "single_choice",
+            "isRequired": true,
+            "scoringCategory": "connectedness",
+            "scoringDirection": "forward",
+            "prompt": {
+              "ar": "نحافظ على عادات أو تقاليد مشتركة تجمعنا.",
+              "en": "We keep shared routines or traditions that bring us together."
+            },
+            "options": [
+              {
+                "code": "1",
+                "displayOrder": 1,
+                "value": 1,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "لا أوافق بشدة",
+                  "en": "Strongly Disagree"
+                }
+              },
+              {
+                "code": "2",
+                "displayOrder": 2,
+                "value": 2,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "لا أوافق",
+                  "en": "Disagree"
+                }
+              },
+              {
+                "code": "3",
+                "displayOrder": 3,
+                "value": 3,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "أوافق",
+                  "en": "Agree"
+                }
+              },
+              {
+                "code": "4",
+                "displayOrder": 4,
+                "value": 4,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "أوافق بشدة",
+                  "en": "Strongly Agree"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "code": "outlook",
+        "displayOrder": 3,
+        "title": {
+          "ar": "النظرة الإيجابية والقيم المشتركة",
+          "en": "Positive Outlook & Shared Values"
+        },
+        "items": [
+          {
+            "code": "Q13",
+            "displayOrder": 1,
+            "itemType": "single_choice",
+            "isRequired": true,
+            "scoringCategory": "outlook",
+            "scoringDirection": "forward",
+            "prompt": {
+              "ar": "نؤمن بأن أسرتنا قادرة على تجاوز التحديات التي تواجهها.",
+              "en": "We believe our family can overcome the challenges we face."
+            },
+            "options": [
+              {
+                "code": "1",
+                "displayOrder": 1,
+                "value": 1,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "لا أوافق بشدة",
+                  "en": "Strongly Disagree"
+                }
+              },
+              {
+                "code": "2",
+                "displayOrder": 2,
+                "value": 2,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "لا أوافق",
+                  "en": "Disagree"
+                }
+              },
+              {
+                "code": "3",
+                "displayOrder": 3,
+                "value": 3,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "أوافق",
+                  "en": "Agree"
+                }
+              },
+              {
+                "code": "4",
+                "displayOrder": 4,
+                "value": 4,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "أوافق بشدة",
+                  "en": "Strongly Agree"
+                }
+              }
+            ]
+          },
+          {
+            "code": "Q14",
+            "displayOrder": 2,
+            "itemType": "single_choice",
+            "isRequired": true,
+            "scoringCategory": "outlook",
+            "scoringDirection": "forward",
+            "prompt": {
+              "ar": "تمنحنا قيمنا المشتركة أو إيماننا القوة في الأوقات الصعبة.",
+              "en": "Our shared values or faith give us strength during hard times."
+            },
+            "options": [
+              {
+                "code": "1",
+                "displayOrder": 1,
+                "value": 1,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "لا أوافق بشدة",
+                  "en": "Strongly Disagree"
+                }
+              },
+              {
+                "code": "2",
+                "displayOrder": 2,
+                "value": 2,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "لا أوافق",
+                  "en": "Disagree"
+                }
+              },
+              {
+                "code": "3",
+                "displayOrder": 3,
+                "value": 3,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "أوافق",
+                  "en": "Agree"
+                }
+              },
+              {
+                "code": "4",
+                "displayOrder": 4,
+                "value": 4,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "أوافق بشدة",
+                  "en": "Strongly Agree"
+                }
+              }
+            ]
+          },
+          {
+            "code": "Q15",
+            "displayOrder": 3,
+            "itemType": "single_choice",
+            "isRequired": true,
+            "scoringCategory": "outlook",
+            "scoringDirection": "forward",
+            "prompt": {
+              "ar": "نستطيع أن نجد معنى أو دروسًا في التجارب الصعبة.",
+              "en": "We are able to find meaning or lessons in difficult experiences."
+            },
+            "options": [
+              {
+                "code": "1",
+                "displayOrder": 1,
+                "value": 1,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "لا أوافق بشدة",
+                  "en": "Strongly Disagree"
+                }
+              },
+              {
+                "code": "2",
+                "displayOrder": 2,
+                "value": 2,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "لا أوافق",
+                  "en": "Disagree"
+                }
+              },
+              {
+                "code": "3",
+                "displayOrder": 3,
+                "value": 3,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "أوافق",
+                  "en": "Agree"
+                }
+              },
+              {
+                "code": "4",
+                "displayOrder": 4,
+                "value": 4,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "أوافق بشدة",
+                  "en": "Strongly Agree"
+                }
+              }
+            ]
+          },
+          {
+            "code": "Q16",
+            "displayOrder": 4,
+            "itemType": "single_choice",
+            "isRequired": true,
+            "scoringCategory": "outlook",
+            "scoringDirection": "reverse",
+            "prompt": {
+              "ar": "كثيرًا ما نشعر بأن وضعنا خارج عن سيطرتنا.",
+              "en": "We often feel that our situation is beyond our control."
+            },
+            "options": [
+              {
+                "code": "1",
+                "displayOrder": 1,
+                "value": 1,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "لا أوافق بشدة",
+                  "en": "Strongly Disagree"
+                }
+              },
+              {
+                "code": "2",
+                "displayOrder": 2,
+                "value": 2,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "لا أوافق",
+                  "en": "Disagree"
+                }
+              },
+              {
+                "code": "3",
+                "displayOrder": 3,
+                "value": 3,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "أوافق",
+                  "en": "Agree"
+                }
+              },
+              {
+                "code": "4",
+                "displayOrder": 4,
+                "value": 4,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "أوافق بشدة",
+                  "en": "Strongly Agree"
+                }
+              }
+            ]
+          },
+          {
+            "code": "Q17",
+            "displayOrder": 5,
+            "itemType": "single_choice",
+            "isRequired": true,
+            "scoringCategory": "outlook",
+            "scoringDirection": "forward",
+            "prompt": {
+              "ar": "نحن متفائلون بمستقبل أسرتنا.",
+              "en": "We are hopeful about our family's future."
+            },
+            "options": [
+              {
+                "code": "1",
+                "displayOrder": 1,
+                "value": 1,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "لا أوافق بشدة",
+                  "en": "Strongly Disagree"
+                }
+              },
+              {
+                "code": "2",
+                "displayOrder": 2,
+                "value": 2,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "لا أوافق",
+                  "en": "Disagree"
+                }
+              },
+              {
+                "code": "3",
+                "displayOrder": 3,
+                "value": 3,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "أوافق",
+                  "en": "Agree"
+                }
+              },
+              {
+                "code": "4",
+                "displayOrder": 4,
+                "value": 4,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "أوافق بشدة",
+                  "en": "Strongly Agree"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "code": "extended_family",
+        "displayOrder": 4,
+        "title": {
+          "ar": "شبكات دعم العائلة الممتدة",
+          "en": "Extended Family Support Networks"
+        },
+        "items": [
+          {
+            "code": "Q18",
+            "displayOrder": 1,
+            "itemType": "single_choice",
+            "isRequired": true,
+            "scoringCategory": "extended_family",
+            "scoringDirection": "forward",
+            "prompt": {
+              "ar": "نستطيع الاعتماد على أفراد العائلة الممتدة في المساعدة العملية عند الحاجة.",
+              "en": "We can rely on extended family members for practical help when we need it."
+            },
+            "options": [
+              {
+                "code": "1",
+                "displayOrder": 1,
+                "value": 1,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "لا أوافق بشدة",
+                  "en": "Strongly Disagree"
+                }
+              },
+              {
+                "code": "2",
+                "displayOrder": 2,
+                "value": 2,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "لا أوافق",
+                  "en": "Disagree"
+                }
+              },
+              {
+                "code": "3",
+                "displayOrder": 3,
+                "value": 3,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "أوافق",
+                  "en": "Agree"
+                }
+              },
+              {
+                "code": "4",
+                "displayOrder": 4,
+                "value": 4,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "أوافق بشدة",
+                  "en": "Strongly Agree"
+                }
+              }
+            ]
+          },
+          {
+            "code": "Q19",
+            "displayOrder": 2,
+            "itemType": "single_choice",
+            "isRequired": true,
+            "scoringCategory": "extended_family",
+            "scoringDirection": "forward",
+            "prompt": {
+              "ar": "نبقى على تواصل منتظم مع الأقارب خارج أسرتنا.",
+              "en": "We stay in regular contact with relatives outside our household."
+            },
+            "options": [
+              {
+                "code": "1",
+                "displayOrder": 1,
+                "value": 1,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "لا أوافق بشدة",
+                  "en": "Strongly Disagree"
+                }
+              },
+              {
+                "code": "2",
+                "displayOrder": 2,
+                "value": 2,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "لا أوافق",
+                  "en": "Disagree"
+                }
+              },
+              {
+                "code": "3",
+                "displayOrder": 3,
+                "value": 3,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "أوافق",
+                  "en": "Agree"
+                }
+              },
+              {
+                "code": "4",
+                "displayOrder": 4,
+                "value": 4,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "أوافق بشدة",
+                  "en": "Strongly Agree"
+                }
+              }
+            ]
+          },
+          {
+            "code": "Q20",
+            "displayOrder": 3,
+            "itemType": "single_choice",
+            "isRequired": true,
+            "scoringCategory": "extended_family",
+            "scoringDirection": "forward",
+            "prompt": {
+              "ar": "سيساندنا أفراد العائلة الممتدة معنويًا إذا مررنا بأزمة.",
+              "en": "Extended family members would support us emotionally during a crisis."
+            },
+            "options": [
+              {
+                "code": "1",
+                "displayOrder": 1,
+                "value": 1,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "لا أوافق بشدة",
+                  "en": "Strongly Disagree"
+                }
+              },
+              {
+                "code": "2",
+                "displayOrder": 2,
+                "value": 2,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "لا أوافق",
+                  "en": "Disagree"
+                }
+              },
+              {
+                "code": "3",
+                "displayOrder": 3,
+                "value": 3,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "أوافق",
+                  "en": "Agree"
+                }
+              },
+              {
+                "code": "4",
+                "displayOrder": 4,
+                "value": 4,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "أوافق بشدة",
+                  "en": "Strongly Agree"
+                }
+              }
+            ]
+          },
+          {
+            "code": "Q21",
+            "displayOrder": 4,
+            "itemType": "single_choice",
+            "isRequired": true,
+            "scoringCategory": "extended_family",
+            "scoringDirection": "reverse",
+            "prompt": {
+              "ar": "العلاقات مع عائلتنا الممتدة مصدر ضغط كبير علينا.",
+              "en": "Relationships with our extended family are a source of significant strain."
+            },
+            "options": [
+              {
+                "code": "1",
+                "displayOrder": 1,
+                "value": 1,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "لا أوافق بشدة",
+                  "en": "Strongly Disagree"
+                }
+              },
+              {
+                "code": "2",
+                "displayOrder": 2,
+                "value": 2,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "لا أوافق",
+                  "en": "Disagree"
+                }
+              },
+              {
+                "code": "3",
+                "displayOrder": 3,
+                "value": 3,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "أوافق",
+                  "en": "Agree"
+                }
+              },
+              {
+                "code": "4",
+                "displayOrder": 4,
+                "value": 4,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "أوافق بشدة",
+                  "en": "Strongly Agree"
+                }
+              }
+            ]
+          },
+          {
+            "code": "Q22",
+            "displayOrder": 5,
+            "itemType": "single_choice",
+            "isRequired": true,
+            "scoringCategory": "extended_family",
+            "scoringDirection": "forward",
+            "prompt": {
+              "ar": "إلى جانب الأقارب، لدينا أصدقاء أو جيران أو أفراد من المجتمع نثق بهم ونلجأ إليهم.",
+              "en": "Beyond relatives, we have trusted friends, neighbours or community members we can turn to."
+            },
+            "options": [
+              {
+                "code": "1",
+                "displayOrder": 1,
+                "value": 1,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "لا أوافق بشدة",
+                  "en": "Strongly Disagree"
+                }
+              },
+              {
+                "code": "2",
+                "displayOrder": 2,
+                "value": 2,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "لا أوافق",
+                  "en": "Disagree"
+                }
+              },
+              {
+                "code": "3",
+                "displayOrder": 3,
+                "value": 3,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "أوافق",
+                  "en": "Agree"
+                }
+              },
+              {
+                "code": "4",
+                "displayOrder": 4,
+                "value": 4,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "أوافق بشدة",
+                  "en": "Strongly Agree"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "code": "wealth_debt",
+        "displayOrder": 5,
+        "title": {
+          "ar": "إدارة الثروة والديون عبر الأجيال",
+          "en": "Intergenerational Wealth & Debt Management"
+        },
+        "items": [
+          {
+            "code": "Q23",
+            "displayOrder": 1,
+            "itemType": "single_choice",
+            "isRequired": true,
+            "scoringCategory": "wealth_debt",
+            "scoringDirection": "forward",
+            "prompt": {
+              "ar": "تلتزم أسرتنا بميزانية أو خطة إنفاق.",
+              "en": "Our household follows a budget or spending plan."
+            },
+            "options": [
+              {
+                "code": "1",
+                "displayOrder": 1,
+                "value": 1,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "لا أوافق بشدة",
+                  "en": "Strongly Disagree"
+                }
+              },
+              {
+                "code": "2",
+                "displayOrder": 2,
+                "value": 2,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "لا أوافق",
+                  "en": "Disagree"
+                }
+              },
+              {
+                "code": "3",
+                "displayOrder": 3,
+                "value": 3,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "أوافق",
+                  "en": "Agree"
+                }
+              },
+              {
+                "code": "4",
+                "displayOrder": 4,
+                "value": 4,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "أوافق بشدة",
+                  "en": "Strongly Agree"
+                }
+              }
+            ]
+          },
+          {
+            "code": "Q24",
+            "displayOrder": 2,
+            "itemType": "single_choice",
+            "isRequired": true,
+            "scoringCategory": "wealth_debt",
+            "scoringDirection": "forward",
+            "prompt": {
+              "ar": "لدينا مدخرات تكفي لتغطية ثلاثة أشهر على الأقل من النفقات الأساسية.",
+              "en": "We have savings that could cover at least three months of essential expenses."
+            },
+            "options": [
+              {
+                "code": "1",
+                "displayOrder": 1,
+                "value": 1,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "لا أوافق بشدة",
+                  "en": "Strongly Disagree"
+                }
+              },
+              {
+                "code": "2",
+                "displayOrder": 2,
+                "value": 2,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "لا أوافق",
+                  "en": "Disagree"
+                }
+              },
+              {
+                "code": "3",
+                "displayOrder": 3,
+                "value": 3,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "أوافق",
+                  "en": "Agree"
+                }
+              },
+              {
+                "code": "4",
+                "displayOrder": 4,
+                "value": 4,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "أوافق بشدة",
+                  "en": "Strongly Agree"
+                }
+              }
+            ]
+          },
+          {
+            "code": "Q25",
+            "displayOrder": 3,
+            "itemType": "single_choice",
+            "isRequired": true,
+            "scoringCategory": "wealth_debt",
+            "scoringDirection": "reverse",
+            "prompt": {
+              "ar": "تعتمد أسرتنا على الاقتراض لتغطية النفقات الشهرية المعتادة.",
+              "en": "Our household relies on borrowing to cover routine monthly expenses."
+            },
+            "options": [
+              {
+                "code": "1",
+                "displayOrder": 1,
+                "value": 1,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "لا أوافق بشدة",
+                  "en": "Strongly Disagree"
+                }
+              },
+              {
+                "code": "2",
+                "displayOrder": 2,
+                "value": 2,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "لا أوافق",
+                  "en": "Disagree"
+                }
+              },
+              {
+                "code": "3",
+                "displayOrder": 3,
+                "value": 3,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "أوافق",
+                  "en": "Agree"
+                }
+              },
+              {
+                "code": "4",
+                "displayOrder": 4,
+                "value": 4,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "أوافق بشدة",
+                  "en": "Strongly Agree"
+                }
+              }
+            ]
+          },
+          {
+            "code": "Q26",
+            "displayOrder": 4,
+            "itemType": "single_choice",
+            "isRequired": true,
+            "scoringCategory": "wealth_debt",
+            "scoringDirection": "reverse",
+            "prompt": {
+              "ar": "تشكّل أقساط الديون ضغطًا شديدًا على أسرتنا.",
+              "en": "Debt repayments place serious strain on our household."
+            },
+            "options": [
+              {
+                "code": "1",
+                "displayOrder": 1,
+                "value": 1,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "لا أوافق بشدة",
+                  "en": "Strongly Disagree"
+                }
+              },
+              {
+                "code": "2",
+                "displayOrder": 2,
+                "value": 2,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "لا أوافق",
+                  "en": "Disagree"
+                }
+              },
+              {
+                "code": "3",
+                "displayOrder": 3,
+                "value": 3,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "أوافق",
+                  "en": "Agree"
+                }
+              },
+              {
+                "code": "4",
+                "displayOrder": 4,
+                "value": 4,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "أوافق بشدة",
+                  "en": "Strongly Agree"
+                }
+              }
+            ]
+          },
+          {
+            "code": "Q27",
+            "displayOrder": 5,
+            "itemType": "single_choice",
+            "isRequired": true,
+            "scoringCategory": "wealth_debt",
+            "scoringDirection": "forward",
+            "prompt": {
+              "ar": "تُناقَش القرارات والالتزامات المالية بصراحة بين الأجيال في عائلتنا.",
+              "en": "Financial decisions and obligations are discussed openly across generations in our family."
+            },
+            "options": [
+              {
+                "code": "1",
+                "displayOrder": 1,
+                "value": 1,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "لا أوافق بشدة",
+                  "en": "Strongly Disagree"
+                }
+              },
+              {
+                "code": "2",
+                "displayOrder": 2,
+                "value": 2,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "لا أوافق",
+                  "en": "Disagree"
+                }
+              },
+              {
+                "code": "3",
+                "displayOrder": 3,
+                "value": 3,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "أوافق",
+                  "en": "Agree"
+                }
+              },
+              {
+                "code": "4",
+                "displayOrder": 4,
+                "value": 4,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "أوافق بشدة",
+                  "en": "Strongly Agree"
+                }
+              }
+            ]
+          },
+          {
+            "code": "Q28",
+            "displayOrder": 6,
+            "itemType": "single_choice",
+            "isRequired": true,
+            "scoringCategory": "wealth_debt",
+            "scoringDirection": "forward",
+            "prompt": {
+              "ar": "نخطط لأمننا المالي على المدى الطويل، مثل التعليم أو التقاعد أو الميراث.",
+              "en": "We are planning for long-term financial security, such as education, retirement or inheritance."
+            },
+            "options": [
+              {
+                "code": "1",
+                "displayOrder": 1,
+                "value": 1,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "لا أوافق بشدة",
+                  "en": "Strongly Disagree"
+                }
+              },
+              {
+                "code": "2",
+                "displayOrder": 2,
+                "value": 2,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "لا أوافق",
+                  "en": "Disagree"
+                }
+              },
+              {
+                "code": "3",
+                "displayOrder": 3,
+                "value": 3,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "أوافق",
+                  "en": "Agree"
+                }
+              },
+              {
+                "code": "4",
+                "displayOrder": 4,
+                "value": 4,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "أوافق بشدة",
+                  "en": "Strongly Agree"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "code": "seniors",
+        "displayOrder": 6,
+        "title": {
+          "ar": "تمكين كبار السن ودمجهم",
+          "en": "Empowerment & Integration of Seniors"
+        },
+        "items": [
+          {
+            "code": "Q29",
+            "displayOrder": 1,
+            "itemType": "single_choice",
+            "isRequired": true,
+            "scoringCategory": "seniors",
+            "scoringDirection": "forward",
+            "prompt": {
+              "ar": "يشارك كبار السن في الأسرة بفاعلية في القرارات العائلية المهمة.",
+              "en": "Older family members are actively involved in important family decisions."
+            },
+            "options": [
+              {
+                "code": "1",
+                "displayOrder": 1,
+                "value": 1,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "لا أوافق بشدة",
+                  "en": "Strongly Disagree"
+                }
+              },
+              {
+                "code": "2",
+                "displayOrder": 2,
+                "value": 2,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "لا أوافق",
+                  "en": "Disagree"
+                }
+              },
+              {
+                "code": "3",
+                "displayOrder": 3,
+                "value": 3,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "أوافق",
+                  "en": "Agree"
+                }
+              },
+              {
+                "code": "4",
+                "displayOrder": 4,
+                "value": 4,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "أوافق بشدة",
+                  "en": "Strongly Agree"
+                }
+              }
+            ]
+          },
+          {
+            "code": "Q30",
+            "displayOrder": 2,
+            "itemType": "single_choice",
+            "isRequired": true,
+            "scoringCategory": "seniors",
+            "scoringDirection": "forward",
+            "prompt": {
+              "ar": "تُقدَّر معرفة كبار السن في الأسرة وخبرتهم وتنتقل إلى الأجيال الأصغر.",
+              "en": "The knowledge and experience of older family members is valued and passed on to younger generations."
+            },
+            "options": [
+              {
+                "code": "1",
+                "displayOrder": 1,
+                "value": 1,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "لا أوافق بشدة",
+                  "en": "Strongly Disagree"
+                }
+              },
+              {
+                "code": "2",
+                "displayOrder": 2,
+                "value": 2,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "لا أوافق",
+                  "en": "Disagree"
+                }
+              },
+              {
+                "code": "3",
+                "displayOrder": 3,
+                "value": 3,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "أوافق",
+                  "en": "Agree"
+                }
+              },
+              {
+                "code": "4",
+                "displayOrder": 4,
+                "value": 4,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "أوافق بشدة",
+                  "en": "Strongly Agree"
+                }
+              }
+            ]
+          },
+          {
+            "code": "Q31",
+            "displayOrder": 3,
+            "itemType": "single_choice",
+            "isRequired": true,
+            "scoringCategory": "seniors",
+            "scoringDirection": "forward",
+            "prompt": {
+              "ar": "يتواصل كبار السن في الأسرة بانتظام وبشكل هادف مع الأجيال الأصغر.",
+              "en": "Older family members have regular, meaningful contact with younger generations."
+            },
+            "options": [
+              {
+                "code": "1",
+                "displayOrder": 1,
+                "value": 1,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "لا أوافق بشدة",
+                  "en": "Strongly Disagree"
+                }
+              },
+              {
+                "code": "2",
+                "displayOrder": 2,
+                "value": 2,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "لا أوافق",
+                  "en": "Disagree"
+                }
+              },
+              {
+                "code": "3",
+                "displayOrder": 3,
+                "value": 3,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "أوافق",
+                  "en": "Agree"
+                }
+              },
+              {
+                "code": "4",
+                "displayOrder": 4,
+                "value": 4,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "أوافق بشدة",
+                  "en": "Strongly Agree"
+                }
+              }
+            ]
+          },
+          {
+            "code": "Q32",
+            "displayOrder": 4,
+            "itemType": "single_choice",
+            "isRequired": true,
+            "scoringCategory": "seniors",
+            "scoringDirection": "reverse",
+            "prompt": {
+              "ar": "كثيرًا ما يشعر كبار السن في الأسرة بالعزلة أو بأنهم مستبعدون من الحياة العائلية.",
+              "en": "Older family members often feel isolated or left out of family life."
+            },
+            "options": [
+              {
+                "code": "1",
+                "displayOrder": 1,
+                "value": 1,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "لا أوافق بشدة",
+                  "en": "Strongly Disagree"
+                }
+              },
+              {
+                "code": "2",
+                "displayOrder": 2,
+                "value": 2,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "لا أوافق",
+                  "en": "Disagree"
+                }
+              },
+              {
+                "code": "3",
+                "displayOrder": 3,
+                "value": 3,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "أوافق",
+                  "en": "Agree"
+                }
+              },
+              {
+                "code": "4",
+                "displayOrder": 4,
+                "value": 4,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "أوافق بشدة",
+                  "en": "Strongly Agree"
+                }
+              }
+            ]
+          },
+          {
+            "code": "Q33",
+            "displayOrder": 5,
+            "itemType": "single_choice",
+            "isRequired": true,
+            "scoringCategory": "seniors",
+            "scoringDirection": "forward",
+            "prompt": {
+              "ar": "يحظى كبار السن في الأسرة بالدعم الذي يحتاجونه للحفاظ على صحتهم واستقلاليتهم.",
+              "en": "Older family members have the support they need to stay healthy and independent."
+            },
+            "options": [
+              {
+                "code": "1",
+                "displayOrder": 1,
+                "value": 1,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "لا أوافق بشدة",
+                  "en": "Strongly Disagree"
+                }
+              },
+              {
+                "code": "2",
+                "displayOrder": 2,
+                "value": 2,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "لا أوافق",
+                  "en": "Disagree"
+                }
+              },
+              {
+                "code": "3",
+                "displayOrder": 3,
+                "value": 3,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "أوافق",
+                  "en": "Agree"
+                }
+              },
+              {
+                "code": "4",
+                "displayOrder": 4,
+                "value": 4,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "أوافق بشدة",
+                  "en": "Strongly Agree"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "code": "work_life",
+        "displayOrder": 7,
+        "title": {
+          "ar": "التوازن بين العمل والحياة والرعاية",
+          "en": "Work–Life Balance & Caregiving"
+        },
+        "items": [
+          {
+            "code": "Q34",
+            "displayOrder": 1,
+            "itemType": "single_choice",
+            "isRequired": true,
+            "scoringCategory": "work_life",
+            "scoringDirection": "forward",
+            "prompt": {
+              "ar": "تترك التزامات العمل وقتًا وطاقة كافيين للحياة الأسرية.",
+              "en": "Work commitments leave enough time and energy for family life."
+            },
+            "options": [
+              {
+                "code": "1",
+                "displayOrder": 1,
+                "value": 1,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "لا أوافق بشدة",
+                  "en": "Strongly Disagree"
+                }
+              },
+              {
+                "code": "2",
+                "displayOrder": 2,
+                "value": 2,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "لا أوافق",
+                  "en": "Disagree"
+                }
+              },
+              {
+                "code": "3",
+                "displayOrder": 3,
+                "value": 3,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "أوافق",
+                  "en": "Agree"
+                }
+              },
+              {
+                "code": "4",
+                "displayOrder": 4,
+                "value": 4,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "أوافق بشدة",
+                  "en": "Strongly Agree"
+                }
+              }
+            ]
+          },
+          {
+            "code": "Q35",
+            "displayOrder": 2,
+            "itemType": "single_choice",
+            "isRequired": true,
+            "scoringCategory": "work_life",
+            "scoringDirection": "forward",
+            "prompt": {
+              "ar": "تُتقاسَم مسؤوليات رعاية الأطفال أو الأقارب المسنين بإنصاف داخل أسرتنا.",
+              "en": "Caregiving responsibilities for children or older relatives are shared fairly within our household."
+            },
+            "options": [
+              {
+                "code": "1",
+                "displayOrder": 1,
+                "value": 1,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "لا أوافق بشدة",
+                  "en": "Strongly Disagree"
+                }
+              },
+              {
+                "code": "2",
+                "displayOrder": 2,
+                "value": 2,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "لا أوافق",
+                  "en": "Disagree"
+                }
+              },
+              {
+                "code": "3",
+                "displayOrder": 3,
+                "value": 3,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "أوافق",
+                  "en": "Agree"
+                }
+              },
+              {
+                "code": "4",
+                "displayOrder": 4,
+                "value": 4,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "أوافق بشدة",
+                  "en": "Strongly Agree"
+                }
+              }
+            ]
+          },
+          {
+            "code": "Q36",
+            "displayOrder": 3,
+            "itemType": "single_choice",
+            "isRequired": true,
+            "scoringCategory": "work_life",
+            "scoringDirection": "reverse",
+            "prompt": {
+              "ar": "كثيرًا ما يشعر أفراد أسرتنا بالإرهاق من مجموع متطلبات العمل والرعاية.",
+              "en": "Household members frequently feel overwhelmed by their combined work and caregiving demands."
+            },
+            "options": [
+              {
+                "code": "1",
+                "displayOrder": 1,
+                "value": 1,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "لا أوافق بشدة",
+                  "en": "Strongly Disagree"
+                }
+              },
+              {
+                "code": "2",
+                "displayOrder": 2,
+                "value": 2,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "لا أوافق",
+                  "en": "Disagree"
+                }
+              },
+              {
+                "code": "3",
+                "displayOrder": 3,
+                "value": 3,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "أوافق",
+                  "en": "Agree"
+                }
+              },
+              {
+                "code": "4",
+                "displayOrder": 4,
+                "value": 4,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "أوافق بشدة",
+                  "en": "Strongly Agree"
+                }
+              }
+            ]
+          },
+          {
+            "code": "Q37",
+            "displayOrder": 4,
+            "itemType": "single_choice",
+            "isRequired": true,
+            "scoringCategory": "work_life",
+            "scoringDirection": "forward",
+            "prompt": {
+              "ar": "نستطيع الاهتمام بصحتنا ورفاهنا إلى جانب مسؤولياتنا تجاه الآخرين.",
+              "en": "We are able to look after our own wellbeing alongside our responsibilities to others."
+            },
+            "options": [
+              {
+                "code": "1",
+                "displayOrder": 1,
+                "value": 1,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "لا أوافق بشدة",
+                  "en": "Strongly Disagree"
+                }
+              },
+              {
+                "code": "2",
+                "displayOrder": 2,
+                "value": 2,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "لا أوافق",
+                  "en": "Disagree"
+                }
+              },
+              {
+                "code": "3",
+                "displayOrder": 3,
+                "value": 3,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "أوافق",
+                  "en": "Agree"
+                }
+              },
+              {
+                "code": "4",
+                "displayOrder": 4,
+                "value": 4,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "أوافق بشدة",
+                  "en": "Strongly Agree"
+                }
+              }
+            ]
+          },
+          {
+            "code": "Q38",
+            "displayOrder": 5,
+            "itemType": "single_choice",
+            "isRequired": true,
+            "scoringCategory": "work_life",
+            "scoringDirection": "reverse",
+            "prompt": {
+              "ar": "يؤثر ضغط العمل بانتظام على أجواء المنزل.",
+              "en": "Work-related stress regularly affects the atmosphere at home."
+            },
+            "options": [
+              {
+                "code": "1",
+                "displayOrder": 1,
+                "value": 1,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "لا أوافق بشدة",
+                  "en": "Strongly Disagree"
+                }
+              },
+              {
+                "code": "2",
+                "displayOrder": 2,
+                "value": 2,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "لا أوافق",
+                  "en": "Disagree"
+                }
+              },
+              {
+                "code": "3",
+                "displayOrder": 3,
+                "value": 3,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "أوافق",
+                  "en": "Agree"
+                }
+              },
+              {
+                "code": "4",
+                "displayOrder": 4,
+                "value": 4,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "أوافق بشدة",
+                  "en": "Strongly Agree"
+                }
+              }
+            ]
+          },
+          {
+            "code": "Q39",
+            "displayOrder": 6,
+            "itemType": "single_choice",
+            "isRequired": true,
+            "scoringCategory": "work_life",
+            "scoringDirection": "forward",
+            "prompt": {
+              "ar": "نعرف أين نجد خدمات الدعم مثل رعاية الأطفال أو رعاية المسنين أو الخدمات الأسرية.",
+              "en": "We know where to find support services such as childcare, eldercare or family services."
+            },
+            "options": [
+              {
+                "code": "1",
+                "displayOrder": 1,
+                "value": 1,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "لا أوافق بشدة",
+                  "en": "Strongly Disagree"
+                }
+              },
+              {
+                "code": "2",
+                "displayOrder": 2,
+                "value": 2,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "لا أوافق",
+                  "en": "Disagree"
+                }
+              },
+              {
+                "code": "3",
+                "displayOrder": 3,
+                "value": 3,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "أوافق",
+                  "en": "Agree"
+                }
+              },
+              {
+                "code": "4",
+                "displayOrder": 4,
+                "value": 4,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "أوافق بشدة",
+                  "en": "Strongly Agree"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "platforms": ["apple", "android"],
+  "apple": {
+    "modules": ["AzwahVoiceModule"]
+  },
+  "android": {
+    "modules": ["ae.azwah.voice.AzwahVoiceModule"]
+  }
+}

@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <!--
+    The live evaluation harness for the Azwah assistant and consultant (D-127). It drives the real OpenAI adapters with
+    synthetic families, scripted conversations and synthetic speech, checks the answers and reports pass rates and
+    latency. It needs an OpenAI key and costs money, so it runs only when asked; nothing references it and the API image
+    never contains it.
+  -->
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FamilyResilience.Application\FamilyResilience.Application.csproj" />
+    <ProjectReference Include="..\FamilyResilience.Infrastructure\FamilyResilience.Infrastructure.csproj" />
+  </ItemGroup>
+</Project>

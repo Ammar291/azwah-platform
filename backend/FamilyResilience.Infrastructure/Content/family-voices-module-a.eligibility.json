@@ -1,0 +1,5 @@
+{
+  "schema": "eligibility.v1",
+  "target": { "sectionCode": "A" },
+  "rule": { "any": [ { "isHeadOfHousehold": true }, { "isPrimaryIncomeEarner": true } ] }
+}

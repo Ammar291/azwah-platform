@@ -1,0 +1,7 @@
+**/bin/
+**/obj/
+**/TestResults/
+FamilyResilience.UnitTests/
+FamilyResilience.IntegrationTests/
+dotnet-tools.json
+README.md

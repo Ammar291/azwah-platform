@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+  <PropertyGroup>
+    <UserSecretsId>familyresilience-api</UserSecretsId>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FamilyResilience.Application\FamilyResilience.Application.csproj" />
+    <ProjectReference Include="..\FamilyResilience.Infrastructure\FamilyResilience.Infrastructure.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <!-- The consultant's safety watch is tested directly, on a manual clock. -->
+    <InternalsVisibleTo Include="FamilyResilience.UnitTests" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" />
+    <PackageReference Include="Microsoft.AspNetCore.OpenApi" />
+    <PackageReference Include="OpenTelemetry.Extensions.Hosting" />
+    <PackageReference Include="OpenTelemetry.Exporter.OpenTelemetryProtocol" />
+    <PackageReference Include="OpenTelemetry.Instrumentation.AspNetCore" />
+    <PackageReference Include="OpenTelemetry.Instrumentation.Http" />
+    <PackageReference Include="OpenTelemetry.Instrumentation.Runtime" />
+    <PackageReference Include="Npgsql.OpenTelemetry" />
+  </ItemGroup>
+</Project>

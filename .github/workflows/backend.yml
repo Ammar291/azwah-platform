@@ -1,0 +1,59 @@
+name: backend
+
+on:
+  push:
+    branches: [main]
+    paths: ["backend/**", "infra/monitoring/**", ".github/workflows/backend.yml"]
+  pull_request:
+    paths: ["backend/**", "infra/monitoring/**", ".github/workflows/backend.yml"]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: backend-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    defaults:
+      run:
+        working-directory: backend
+    env:
+      DOTNET_CLI_TELEMETRY_OPTOUT: "1"
+      DOTNET_NOLOGO: "1"
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-dotnet@v6
+        with:
+          global-json-file: backend/global.json
+      - name: Restore
+        run: dotnet restore FamilyResilience.slnx
+      - name: Known vulnerable packages (direct and transitive)
+        run: |
+          set -o pipefail
+          dotnet list FamilyResilience.slnx package --vulnerable --include-transitive | tee vulnerable-packages.txt
+          if grep -q "has the following vulnerable packages" vulnerable-packages.txt; then
+            echo "::error::A NuGet package has a known vulnerability; update it in Directory.Packages.props."
+            exit 1
+          fi
+      - name: Build (warnings are errors)
+        run: dotnet build FamilyResilience.slnx --no-restore --configuration Release
+      - name: Test (unit and integration; Testcontainers uses the runner's Docker)
+        run: dotnet test --solution FamilyResilience.slnx --no-build --configuration Release
+      - name: Build the API image
+        run: docker build --tag familyresilience-api:ci .
+
+  alert-rules:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v7
+      - name: Check and test the security alert rules
+        env:
+          PROMTOOL: docker run --rm --volume ${{ github.workspace }}/infra/monitoring:/rules:ro --workdir /rules --entrypoint promtool prom/prometheus:v3.5.0
+        run: |
+          $PROMTOOL check rules alert-rules.yml
+          $PROMTOOL test rules alert-rules.test.yml

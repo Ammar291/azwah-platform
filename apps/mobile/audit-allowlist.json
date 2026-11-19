@@ -1,0 +1,10 @@
+{
+  "advisories": [
+    {
+      "id": "GHSA-qr28-fpjm-wq7f",
+      "package": "decode-uri-component",
+      "reason": "The fixed release (0.5.1) is ESM-only and outside the range of query-string 7, which expo-router 57 requires; forcing it breaks Jest and risks the router. The package decodes the query string of deep links opened in the app. A website or another app can hand the phone a crafted link, so the worst case is that the app is slow or unresponsive on that one phone until it is closed; no data is exposed or changed. Revisit with the next Expo SDK (D-139).",
+      "reviewBy": "2027-01-17"
+    }
+  ]
+}

@@ -1,0 +1,5 @@
+{
+  "schema": "eligibility.v1",
+  "target": { "sectionCode": "C" },
+  "rule": { "ageAtLeast": 60 }
+}

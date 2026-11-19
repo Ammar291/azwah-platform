@@ -1,0 +1,206 @@
+# Prometheus alert rules for the API's security counters (D-90).
+#
+# The API exports its metrics over OTLP when OTEL_EXPORTER_OTLP_ENDPOINT is set (meter FamilyResilience.Api.Security).
+# Prometheus (its OTLP receiver, or an OpenTelemetry Collector in front of it) names a counter with underscores and a
+# _total suffix: azwah.authorization.denied becomes azwah_authorization_denied_total.
+#
+# A counter series exists only from its first increment, so the first event after a restart arrives as a new series
+# already at 1, which increase() alone never sees. Every rule therefore also fires on a series that is new within its
+# window (`x unless x offset <window>`); alert-rules.test.yml starts its series absent to prove it.
+#
+# Thresholds are starting values chosen by engineering, not tuned on real traffic. Review them after the first weeks
+# in each environment and record the change in docs/decisions.md. Nothing here is wired to a pager: whoever runs the
+# platform connects Alertmanager to a receiver. Load the file with `rule_files` in prometheus.yml; check it with
+# `promtool check rules infra/monitoring/alert-rules.yml`.
+#
+# The counters carry fixed codes only, never subjects or IDs. To find who or what an alert is about, read the audit
+# trail (audit_events) for the window: it holds the actor, action, resource and outcome of every refusal, role change
+# and erasure.
+
+groups:
+  - name: azwah-security
+    rules:
+      - alert: AzwahAuthorizationRefusalBurst
+        expr: >-
+          sum by (kind) (increase(azwah_authorization_denied_total[10m])) > 50
+          or sum by (kind) (azwah_authorization_denied_total unless azwah_authorization_denied_total offset 10m) > 50
+        labels:
+          severity: warning
+        annotations:
+          summary: "More than 50 signed-in requests refused ({{ $labels.kind }}) in 10 minutes"
+          description: >-
+            kind=resource means requests for other households' resources (answered 404); kind=role means staff routes
+            requested without the role (403). A burst usually means one account probing IDs or routes. Find it in
+            audit_events: action authorization.resource.denied or authorization.role.denied, outcome Denied, grouped
+            by actor_id over the last 10 minutes.
+
+      - alert: AzwahStaffRoleAdded
+        expr: >-
+          sum by (role) (increase(azwah_identity_role_changes_total{change="added", role!="participant"}[5m])) > 0
+          or sum by (role) (
+            azwah_identity_role_changes_total{change="added", role!="participant"}
+            unless azwah_identity_role_changes_total{change="added", role!="participant"} offset 5m)
+        labels:
+          severity: critical
+        annotations:
+          summary: "The staff role {{ $labels.role }} appeared on an account"
+          description: >-
+            Roles are granted in the identity provider. Check the grant against an approved access request: audit_events
+            with action identity.role.added and resource_id {{ $labels.role }}. Silence this alert in Alertmanager for an
+            announced access change window; outside one, treat an unexplained grant as an incident.
+
+      - alert: AzwahStaffRoleRemoved
+        expr: >-
+          sum by (role) (increase(azwah_identity_role_changes_total{change="removed", role!="participant"}[1h])) > 0
+          or sum by (role) (
+            azwah_identity_role_changes_total{change="removed", role!="participant"}
+            unless azwah_identity_role_changes_total{change="removed", role!="participant"} offset 1h)
+        labels:
+          severity: info
+        annotations:
+          summary: "The staff role {{ $labels.role }} was removed from an account"
+          description: "Expected when someone leaves or changes duties; confirm against the access register (identity.role.removed)."
+
+      - alert: AzwahDevelopmentTokenPresented
+        expr: >-
+          sum(increase(azwah_auth_tokens_rejected_total{reason="development_token"}[10m])) > 0
+          or sum(
+            azwah_auth_tokens_rejected_total{reason="development_token"}
+            unless azwah_auth_tokens_rejected_total{reason="development_token"} offset 10m)
+        labels:
+          severity: critical
+        annotations:
+          summary: "A deployed API received a token from the development identity provider"
+          description: >-
+            The token was refused, but a deployed client or proxy is pointing at, or replaying tokens from, the
+            development identity provider. Find the configuration that produces it.
+
+      - alert: AzwahTokenRejectionSurge
+        expr: >-
+          sum by (reason) (increase(azwah_auth_tokens_rejected_total{reason!="development_token"}[10m])) > 100
+          or sum by (reason) (
+            azwah_auth_tokens_rejected_total{reason!="development_token"}
+            unless azwah_auth_tokens_rejected_total{reason!="development_token"} offset 10m) > 100
+        labels:
+          severity: warning
+        annotations:
+          summary: "More than 100 bearer tokens refused ({{ $labels.reason }}) in 10 minutes"
+          description: >-
+            A surge of expired tokens usually follows a client release or clock drift; invalid signatures or issuers
+            point to a misconfiguration or forged tokens. The API logs event 1100 with the reason, never the token.
+
+      - alert: AzwahSustainedRateLimiting
+        expr: sum by (endpoint_policy) (rate(azwah_requests_rate_limited_total[5m])) > 0.5
+        for: 15m
+        labels:
+          severity: warning
+        annotations:
+          summary: "Requests refused by the {{ $labels.endpoint_policy }} rate limit for 15 minutes"
+          description: >-
+            Sustained 429s mean automated traffic or a client retry loop. endpoint_policy=none means the global
+            per-caller limit. If legitimate use hits the limit, change RateLimiting:Policies and record why.
+
+      - alert: AzwahRetentionErasedHouseholds
+        expr: >-
+          sum(increase(azwah_retention_households_erased_total[1h])) > 0
+          or sum(azwah_retention_households_erased_total unless azwah_retention_households_erased_total offset 1h)
+        labels:
+          severity: info
+        annotations:
+          summary: "The retention job erased withdrawn households in the last hour"
+          description: "Expected only once retention is switched on with approved periods (D-88). Each erasure is audited as households.household.erased."
+
+      - alert: AzwahRetentionErasureFailures
+        expr: >-
+          sum(increase(azwah_retention_erasure_failures_total[1h])) > 0
+          or sum(azwah_retention_erasure_failures_total unless azwah_retention_erasure_failures_total offset 1h)
+        labels:
+          severity: warning
+        annotations:
+          summary: "The retention job failed to erase a household"
+          description: >-
+            The failed erasure was rolled back and will be tried again at the next run. The API logs event 2008 with the
+            error codes (an exception's type, never its message); investigate before the household's data outlives its
+            approved period.
+
+  - name: azwah-safeguarding
+    rules:
+      # Safety alerts (D-135). The counters carry fixed codes only (concern, severity, source); the alert itself is read
+      # on the admin dashboard page /safety-alerts, which is where a person responds.
+      - alert: SafetyAlertRaised
+        expr: >-
+          sum by (concern, source) (increase(azwah_safeguarding_alerts_raised_total{severity="critical"}[10m])) > 0
+          or sum by (concern, source) (
+            azwah_safeguarding_alerts_raised_total{severity="critical"}
+            unless azwah_safeguarding_alerts_raised_total{severity="critical"} offset 10m) > 0
+        labels:
+          severity: critical
+        annotations:
+          summary: "A critical safety alert was raised ({{ $labels.concern }}, from {{ $labels.source }})"
+          description: >-
+            A participant's words or a detector flagged a possible crisis. Open the admin dashboard page Safety alerts
+            (/safety-alerts) and follow the organisation's safeguarding procedure (open question 59). The alert holds
+            no conversation text. The person usually saw the crisis support card, but not always: a line still being
+            spoken at hang-up, a phone timeout or a closed app can leave them without it.
+
+      - alert: SafetyAlertRepeated
+        expr: >-
+          sum by (concern, source) (increase(azwah_safeguarding_alerts_repeated_total{severity="critical"}[10m])) > 0
+          or sum by (concern, source) (
+            azwah_safeguarding_alerts_repeated_total{severity="critical"}
+            unless azwah_safeguarding_alerts_repeated_total{severity="critical"} offset 10m) > 0
+        labels:
+          severity: critical
+        annotations:
+          summary: "A critical safety alert was repeated ({{ $labels.concern }}, from {{ $labels.source }})"
+          description: >-
+            The same household signalled the same concern again, so its alert is open again (an Acknowledged alert
+            re-opens). Open the admin dashboard page Safety alerts (/safety-alerts) and follow the organisation's
+            safeguarding procedure (open question 59). The alert holds no conversation text.
+
+      - alert: LowResilienceScoreAlertRaised
+        expr: >-
+          sum by (concern, source) (increase(azwah_safeguarding_alerts_raised_total{severity="high"}[10m])) > 0
+          or sum by (concern, source) (
+            azwah_safeguarding_alerts_raised_total{severity="high"}
+            unless azwah_safeguarding_alerts_raised_total{severity="high"} offset 10m) > 0
+        labels:
+          severity: warning
+        annotations:
+          summary: "A household's score fell in the lowest approved band ({{ $labels.concern }})"
+          description: >-
+            Lower urgency than a crisis signal. Review it on the admin dashboard page Safety alerts (/safety-alerts).
+            Only system administrators can see it; programme administrators never see scores (D-62).
+
+      - alert: SafetyAlertRecordingFailing
+        expr: >-
+          sum by (source) (increase(azwah_safeguarding_recording_failures_total[10m])) > 0
+          or sum by (source) (
+            azwah_safeguarding_recording_failures_total
+            unless azwah_safeguarding_recording_failures_total offset 10m) > 0
+        labels:
+          severity: warning
+        annotations:
+          summary: "Safety alerts from {{ $labels.source }} could not be recorded"
+          description: >-
+            The person usually still saw the crisis support card, but no alert reached the dashboard, so staff may not
+            know, and this alert may be lost. The API logs the fixed code safety_alert_failed with the exception type or
+            error code (never the text). Check the database and the Safeguarding module. Notices are not logged, so
+            there is no list to compare: correlate the failure time with assistant.reply.generated audit events in the
+            same minutes to see which households were chatting.
+
+      - alert: SafetyAlertRecordingSkipped
+        expr: >-
+          sum by (source) (increase(azwah_safeguarding_recording_skipped_total[10m])) > 0
+          or sum by (source) (
+            azwah_safeguarding_recording_skipped_total
+            unless azwah_safeguarding_recording_skipped_total offset 10m) > 0
+        labels:
+          severity: warning
+        annotations:
+          summary: "Safety alerts from {{ $labels.source }} were skipped"
+          description: >-
+            A crisis signal was detected but the server has no platform user record for the signed-in caller, so no
+            alert exists and staff may not know. Notices are not logged: correlate the time with
+            assistant.reply.generated audit events to find the conversation, and check how the caller's account was
+            created (sign-in and the platform's own records).

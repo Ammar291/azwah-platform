@@ -1,0 +1,43 @@
+# Proposed dependency updates (D-87). Each update is a pull request that runs the component's full check list.
+version: 2
+updates:
+  - package-ecosystem: nuget
+    directory: /backend
+    schedule:
+      interval: weekly
+    open-pull-requests-limit: 5
+    groups:
+      microsoft:
+        patterns: ["Microsoft.*", "System.*"]
+      opentelemetry:
+        patterns: ["OpenTelemetry*", "Npgsql.OpenTelemetry"]
+
+  - package-ecosystem: npm
+    directory: /apps/admin
+    schedule:
+      interval: weekly
+    open-pull-requests-limit: 5
+
+  - package-ecosystem: npm
+    directory: /apps/mobile
+    schedule:
+      interval: weekly
+    open-pull-requests-limit: 5
+    # Expo SDK packages and React Native move together and are updated with `npx expo install`, never
+    # one by one.
+    ignore:
+      - dependency-name: "expo"
+      - dependency-name: "expo-*"
+      - dependency-name: "@expo/*"
+      - dependency-name: "jest-expo"
+      - dependency-name: "eslint-config-expo"
+      - dependency-name: "react-native"
+      - dependency-name: "react-native-*"
+      - dependency-name: "@react-native/*"
+      - dependency-name: "react"
+      - dependency-name: "react-dom"
+
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly

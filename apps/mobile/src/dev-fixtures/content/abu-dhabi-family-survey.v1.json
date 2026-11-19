@@ -1,0 +1,2714 @@
+{
+  "instrument": {
+    "code": "abu_dhabi_family_survey",
+    "kind": "family_voices",
+    "name": {
+      "ar": null,
+      "en": "Abu Dhabi Family Survey"
+    },
+    "description": {
+      "ar": null,
+      "en": "39-Question Adaptive Skip-Logic Structure for Emirati Extended Households"
+    }
+  },
+  "version": {
+    "contentReferenceAr": "Abu Dhabi Family Survey codebook, received 2026-10-13 (not included in this repository); some answer labels from the earlier sample questions document (not included)",
+    "contentReferenceEn": "Abu Dhabi Family Survey codebook, received 2026-10-13 (not included in this repository)",
+    "sections": [
+      {
+        "code": "A",
+        "displayOrder": 1,
+        "title": {
+          "ar": null,
+          "en": "Module A: Finance"
+        },
+        "items": [
+          {
+            "code": "Q04_Financial_Cushion",
+            "displayOrder": 1,
+            "itemType": "single_choice",
+            "isRequired": true,
+            "scoringCategory": null,
+            "scoringDirection": "unspecified",
+            "prompt": {
+              "ar": "إذا واجهت أسرتك غداً مصروفاً طارئاً كبيراً، ما مدى صعوبة تغطية هذا المصروف؟",
+              "en": "If your household experienced an unexpected major expense tomorrow, how difficult would it be to cover it?"
+            },
+            "options": [
+              {
+                "code": "1",
+                "displayOrder": 1,
+                "value": 1,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "صعب للغاية",
+                  "en": "Extremely Difficult"
+                }
+              },
+              {
+                "code": "2",
+                "displayOrder": 2,
+                "value": 2,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "صعب",
+                  "en": "Difficult"
+                }
+              },
+              {
+                "code": "3",
+                "displayOrder": 3,
+                "value": 3,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "محايد",
+                  "en": "Neutral"
+                }
+              },
+              {
+                "code": "4",
+                "displayOrder": 4,
+                "value": 4,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "سهل",
+                  "en": "Easy"
+                }
+              },
+              {
+                "code": "5",
+                "displayOrder": 5,
+                "value": 5,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "سهل للغاية",
+                  "en": "Extremely Easy"
+                }
+              },
+              {
+                "code": "99",
+                "displayOrder": 6,
+                "value": 99,
+                "isNonSubstantive": true,
+                "label": {
+                  "ar": "يفضل عدم الإجابة",
+                  "en": "Prefer not to answer"
+                }
+              }
+            ]
+          },
+          {
+            "code": "Q05_Debt_Service_Burden",
+            "displayOrder": 2,
+            "itemType": "single_choice",
+            "isRequired": true,
+            "scoringCategory": null,
+            "scoringDirection": "unspecified",
+            "prompt": {
+              "ar": "إلى أي مدى تشكل التزامات الديون الشهرية ضغطاً على الميزانية الشهرية لأسرتك؟",
+              "en": "To what extent do your monthly debt obligations put a strain on your family's monthly budget?"
+            },
+            "options": [
+              {
+                "code": "1",
+                "displayOrder": 1,
+                "value": 1,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "لا تشكل أي عبء",
+                  "en": "No Burden"
+                }
+              },
+              {
+                "code": "2",
+                "displayOrder": 2,
+                "value": 2,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "عبء خفيف",
+                  "en": "Low Burden"
+                }
+              },
+              {
+                "code": "3",
+                "displayOrder": 3,
+                "value": 3,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "عبء متوسط",
+                  "en": "Moderate Burden"
+                }
+              },
+              {
+                "code": "4",
+                "displayOrder": 4,
+                "value": 4,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "عبء ثقيل",
+                  "en": "High Burden"
+                }
+              },
+              {
+                "code": "5",
+                "displayOrder": 5,
+                "value": 5,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "عبء شديد للغاية",
+                  "en": "Severe Burden"
+                }
+              },
+              {
+                "code": "99",
+                "displayOrder": 6,
+                "value": 99,
+                "isNonSubstantive": true,
+                "label": {
+                  "ar": "يفضل عدم الإجابة",
+                  "en": "Prefer not to answer"
+                }
+              }
+            ]
+          },
+          {
+            "code": "Q06_Monthly_Savings",
+            "displayOrder": 3,
+            "itemType": "single_choice",
+            "isRequired": true,
+            "scoringCategory": null,
+            "scoringDirection": "unspecified",
+            "prompt": {
+              "ar": "ما مدى انتظام أسرتك في ادخار جزء من الدخل الشهري بعد تغطية جميع المصاريف الأساسية؟",
+              "en": "How regularly is your household able to save a portion of your monthly income after covering all essential expenses?"
+            },
+            "options": [
+              {
+                "code": "1",
+                "displayOrder": 1,
+                "value": 1,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "أبداً",
+                  "en": "Never"
+                }
+              },
+              {
+                "code": "2",
+                "displayOrder": 2,
+                "value": 2,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "نادراً",
+                  "en": "Rarely"
+                }
+              },
+              {
+                "code": "3",
+                "displayOrder": 3,
+                "value": 3,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "أحياناً",
+                  "en": "Sometimes"
+                }
+              },
+              {
+                "code": "4",
+                "displayOrder": 4,
+                "value": 4,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "غالباً",
+                  "en": "Often"
+                }
+              },
+              {
+                "code": "5",
+                "displayOrder": 5,
+                "value": 5,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "دائماً",
+                  "en": "Always"
+                }
+              },
+              {
+                "code": "99",
+                "displayOrder": 6,
+                "value": 99,
+                "isNonSubstantive": true,
+                "label": {
+                  "ar": "يفضل عدم الإجابة",
+                  "en": "Prefer not to answer"
+                }
+              }
+            ]
+          },
+          {
+            "code": "Q07_Healthcare_Costs",
+            "displayOrder": 4,
+            "itemType": "single_choice",
+            "isRequired": true,
+            "scoringCategory": null,
+            "scoringDirection": "unspecified",
+            "prompt": {
+              "ar": "ما مدى تأثير المصاريف الطبية غير المغطاة بالتأمين أو تكاليف رعاية كبار السن على التدفق النقدي الشهري لأسرتك؟",
+              "en": "How heavily do out-of-pocket medical expenses or elderly care costs impact your monthly household cash flow?"
+            },
+            "options": [
+              {
+                "code": "1",
+                "displayOrder": 1,
+                "value": 1,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": null,
+                  "en": "No Impact"
+                }
+              },
+              {
+                "code": "2",
+                "displayOrder": 2,
+                "value": 2,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": null,
+                  "en": "Low Impact"
+                }
+              },
+              {
+                "code": "3",
+                "displayOrder": 3,
+                "value": 3,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": null,
+                  "en": "Moderate Impact"
+                }
+              },
+              {
+                "code": "4",
+                "displayOrder": 4,
+                "value": 4,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": null,
+                  "en": "High Impact"
+                }
+              },
+              {
+                "code": "5",
+                "displayOrder": 5,
+                "value": 5,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": null,
+                  "en": "Severe Impact"
+                }
+              },
+              {
+                "code": "99",
+                "displayOrder": 6,
+                "value": 99,
+                "isNonSubstantive": true,
+                "label": {
+                  "ar": "يفضل عدم الإجابة",
+                  "en": "Prefer not to answer"
+                }
+              }
+            ]
+          },
+          {
+            "code": "Q08_Longterm_Planning",
+            "displayOrder": 5,
+            "itemType": "single_choice",
+            "isRequired": true,
+            "scoringCategory": null,
+            "scoringDirection": "unspecified",
+            "prompt": {
+              "ar": "ما مدى ثقتك في أن استثمارات ومدخرات أسرتك الحالية ستدعم المنزل على مدى السنوات العشر القادمة؟",
+              "en": "How confident are you that your family's current investments and savings will sustain the household over the next 10 years?"
+            },
+            "options": [
+              {
+                "code": "1",
+                "displayOrder": 1,
+                "value": 1,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": null,
+                  "en": "Not Confident At All"
+                }
+              },
+              {
+                "code": "2",
+                "displayOrder": 2,
+                "value": 2,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": null,
+                  "en": "Slightly Confident"
+                }
+              },
+              {
+                "code": "3",
+                "displayOrder": 3,
+                "value": 3,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "محايد",
+                  "en": "Neutral"
+                }
+              },
+              {
+                "code": "4",
+                "displayOrder": 4,
+                "value": 4,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": null,
+                  "en": "Confident"
+                }
+              },
+              {
+                "code": "5",
+                "displayOrder": 5,
+                "value": 5,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": null,
+                  "en": "Extremely Confident"
+                }
+              },
+              {
+                "code": "99",
+                "displayOrder": 6,
+                "value": 99,
+                "isNonSubstantive": true,
+                "label": {
+                  "ar": "يفضل عدم الإجابة",
+                  "en": "Prefer not to answer"
+                }
+              }
+            ]
+          },
+          {
+            "code": "Q09_Emergency_Liquidity",
+            "displayOrder": 6,
+            "itemType": "single_choice",
+            "isRequired": true,
+            "scoringCategory": null,
+            "scoringDirection": "unspecified",
+            "prompt": {
+              "ar": "هل تستطيع أسرتك الحصول على سيولة مالية أو أصول في غضون 24 ساعة دون الحصول على قروض تجارية جديدة؟",
+              "en": "Can your household access cash equivalents or assets within 24 hours without taking new commercial loans?"
+            },
+            "options": [
+              {
+                "code": "1",
+                "displayOrder": 1,
+                "value": 1,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": null,
+                  "en": "Definitely Not"
+                }
+              },
+              {
+                "code": "2",
+                "displayOrder": 2,
+                "value": 2,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": null,
+                  "en": "Probably Not"
+                }
+              },
+              {
+                "code": "3",
+                "displayOrder": 3,
+                "value": 3,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": null,
+                  "en": "Uncertain"
+                }
+              },
+              {
+                "code": "4",
+                "displayOrder": 4,
+                "value": 4,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": null,
+                  "en": "Probably Yes"
+                }
+              },
+              {
+                "code": "5",
+                "displayOrder": 5,
+                "value": 5,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": null,
+                  "en": "Definitely Yes"
+                }
+              },
+              {
+                "code": "99",
+                "displayOrder": 6,
+                "value": 99,
+                "isNonSubstantive": true,
+                "label": {
+                  "ar": "يفضل عدم الإجابة",
+                  "en": "Prefer not to answer"
+                }
+              }
+            ]
+          },
+          {
+            "code": "Q10_Essential_Costs_Inflation",
+            "displayOrder": 7,
+            "itemType": "single_choice",
+            "isRequired": true,
+            "scoringCategory": null,
+            "scoringDirection": "unspecified",
+            "prompt": {
+              "ar": "خلال الاثني عشر شهراً الماضية، ما مدى صعوبة التعامل مع ارتفاع تكاليف الخدمات والمواد الغذائية والاحتياجات الأساسية؟",
+              "en": "Over the past 12 months, how difficult has it been to manage the rising cost of utilities, food, and basic necessities?"
+            },
+            "options": [
+              {
+                "code": "1",
+                "displayOrder": 1,
+                "value": 1,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "سهل للغاية",
+                  "en": "Extremely Easy"
+                }
+              },
+              {
+                "code": "2",
+                "displayOrder": 2,
+                "value": 2,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "سهل",
+                  "en": "Easy"
+                }
+              },
+              {
+                "code": "3",
+                "displayOrder": 3,
+                "value": 3,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "محايد",
+                  "en": "Neutral"
+                }
+              },
+              {
+                "code": "4",
+                "displayOrder": 4,
+                "value": 4,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "صعب",
+                  "en": "Difficult"
+                }
+              },
+              {
+                "code": "5",
+                "displayOrder": 5,
+                "value": 5,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "صعب للغاية",
+                  "en": "Extremely Difficult"
+                }
+              },
+              {
+                "code": "99",
+                "displayOrder": 6,
+                "value": 99,
+                "isNonSubstantive": true,
+                "label": {
+                  "ar": "يفضل عدم الإجابة",
+                  "en": "Prefer not to answer"
+                }
+              }
+            ]
+          },
+          {
+            "code": "Q11_Housing_Maintenance",
+            "displayOrder": 8,
+            "itemType": "single_choice",
+            "isRequired": true,
+            "scoringCategory": null,
+            "scoringDirection": "unspecified",
+            "prompt": {
+              "ar": "هل تمتلك القدرة المالية لإجراء تعديلات إنشائية كبرى أو تحسينات لتسهيل الحركة في المنزل إذا استدعت الظروف الصحية لأسرتك ذلك؟",
+              "en": "Do you possess the financial capacity to carry out major structural or accessibility modifications to the home if required for family health needs?"
+            },
+            "options": [
+              {
+                "code": "1",
+                "displayOrder": 1,
+                "value": 1,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": null,
+                  "en": "Definitely Not"
+                }
+              },
+              {
+                "code": "2",
+                "displayOrder": 2,
+                "value": 2,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": null,
+                  "en": "Probably Not"
+                }
+              },
+              {
+                "code": "3",
+                "displayOrder": 3,
+                "value": 3,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": null,
+                  "en": "Uncertain"
+                }
+              },
+              {
+                "code": "4",
+                "displayOrder": 4,
+                "value": 4,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": null,
+                  "en": "Probably Yes"
+                }
+              },
+              {
+                "code": "5",
+                "displayOrder": 5,
+                "value": 5,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": null,
+                  "en": "Definitely Yes"
+                }
+              },
+              {
+                "code": "99",
+                "displayOrder": 6,
+                "value": 99,
+                "isNonSubstantive": true,
+                "label": {
+                  "ar": "يفضل عدم الإجابة",
+                  "en": "Prefer not to answer"
+                }
+              }
+            ]
+          },
+          {
+            "code": "Q12_Financial_Literacy",
+            "displayOrder": 9,
+            "itemType": "single_choice",
+            "isRequired": true,
+            "scoringCategory": null,
+            "scoringDirection": "unspecified",
+            "prompt": {
+              "ar": "ما مدى ثقتك في التعامل مع خيارات التخطيط المالي وصناديق التقاعد وبوالص التأمين بشكل مستقل؟",
+              "en": "How confident do you feel navigating financial planning options, retirement funds, and insurance policies independently?"
+            },
+            "options": [
+              {
+                "code": "1",
+                "displayOrder": 1,
+                "value": 1,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": null,
+                  "en": "Not Confident At All"
+                }
+              },
+              {
+                "code": "2",
+                "displayOrder": 2,
+                "value": 2,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": null,
+                  "en": "Slightly Confident"
+                }
+              },
+              {
+                "code": "3",
+                "displayOrder": 3,
+                "value": 3,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "محايد",
+                  "en": "Neutral"
+                }
+              },
+              {
+                "code": "4",
+                "displayOrder": 4,
+                "value": 4,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": null,
+                  "en": "Confident"
+                }
+              },
+              {
+                "code": "5",
+                "displayOrder": 5,
+                "value": 5,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": null,
+                  "en": "Extremely Confident"
+                }
+              },
+              {
+                "code": "99",
+                "displayOrder": 6,
+                "value": 99,
+                "isNonSubstantive": true,
+                "label": {
+                  "ar": "يفضل عدم الإجابة",
+                  "en": "Prefer not to answer"
+                }
+              }
+            ]
+          },
+          {
+            "code": "Q13_Subsidy_Reliance",
+            "displayOrder": 10,
+            "itemType": "single_choice",
+            "isRequired": true,
+            "scoringCategory": null,
+            "scoringDirection": "unspecified",
+            "prompt": {
+              "ar": "إلى أي مدى تعتمد أسرتك على المساعدات الاجتماعية الحكومية أو الدعم الهيكلي لتوازن ميزانيتكم السنوية؟",
+              "en": "To what extent does your household rely on government social subsidies or structural aid to balance your annual budget?"
+            },
+            "options": [
+              {
+                "code": "1",
+                "displayOrder": 1,
+                "value": 1,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": null,
+                  "en": "No Reliance"
+                }
+              },
+              {
+                "code": "2",
+                "displayOrder": 2,
+                "value": 2,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": null,
+                  "en": "Low Reliance"
+                }
+              },
+              {
+                "code": "3",
+                "displayOrder": 3,
+                "value": 3,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": null,
+                  "en": "Moderate Reliance"
+                }
+              },
+              {
+                "code": "4",
+                "displayOrder": 4,
+                "value": 4,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": null,
+                  "en": "High Reliance"
+                }
+              },
+              {
+                "code": "5",
+                "displayOrder": 5,
+                "value": 5,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": null,
+                  "en": "Total Reliance"
+                }
+              },
+              {
+                "code": "99",
+                "displayOrder": 6,
+                "value": 99,
+                "isNonSubstantive": true,
+                "label": {
+                  "ar": "يفضل عدم الإجابة",
+                  "en": "Prefer not to answer"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "code": "B",
+        "displayOrder": 2,
+        "title": {
+          "ar": null,
+          "en": "Module B: Parenting & Burnout"
+        },
+        "items": [
+          {
+            "code": "Q14_Workplace_Exhaustion",
+            "displayOrder": 1,
+            "itemType": "single_choice",
+            "isRequired": true,
+            "scoringCategory": null,
+            "scoringDirection": "unspecified",
+            "prompt": {
+              "ar": "كم مرة تشعر بالإرهاق النفسي أو الجسدي في نهاية يوم عملك؟",
+              "en": "How often do you feel emotionally or physically drained at the end of your workday?"
+            },
+            "options": [
+              {
+                "code": "1",
+                "displayOrder": 1,
+                "value": 1,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "أبداً",
+                  "en": "Never"
+                }
+              },
+              {
+                "code": "2",
+                "displayOrder": 2,
+                "value": 2,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "نادراً",
+                  "en": "Rarely"
+                }
+              },
+              {
+                "code": "3",
+                "displayOrder": 3,
+                "value": 3,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "أحياناً",
+                  "en": "Sometimes"
+                }
+              },
+              {
+                "code": "4",
+                "displayOrder": 4,
+                "value": 4,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "غالباً",
+                  "en": "Often"
+                }
+              },
+              {
+                "code": "5",
+                "displayOrder": 5,
+                "value": 5,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "دائماً",
+                  "en": "Always"
+                }
+              },
+              {
+                "code": "99",
+                "displayOrder": 6,
+                "value": 99,
+                "isNonSubstantive": true,
+                "label": {
+                  "ar": "يفضل عدم الإجابة",
+                  "en": "Prefer not to answer"
+                }
+              }
+            ]
+          },
+          {
+            "code": "Q15_Work_Family_Spillover",
+            "displayOrder": 2,
+            "itemType": "single_choice",
+            "isRequired": true,
+            "scoringCategory": null,
+            "scoringDirection": "unspecified",
+            "prompt": {
+              "ar": "ضغوط عملي وأعبائي المهنية تجعل من الصعب عليّ أن أكون حاضراً ذهنياً أو صبوراً أثناء تواجدي مع أبنائي.",
+              "en": "My professional stress and workload make it difficult for me to be mentally present or patient when I am with my children."
+            },
+            "options": [
+              {
+                "code": "1",
+                "displayOrder": 1,
+                "value": 1,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "لا أوافق بشدة",
+                  "en": "Strongly Disagree"
+                }
+              },
+              {
+                "code": "2",
+                "displayOrder": 2,
+                "value": 2,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "لا أوافق",
+                  "en": "Disagree"
+                }
+              },
+              {
+                "code": "3",
+                "displayOrder": 3,
+                "value": 3,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "محايد",
+                  "en": "Neutral"
+                }
+              },
+              {
+                "code": "4",
+                "displayOrder": 4,
+                "value": 4,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "أوافق",
+                  "en": "Agree"
+                }
+              },
+              {
+                "code": "5",
+                "displayOrder": 5,
+                "value": 5,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "أوافق بشدة",
+                  "en": "Strongly Agree"
+                }
+              },
+              {
+                "code": "99",
+                "displayOrder": 6,
+                "value": 99,
+                "isNonSubstantive": true,
+                "label": {
+                  "ar": "يفضل عدم الإجابة",
+                  "en": "Prefer not to answer"
+                }
+              }
+            ]
+          },
+          {
+            "code": "Q16_Developmental_Time",
+            "displayOrder": 3,
+            "itemType": "single_choice",
+            "isRequired": true,
+            "scoringCategory": null,
+            "scoringDirection": "unspecified",
+            "prompt": {
+              "ar": "في يوم العمل المعتاد، كم عدد الساعات التي تقضيها في التفاعل أو التحدث مع أبنائك بشكل مركز ودون مقاطعة؟",
+              "en": "On a typical working day, how many hours of focused, uninterrupted time do you spend interacting or talking with your children?"
+            },
+            "options": [
+              {
+                "code": "1",
+                "displayOrder": 1,
+                "value": 1,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": null,
+                  "en": "<30 mins"
+                }
+              },
+              {
+                "code": "2",
+                "displayOrder": 2,
+                "value": 2,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": null,
+                  "en": "30–60 mins"
+                }
+              },
+              {
+                "code": "3",
+                "displayOrder": 3,
+                "value": 3,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": null,
+                  "en": "1–2 hours"
+                }
+              },
+              {
+                "code": "4",
+                "displayOrder": 4,
+                "value": 4,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": null,
+                  "en": "2–3 hours"
+                }
+              },
+              {
+                "code": "5",
+                "displayOrder": 5,
+                "value": 5,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": null,
+                  "en": ">3 hours"
+                }
+              },
+              {
+                "code": "99",
+                "displayOrder": 6,
+                "value": 99,
+                "isNonSubstantive": true,
+                "label": {
+                  "ar": "يفضل عدم الإجابة",
+                  "en": "Prefer not to answer"
+                }
+              }
+            ]
+          },
+          {
+            "code": "Q17_Workplace_Flexibility",
+            "displayOrder": 4,
+            "itemType": "single_choice",
+            "isRequired": true,
+            "scoringCategory": null,
+            "scoringDirection": "unspecified",
+            "prompt": {
+              "ar": "هل يوفر صاحب العمل ساعات عمل مرنة أو خيارات عمل عن بُعد كافية تتيح لك التعامل مع حالات الطوارئ الخاصة برعاية الأسرة؟",
+              "en": "Does your employer provide sufficient flexible hours or remote options to allow you to tend to family care emergencies?"
+            },
+            "options": [
+              {
+                "code": "1",
+                "displayOrder": 1,
+                "value": 1,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": null,
+                  "en": "Definitely Not"
+                }
+              },
+              {
+                "code": "2",
+                "displayOrder": 2,
+                "value": 2,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": null,
+                  "en": "Probably Not"
+                }
+              },
+              {
+                "code": "3",
+                "displayOrder": 3,
+                "value": 3,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "محايد",
+                  "en": "Neutral"
+                }
+              },
+              {
+                "code": "4",
+                "displayOrder": 4,
+                "value": 4,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": null,
+                  "en": "Probably Yes"
+                }
+              },
+              {
+                "code": "5",
+                "displayOrder": 5,
+                "value": 5,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": null,
+                  "en": "Definitely Yes"
+                }
+              },
+              {
+                "code": "99",
+                "displayOrder": 6,
+                "value": 99,
+                "isNonSubstantive": true,
+                "label": {
+                  "ar": "يفضل عدم الإجابة",
+                  "en": "Prefer not to answer"
+                }
+              }
+            ]
+          },
+          {
+            "code": "Q18_Parenting_Efficacy",
+            "displayOrder": 5,
+            "itemType": "single_choice",
+            "isRequired": true,
+            "scoringCategory": null,
+            "scoringDirection": "unspecified",
+            "prompt": {
+              "ar": "ما مدى ثقتك في قدرتك على دعم التطور السلوكي والأخلاقي والأكاديمي لطفلك في ظل جدول عملك الحالي؟",
+              "en": "How confident do you feel in your ability to support your child’s behavioral, ethical, and academic development under your current work schedule?"
+            },
+            "options": [
+              {
+                "code": "1",
+                "displayOrder": 1,
+                "value": 1,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": null,
+                  "en": "Not Confident At All"
+                }
+              },
+              {
+                "code": "2",
+                "displayOrder": 2,
+                "value": 2,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": null,
+                  "en": "Slightly Confident"
+                }
+              },
+              {
+                "code": "3",
+                "displayOrder": 3,
+                "value": 3,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "محايد",
+                  "en": "Neutral"
+                }
+              },
+              {
+                "code": "4",
+                "displayOrder": 4,
+                "value": 4,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": null,
+                  "en": "Confident"
+                }
+              },
+              {
+                "code": "5",
+                "displayOrder": 5,
+                "value": 5,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": null,
+                  "en": "Extremely Confident"
+                }
+              },
+              {
+                "code": "99",
+                "displayOrder": 6,
+                "value": 99,
+                "isNonSubstantive": true,
+                "label": {
+                  "ar": "يفضل عدم الإجابة",
+                  "en": "Prefer not to answer"
+                }
+              }
+            ]
+          },
+          {
+            "code": "Q19_Coparenting_Strain",
+            "displayOrder": 6,
+            "itemType": "single_choice",
+            "isRequired": true,
+            "scoringCategory": null,
+            "scoringDirection": "unspecified",
+            "prompt": {
+              "ar": "كم مرة تتسبب الخلافات المتعلقة بتقسيم العمل أو جداول العمل in حدوث توتر بينك وبين شريكك؟",
+              "en": "How often do disagreements regarding the division of labor or work schedules cause tension between you and your partner?"
+            },
+            "options": [
+              {
+                "code": "1",
+                "displayOrder": 1,
+                "value": 1,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "أبداً",
+                  "en": "Never"
+                }
+              },
+              {
+                "code": "2",
+                "displayOrder": 2,
+                "value": 2,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "نادراً",
+                  "en": "Rarely"
+                }
+              },
+              {
+                "code": "3",
+                "displayOrder": 3,
+                "value": 3,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "أحياناً",
+                  "en": "Sometimes"
+                }
+              },
+              {
+                "code": "4",
+                "displayOrder": 4,
+                "value": 4,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "غالباً",
+                  "en": "Often"
+                }
+              },
+              {
+                "code": "5",
+                "displayOrder": 5,
+                "value": 5,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "دائماً",
+                  "en": "Always"
+                }
+              },
+              {
+                "code": "99",
+                "displayOrder": 6,
+                "value": 99,
+                "isNonSubstantive": true,
+                "label": {
+                  "ar": "يفضل عدم الإجابة",
+                  "en": "Prefer not to answer"
+                }
+              }
+            ]
+          },
+          {
+            "code": "Q20_Weekend_Quality_Time",
+            "displayOrder": 7,
+            "itemType": "single_choice",
+            "isRequired": true,
+            "scoringCategory": null,
+            "scoringDirection": "unspecified",
+            "prompt": {
+              "ar": "هل يمكنك قطع الاتصال بنجاح بمهام العمل خلال عطلات نهاية الأسبوع للتركيز حصرياً على الأسرة؟",
+              "en": "Are you able to successfully disconnect from work communication over weekends to focus exclusively on family?"
+            },
+            "options": [
+              {
+                "code": "1",
+                "displayOrder": 1,
+                "value": 1,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "أبداً",
+                  "en": "Never"
+                }
+              },
+              {
+                "code": "2",
+                "displayOrder": 2,
+                "value": 2,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "نادراً",
+                  "en": "Rarely"
+                }
+              },
+              {
+                "code": "3",
+                "displayOrder": 3,
+                "value": 3,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "أحياناً",
+                  "en": "Sometimes"
+                }
+              },
+              {
+                "code": "4",
+                "displayOrder": 4,
+                "value": 4,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "غالباً",
+                  "en": "Often"
+                }
+              },
+              {
+                "code": "5",
+                "displayOrder": 5,
+                "value": 5,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "دائماً",
+                  "en": "Always"
+                }
+              },
+              {
+                "code": "99",
+                "displayOrder": 6,
+                "value": 99,
+                "isNonSubstantive": true,
+                "label": {
+                  "ar": "يفضل عدم الإجابة",
+                  "en": "Prefer not to answer"
+                }
+              }
+            ]
+          },
+          {
+            "code": "Q21_Guilt_Anxiety",
+            "displayOrder": 8,
+            "itemType": "single_choice",
+            "isRequired": true,
+            "scoringCategory": null,
+            "scoringDirection": "unspecified",
+            "prompt": {
+              "ar": "كم مرة تشعر بالذنب تجاه مقدار الوقت الذي تقضيه بعيداً عن أسرتك بسبب الالتزامات المهنية؟",
+              "en": "How frequently do you experience feelings of guilt regarding the amount of time you spend away from your family due to career obligations?"
+            },
+            "options": [
+              {
+                "code": "1",
+                "displayOrder": 1,
+                "value": 1,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "أبداً",
+                  "en": "Never"
+                }
+              },
+              {
+                "code": "2",
+                "displayOrder": 2,
+                "value": 2,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "نادراً",
+                  "en": "Rarely"
+                }
+              },
+              {
+                "code": "3",
+                "displayOrder": 3,
+                "value": 3,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "أحياناً",
+                  "en": "Sometimes"
+                }
+              },
+              {
+                "code": "4",
+                "displayOrder": 4,
+                "value": 4,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "غالباً",
+                  "en": "Often"
+                }
+              },
+              {
+                "code": "5",
+                "displayOrder": 5,
+                "value": 5,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "دائماً",
+                  "en": "Always"
+                }
+              },
+              {
+                "code": "99",
+                "displayOrder": 6,
+                "value": 99,
+                "isNonSubstantive": true,
+                "label": {
+                  "ar": "يفضل عدم الإجابة",
+                  "en": "Prefer not to answer"
+                }
+              }
+            ]
+          },
+          {
+            "code": "Q22_Childcare_Support_Trust",
+            "displayOrder": 9,
+            "itemType": "single_choice",
+            "isRequired": true,
+            "scoringCategory": null,
+            "scoringDirection": "unspecified",
+            "prompt": {
+              "ar": "ما مدى رضاك عن جودة وسلامة ومواءمة بدائل الرعاية الخارجية المتوفرة المستخدمة أثناء عملك؟",
+              "en": "How satisfied are you with the quality, safety, and cultural alignment of external childcare alternatives used while you work?"
+            },
+            "options": [
+              {
+                "code": "1",
+                "displayOrder": 1,
+                "value": 1,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": null,
+                  "en": "Extremely Dissatisfied"
+                }
+              },
+              {
+                "code": "2",
+                "displayOrder": 2,
+                "value": 2,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": null,
+                  "en": "Dissatisfied"
+                }
+              },
+              {
+                "code": "3",
+                "displayOrder": 3,
+                "value": 3,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "محايد",
+                  "en": "Neutral"
+                }
+              },
+              {
+                "code": "4",
+                "displayOrder": 4,
+                "value": 4,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": null,
+                  "en": "Satisfied"
+                }
+              },
+              {
+                "code": "5",
+                "displayOrder": 5,
+                "value": 5,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": null,
+                  "en": "Extremely Satisfied"
+                }
+              },
+              {
+                "code": "99",
+                "displayOrder": 6,
+                "value": 99,
+                "isNonSubstantive": true,
+                "label": {
+                  "ar": "يفضل عدم الإجابة",
+                  "en": "Prefer not to answer"
+                }
+              }
+            ]
+          },
+          {
+            "code": "Q23_Caregiving_Overlap",
+            "displayOrder": 10,
+            "itemType": "single_choice",
+            "isRequired": true,
+            "scoringCategory": null,
+            "scoringDirection": "unspecified",
+            "prompt": {
+              "ar": "ما مدى ثقل الضغوط التي تواجهها بين المتمتطلبات المتزامنة لتربية أبنائك ومتابعة رعاية الأقارب من كبار السن؟",
+              "en": "How heavily do you feel squeezed between the simultaneous demands of managing your children's upbringing and tracking elder relative care?"
+            },
+            "options": [
+              {
+                "code": "1",
+                "displayOrder": 1,
+                "value": 1,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "لا تشكل أي عبء",
+                  "en": "No Burden"
+                }
+              },
+              {
+                "code": "2",
+                "displayOrder": 2,
+                "value": 2,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": null,
+                  "en": "Light Burden"
+                }
+              },
+              {
+                "code": "3",
+                "displayOrder": 3,
+                "value": 3,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "عبء متوسط",
+                  "en": "Moderate Burden"
+                }
+              },
+              {
+                "code": "4",
+                "displayOrder": 4,
+                "value": 4,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": null,
+                  "en": "Heavy Burden"
+                }
+              },
+              {
+                "code": "5",
+                "displayOrder": 5,
+                "value": 5,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "عبء شديد للغاية",
+                  "en": "Severe Burden"
+                }
+              },
+              {
+                "code": "99",
+                "displayOrder": 6,
+                "value": 99,
+                "isNonSubstantive": true,
+                "label": {
+                  "ar": "يفضل عدم الإجابة",
+                  "en": "Prefer not to answer"
+                }
+              }
+            ]
+          },
+          {
+            "code": "Q24_Overtime_Demands",
+            "displayOrder": 11,
+            "itemType": "single_choice",
+            "isRequired": true,
+            "scoringCategory": null,
+            "scoringDirection": "unspecified",
+            "prompt": {
+              "ar": "كم مرة تتطلب منك وظيفتك الأساسية العمل لساعات إضافية تتجاوز جداولك التعاقدية الرسمية لتلبية التوقعات؟",
+              "en": "How often does your primary job require you to log hours beyond your official contractual schedules to meet expectations?"
+            },
+            "options": [
+              {
+                "code": "1",
+                "displayOrder": 1,
+                "value": 1,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "أبداً",
+                  "en": "Never"
+                }
+              },
+              {
+                "code": "2",
+                "displayOrder": 2,
+                "value": 2,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "نادراً",
+                  "en": "Rarely"
+                }
+              },
+              {
+                "code": "3",
+                "displayOrder": 3,
+                "value": 3,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "أحياناً",
+                  "en": "Sometimes"
+                }
+              },
+              {
+                "code": "4",
+                "displayOrder": 4,
+                "value": 4,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "غالباً",
+                  "en": "Often"
+                }
+              },
+              {
+                "code": "5",
+                "displayOrder": 5,
+                "value": 5,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "دائماً",
+                  "en": "Always"
+                }
+              },
+              {
+                "code": "99",
+                "displayOrder": 6,
+                "value": 99,
+                "isNonSubstantive": true,
+                "label": {
+                  "ar": "يفضل عدم الإجابة",
+                  "en": "Prefer not to answer"
+                }
+              }
+            ]
+          },
+          {
+            "code": "Q25_Physical_Toll",
+            "displayOrder": 12,
+            "itemType": "single_choice",
+            "isRequired": true,
+            "scoringCategory": null,
+            "scoringDirection": "unspecified",
+            "prompt": {
+              "ar": "هل أدت ضغوط العمل إلى ضعف أنماط النوم، أو آلام جسدية مزمنة، أو مشكلات صحية هيكلية خلال الأشهر الستة الماضية؟",
+              "en": "Has workplace stress resulted in poor sleep patterns, physical chronic pain, or systemic health issues over the last six months?"
+            },
+            "options": [
+              {
+                "code": "1",
+                "displayOrder": 1,
+                "value": 1,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "أبداً",
+                  "en": "Never"
+                }
+              },
+              {
+                "code": "2",
+                "displayOrder": 2,
+                "value": 2,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "نادراً",
+                  "en": "Rarely"
+                }
+              },
+              {
+                "code": "3",
+                "displayOrder": 3,
+                "value": 3,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "أحياناً",
+                  "en": "Sometimes"
+                }
+              },
+              {
+                "code": "4",
+                "displayOrder": 4,
+                "value": 4,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "غالباً",
+                  "en": "Often"
+                }
+              },
+              {
+                "code": "5",
+                "displayOrder": 5,
+                "value": 5,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "دائماً",
+                  "en": "Always"
+                }
+              },
+              {
+                "code": "99",
+                "displayOrder": 6,
+                "value": 99,
+                "isNonSubstantive": true,
+                "label": {
+                  "ar": "يفضل عدم الإجابة",
+                  "en": "Prefer not to answer"
+                }
+              }
+            ]
+          },
+          {
+            "code": "Q26_Leisure_Deprivation",
+            "displayOrder": 13,
+            "itemType": "single_choice",
+            "isRequired": true,
+            "scoringCategory": null,
+            "scoringDirection": "unspecified",
+            "prompt": {
+              "ar": "كم مرة يمكنك تخصيص وقت لرفاهيتك الشخصية أو هواياتك أو راحتك الفردية خلال أسبوع نموذجي معتاد؟",
+              "en": "How often are you able to allocate time for personal wellness, hobbies, or individual rest during a standard baseline week?"
+            },
+            "options": [
+              {
+                "code": "1",
+                "displayOrder": 1,
+                "value": 1,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "أبداً",
+                  "en": "Never"
+                }
+              },
+              {
+                "code": "2",
+                "displayOrder": 2,
+                "value": 2,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "نادراً",
+                  "en": "Rarely"
+                }
+              },
+              {
+                "code": "3",
+                "displayOrder": 3,
+                "value": 3,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "أحياناً",
+                  "en": "Sometimes"
+                }
+              },
+              {
+                "code": "4",
+                "displayOrder": 4,
+                "value": 4,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "غالباً",
+                  "en": "Often"
+                }
+              },
+              {
+                "code": "5",
+                "displayOrder": 5,
+                "value": 5,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "دائماً",
+                  "en": "Always"
+                }
+              },
+              {
+                "code": "99",
+                "displayOrder": 6,
+                "value": 99,
+                "isNonSubstantive": true,
+                "label": {
+                  "ar": "يفضل عدم الإجابة",
+                  "en": "Prefer not to answer"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "code": "C",
+        "displayOrder": 3,
+        "title": {
+          "ar": null,
+          "en": "Module C: Active Aging"
+        },
+        "items": [
+          {
+            "code": "Q27_Household_Integration",
+            "displayOrder": 1,
+            "itemType": "single_choice",
+            "isRequired": true,
+            "scoringCategory": null,
+            "scoringDirection": "unspecified",
+            "prompt": {
+              "ar": "أشعر أن آرائي ونصائحي تحظى بتقدير واحترام كبيرين من قبل الأجيال الشابة العائشة معي في هذا المنزل.",
+              "en": "I feel that my opinions and advice are highly valued and respected by the younger generations living in this house."
+            },
+            "options": [
+              {
+                "code": "1",
+                "displayOrder": 1,
+                "value": 1,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "لا أوافق بشدة",
+                  "en": "Strongly Disagree"
+                }
+              },
+              {
+                "code": "2",
+                "displayOrder": 2,
+                "value": 2,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "لا أوافق",
+                  "en": "Disagree"
+                }
+              },
+              {
+                "code": "3",
+                "displayOrder": 3,
+                "value": 3,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "محايد",
+                  "en": "Neutral"
+                }
+              },
+              {
+                "code": "4",
+                "displayOrder": 4,
+                "value": 4,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "أوافق",
+                  "en": "Agree"
+                }
+              },
+              {
+                "code": "5",
+                "displayOrder": 5,
+                "value": 5,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "أوافق بشدة",
+                  "en": "Strongly Agree"
+                }
+              },
+              {
+                "code": "99",
+                "displayOrder": 6,
+                "value": 99,
+                "isNonSubstantive": true,
+                "label": {
+                  "ar": "يفضل عدم الإجابة",
+                  "en": "Prefer not to answer"
+                }
+              }
+            ]
+          },
+          {
+            "code": "Q28_Social_Connectedness",
+            "displayOrder": 2,
+            "itemType": "single_choice",
+            "isRequired": true,
+            "scoringCategory": null,
+            "scoringDirection": "unspecified",
+            "prompt": {
+              "ar": "خارج نطاق أسرتك المباشرة في المنزل، كم مرة تتواصل مع الأصدقاء، الجيران، أو الأقارب؟",
+              "en": "Outside of your immediate household family, how often do you interact with friends, neighbors, or relatives?"
+            },
+            "options": [
+              {
+                "code": "1",
+                "displayOrder": 1,
+                "value": 1,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "نادراً / أبداً",
+                  "en": "Rarely/Never"
+                }
+              },
+              {
+                "code": "2",
+                "displayOrder": 2,
+                "value": 2,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "مرات قليلة في الشهر",
+                  "en": "A few times a month"
+                }
+              },
+              {
+                "code": "3",
+                "displayOrder": 3,
+                "value": 3,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "مرة في الأسبوع",
+                  "en": "Once a week"
+                }
+              },
+              {
+                "code": "4",
+                "displayOrder": 4,
+                "value": 4,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "مرات قليلة في الأسبوع",
+                  "en": "A few times a week"
+                }
+              },
+              {
+                "code": "5",
+                "displayOrder": 5,
+                "value": 5,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "يومياً",
+                  "en": "Daily"
+                }
+              },
+              {
+                "code": "99",
+                "displayOrder": 6,
+                "value": 99,
+                "isNonSubstantive": true,
+                "label": {
+                  "ar": "يفضل عدم الإجابة",
+                  "en": "Prefer not to answer"
+                }
+              }
+            ]
+          },
+          {
+            "code": "Q29_Grandparenting_Cushion",
+            "displayOrder": 3,
+            "itemType": "single_choice",
+            "isRequired": true,
+            "scoringCategory": null,
+            "scoringDirection": "unspecified",
+            "prompt": {
+              "ar": "كم مرة تساهم بشكل فعال في رعاية، تعليم، أو توجيه أحفادك أثناء تواجد والديهم في العمل؟",
+              "en": "How often do you actively assist in watching, teaching, or guiding your grandchildren while their parents are at work?"
+            },
+            "options": [
+              {
+                "code": "1",
+                "displayOrder": 1,
+                "value": 1,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "أبداً",
+                  "en": "Never"
+                }
+              },
+              {
+                "code": "2",
+                "displayOrder": 2,
+                "value": 2,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "نادراً ما أفعل",
+                  "en": "Seldom"
+                }
+              },
+              {
+                "code": "3",
+                "displayOrder": 3,
+                "value": 3,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "أحياناً",
+                  "en": "Sometimes"
+                }
+              },
+              {
+                "code": "4",
+                "displayOrder": 4,
+                "value": 4,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "غالباً",
+                  "en": "Frequently"
+                }
+              },
+              {
+                "code": "5",
+                "displayOrder": 5,
+                "value": 5,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "كل يوم",
+                  "en": "Every day"
+                }
+              },
+              {
+                "code": "99",
+                "displayOrder": 6,
+                "value": 99,
+                "isNonSubstantive": true,
+                "label": {
+                  "ar": "يفضل عدم الإجابة",
+                  "en": "Prefer not to answer"
+                }
+              }
+            ]
+          },
+          {
+            "code": "Q30_Mobility_Independence",
+            "displayOrder": 4,
+            "itemType": "single_choice",
+            "isRequired": true,
+            "scoringCategory": null,
+            "scoringDirection": "unspecified",
+            "prompt": {
+              "ar": "إلى أي درجة يمكنك الحركة والتنقل في منزلك ومحيطك المجتمعي بأمان دون دعم جسدي أو مساعدة آلية؟",
+              "en": "To what degree are you capable of navigating your home and community environment safely without physical support or mechanical assistance?"
+            },
+            "options": [
+              {
+                "code": "1",
+                "displayOrder": 1,
+                "value": 1,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": null,
+                  "en": "Completely Dependent"
+                }
+              },
+              {
+                "code": "2",
+                "displayOrder": 2,
+                "value": 2,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": null,
+                  "en": "High Assistance Needed"
+                }
+              },
+              {
+                "code": "3",
+                "displayOrder": 3,
+                "value": 3,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": null,
+                  "en": "Moderate Assistance"
+                }
+              },
+              {
+                "code": "4",
+                "displayOrder": 4,
+                "value": 4,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": null,
+                  "en": "Minimal Assistance"
+                }
+              },
+              {
+                "code": "5",
+                "displayOrder": 5,
+                "value": 5,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": null,
+                  "en": "Completely Independent"
+                }
+              },
+              {
+                "code": "99",
+                "displayOrder": 6,
+                "value": 99,
+                "isNonSubstantive": true,
+                "label": {
+                  "ar": "يفضل عدم الإجابة",
+                  "en": "Prefer not to answer"
+                }
+              }
+            ]
+          },
+          {
+            "code": "Q31_IADL_Independence",
+            "displayOrder": 5,
+            "itemType": "single_choice",
+            "isRequired": true,
+            "scoringCategory": null,
+            "scoringDirection": "unspecified",
+            "prompt": {
+              "ar": "ما مدى استقلاليتك في إدارة شؤونك الروتينية، مثل إعداد وجبات خفيفة، متابعة جدول أدويتك، أو تنظيم وسائل النقل؟",
+              "en": "How independently can you manage your personal routines, such as preparing small meals, tracking medication, or arranging transport?"
+            },
+            "options": [
+              {
+                "code": "1",
+                "displayOrder": 1,
+                "value": 1,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": null,
+                  "en": "Completely Dependent"
+                }
+              },
+              {
+                "code": "2",
+                "displayOrder": 2,
+                "value": 2,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": null,
+                  "en": "High Assistance Needed"
+                }
+              },
+              {
+                "code": "3",
+                "displayOrder": 3,
+                "value": 3,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": null,
+                  "en": "Moderate Assistance"
+                }
+              },
+              {
+                "code": "4",
+                "displayOrder": 4,
+                "value": 4,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": null,
+                  "en": "Minimal Assistance"
+                }
+              },
+              {
+                "code": "5",
+                "displayOrder": 5,
+                "value": 5,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": null,
+                  "en": "Completely Independent"
+                }
+              },
+              {
+                "code": "99",
+                "displayOrder": 6,
+                "value": 99,
+                "isNonSubstantive": true,
+                "label": {
+                  "ar": "يفضل عدم الإجابة",
+                  "en": "Prefer not to answer"
+                }
+              }
+            ]
+          },
+          {
+            "code": "Q32_Digital_Inclusion",
+            "displayOrder": 6,
+            "itemType": "single_choice",
+            "isRequired": true,
+            "scoringCategory": null,
+            "scoringDirection": "unspecified",
+            "prompt": {
+              "ar": "ما مدى شعورك بالراحة في استخدام التطبيقات الذكية الحكومية أو تطبيقات التواصل لإدارة شؤونك الشخصية؟",
+              "en": "How comfortable do you feel using government smart applications or communications apps to manage your personal affairs?"
+            },
+            "options": [
+              {
+                "code": "1",
+                "displayOrder": 1,
+                "value": 1,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": null,
+                  "en": "Not Comfortable At All"
+                }
+              },
+              {
+                "code": "2",
+                "displayOrder": 2,
+                "value": 2,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": null,
+                  "en": "Slightly Comfortable"
+                }
+              },
+              {
+                "code": "3",
+                "displayOrder": 3,
+                "value": 3,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "محايد",
+                  "en": "Neutral"
+                }
+              },
+              {
+                "code": "4",
+                "displayOrder": 4,
+                "value": 4,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": null,
+                  "en": "Comfortable"
+                }
+              },
+              {
+                "code": "5",
+                "displayOrder": 5,
+                "value": 5,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": null,
+                  "en": "Extremely Comfortable"
+                }
+              },
+              {
+                "code": "99",
+                "displayOrder": 6,
+                "value": 99,
+                "isNonSubstantive": true,
+                "label": {
+                  "ar": "يفضل عدم الإجابة",
+                  "en": "Prefer not to answer"
+                }
+              }
+            ]
+          },
+          {
+            "code": "Q33_Healthcare_Access",
+            "displayOrder": 7,
+            "itemType": "single_choice",
+            "isRequired": true,
+            "scoringCategory": null,
+            "scoringDirection": "unspecified",
+            "prompt": {
+              "ar": "ما مدى سهولة حجز المواعيد والوصول إلى العيادات وتأمين الفحوصات الطبية الدورية لحالتك؟",
+              "en": "How easy is it for you to book appointments, reach clinics, and secure consistent medical check-ups for your conditions?"
+            },
+            "options": [
+              {
+                "code": "1",
+                "displayOrder": 1,
+                "value": 1,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "صعب للغاية",
+                  "en": "Extremely Difficult"
+                }
+              },
+              {
+                "code": "2",
+                "displayOrder": 2,
+                "value": 2,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "صعب",
+                  "en": "Difficult"
+                }
+              },
+              {
+                "code": "3",
+                "displayOrder": 3,
+                "value": 3,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "محايد",
+                  "en": "Neutral"
+                }
+              },
+              {
+                "code": "4",
+                "displayOrder": 4,
+                "value": 4,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "سهل",
+                  "en": "Easy"
+                }
+              },
+              {
+                "code": "5",
+                "displayOrder": 5,
+                "value": 5,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "سهل للغاية",
+                  "en": "Extremely Easy"
+                }
+              },
+              {
+                "code": "99",
+                "displayOrder": 6,
+                "value": 99,
+                "isNonSubstantive": true,
+                "label": {
+                  "ar": "يفضل عدم الإجابة",
+                  "en": "Prefer not to answer"
+                }
+              }
+            ]
+          },
+          {
+            "code": "Q34_Mental_Wellness",
+            "displayOrder": 8,
+            "itemType": "single_choice",
+            "isRequired": true,
+            "scoringCategory": null,
+            "scoringDirection": "unspecified",
+            "prompt": {
+              "ar": "خلال الشهر الماضي، كم مرة شعرت بالوحدة أو العزلة أو الانفصال عن الأنشطة الأسرية اليومية التي تحدث داخل المنزل؟",
+              "en": "Over the past month, how frequently have you felt lonely, isolated, or detached from daily family activities occurring inside the household?"
+            },
+            "options": [
+              {
+                "code": "1",
+                "displayOrder": 1,
+                "value": 1,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "دائماً",
+                  "en": "Always"
+                }
+              },
+              {
+                "code": "2",
+                "displayOrder": 2,
+                "value": 2,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "غالباً",
+                  "en": "Often"
+                }
+              },
+              {
+                "code": "3",
+                "displayOrder": 3,
+                "value": 3,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "أحياناً",
+                  "en": "Sometimes"
+                }
+              },
+              {
+                "code": "4",
+                "displayOrder": 4,
+                "value": 4,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "نادراً",
+                  "en": "Rarely"
+                }
+              },
+              {
+                "code": "5",
+                "displayOrder": 5,
+                "value": 5,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "أبداً",
+                  "en": "Never"
+                }
+              },
+              {
+                "code": "99",
+                "displayOrder": 6,
+                "value": 99,
+                "isNonSubstantive": true,
+                "label": {
+                  "ar": "يفضل عدم الإجابة",
+                  "en": "Prefer not to answer"
+                }
+              }
+            ]
+          },
+          {
+            "code": "Q35_Community_Infrastructure",
+            "displayOrder": 9,
+            "itemType": "single_choice",
+            "isRequired": true,
+            "scoringCategory": null,
+            "scoringDirection": "unspecified",
+            "prompt": {
+              "ar": "هل تشعر أن الحي المحيط بك يمتلك البنية التحتية المناسبة المصممة لدعم كبار السن؟",
+              "en": "Do you feel that your surrounding neighborhood possesses appropriate infrastructure built to support senior citizens?"
+            },
+            "options": [
+              {
+                "code": "1",
+                "displayOrder": 1,
+                "value": 1,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "لا أوافق بشدة",
+                  "en": "Strongly Disagree"
+                }
+              },
+              {
+                "code": "2",
+                "displayOrder": 2,
+                "value": 2,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "لا أوافق",
+                  "en": "Disagree"
+                }
+              },
+              {
+                "code": "3",
+                "displayOrder": 3,
+                "value": 3,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "محايد",
+                  "en": "Neutral"
+                }
+              },
+              {
+                "code": "4",
+                "displayOrder": 4,
+                "value": 4,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "أوافق",
+                  "en": "Agree"
+                }
+              },
+              {
+                "code": "5",
+                "displayOrder": 5,
+                "value": 5,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "أوافق بشدة",
+                  "en": "Strongly Agree"
+                }
+              },
+              {
+                "code": "99",
+                "displayOrder": 6,
+                "value": 99,
+                "isNonSubstantive": true,
+                "label": {
+                  "ar": "يفضل عدم الإجابة",
+                  "en": "Prefer not to answer"
+                }
+              }
+            ]
+          },
+          {
+            "code": "Q36_Purpose_Civic_Fulfillment",
+            "displayOrder": 10,
+            "itemType": "single_choice",
+            "isRequired": true,
+            "scoringCategory": null,
+            "scoringDirection": "unspecified",
+            "prompt": {
+              "ar": "أشعر أن لدي فرصاً كافية لمشاركة مهاراتي، ومعرفتي بالتراث المحلي، أو وقت التطوع مع المجتمع الأوسع خارج منزلي.",
+              "en": "I feel that I have ample opportunities to share my skills, local heritage knowledge, or volunteering time with broader society."
+            },
+            "options": [
+              {
+                "code": "1",
+                "displayOrder": 1,
+                "value": 1,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "لا أوافق بشدة",
+                  "en": "Strongly Disagree"
+                }
+              },
+              {
+                "code": "2",
+                "displayOrder": 2,
+                "value": 2,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "لا أوافق",
+                  "en": "Disagree"
+                }
+              },
+              {
+                "code": "3",
+                "displayOrder": 3,
+                "value": 3,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "محايد",
+                  "en": "Neutral"
+                }
+              },
+              {
+                "code": "4",
+                "displayOrder": 4,
+                "value": 4,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "أوافق",
+                  "en": "Agree"
+                }
+              },
+              {
+                "code": "5",
+                "displayOrder": 5,
+                "value": 5,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "أوافق بشدة",
+                  "en": "Strongly Agree"
+                }
+              },
+              {
+                "code": "99",
+                "displayOrder": 6,
+                "value": 99,
+                "isNonSubstantive": true,
+                "label": {
+                  "ar": "يفضل عدم الإجابة",
+                  "en": "Prefer not to answer"
+                }
+              }
+            ]
+          },
+          {
+            "code": "Q37_Cognitive_Stimulation",
+            "displayOrder": 11,
+            "itemType": "single_choice",
+            "isRequired": true,
+            "scoringCategory": null,
+            "scoringDirection": "unspecified",
+            "prompt": {
+              "ar": "ما مدى انتظامك في القراءة النشطة، تمارين الذاكرة التقليدية، المحادثات العميقة، أو الحرف اليدوية التي تنشط ذهنك؟",
+              "en": "How regularly do you engage in active reading, traditional memory exercises, complex conversations, or crafts that stimulate your mind?"
+            },
+            "options": [
+              {
+                "code": "1",
+                "displayOrder": 1,
+                "value": 1,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "أبداً",
+                  "en": "Never"
+                }
+              },
+              {
+                "code": "2",
+                "displayOrder": 2,
+                "value": 2,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "نادراً",
+                  "en": "Rarely"
+                }
+              },
+              {
+                "code": "3",
+                "displayOrder": 3,
+                "value": 3,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "أحياناً",
+                  "en": "Sometimes"
+                }
+              },
+              {
+                "code": "4",
+                "displayOrder": 4,
+                "value": 4,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "غالباً",
+                  "en": "Often"
+                }
+              },
+              {
+                "code": "5",
+                "displayOrder": 5,
+                "value": 5,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "دائماً",
+                  "en": "Always"
+                }
+              },
+              {
+                "code": "99",
+                "displayOrder": 6,
+                "value": 99,
+                "isNonSubstantive": true,
+                "label": {
+                  "ar": "يفضل عدم الإجابة",
+                  "en": "Prefer not to answer"
+                }
+              }
+            ]
+          },
+          {
+            "code": "Q38_Caregiver_Relationship",
+            "displayOrder": 12,
+            "itemType": "single_choice",
+            "isRequired": true,
+            "scoringCategory": null,
+            "scoringDirection": "unspecified",
+            "prompt": {
+              "ar": "ما مدى رضاك وشعورك بالأمان تجاه تعامل وصبر وكفاءة أفراد الأسرة أو العاملين الذين يقدمون لك الدعم والرعاية؟",
+              "en": "How satisfied and secure do you feel with the attitude, patience, and competence of family members or staff who provide care support?"
+            },
+            "options": [
+              {
+                "code": "1",
+                "displayOrder": 1,
+                "value": 1,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": null,
+                  "en": "Extremely Dissatisfied"
+                }
+              },
+              {
+                "code": "2",
+                "displayOrder": 2,
+                "value": 2,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": null,
+                  "en": "Dissatisfied"
+                }
+              },
+              {
+                "code": "3",
+                "displayOrder": 3,
+                "value": 3,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": "محايد",
+                  "en": "Neutral"
+                }
+              },
+              {
+                "code": "4",
+                "displayOrder": 4,
+                "value": 4,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": null,
+                  "en": "Satisfied"
+                }
+              },
+              {
+                "code": "5",
+                "displayOrder": 5,
+                "value": 5,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": null,
+                  "en": "Extremely Satisfied"
+                }
+              },
+              {
+                "code": "99",
+                "displayOrder": 6,
+                "value": 99,
+                "isNonSubstantive": true,
+                "label": {
+                  "ar": "يفضل عدم الإجابة",
+                  "en": "Prefer not to answer"
+                }
+              }
+            ]
+          },
+          {
+            "code": "Q39_Physical_Resilience_Falls",
+            "displayOrder": 13,
+            "itemType": "single_choice",
+            "isRequired": true,
+            "scoringCategory": null,
+            "scoringDirection": "unspecified",
+            "prompt": {
+              "ar": "إلى أي مدى تقلق بشأن السقوط، أو فقدان قوتك البدنية، أو فقدان توازنك أثناء تحركاتك اليومية المعتادة؟",
+              "en": "To what extent do you worry about falling, losing physical strength, or losing your balance during normal everyday movements?"
+            },
+            "options": [
+              {
+                "code": "1",
+                "displayOrder": 1,
+                "value": 1,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": null,
+                  "en": "Constantly Worried"
+                }
+              },
+              {
+                "code": "2",
+                "displayOrder": 2,
+                "value": 2,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": null,
+                  "en": "Frequently Worried"
+                }
+              },
+              {
+                "code": "3",
+                "displayOrder": 3,
+                "value": 3,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": null,
+                  "en": "Moderately Worried"
+                }
+              },
+              {
+                "code": "4",
+                "displayOrder": 4,
+                "value": 4,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": null,
+                  "en": "Seldom Worried"
+                }
+              },
+              {
+                "code": "5",
+                "displayOrder": 5,
+                "value": 5,
+                "isNonSubstantive": false,
+                "label": {
+                  "ar": null,
+                  "en": "Not Worried At All"
+                }
+              },
+              {
+                "code": "99",
+                "displayOrder": 6,
+                "value": 99,
+                "isNonSubstantive": true,
+                "label": {
+                  "ar": "يفضل عدم الإجابة",
+                  "en": "Prefer not to answer"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,156 @@
+# Local development only: PostgreSQL 18.6, the API, the Azwah identity provider in its Development mode and the admin
+# dashboard. Run from the repository root: docker compose --env-file .env -f infra/docker-compose.yml up --build -d
+# Demonstration data (D-140): docker compose --env-file .env -f infra/docker-compose.yml run --rm api db demo, then
+# USE_DEMONSTRATION_DATABASE=true in .env and `up -d` again (README.md, "Quickstart").
+name: azwah
+
+services:
+  postgres:
+    image: postgres:18.6
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:?Set POSTGRES_USER in .env}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?Set POSTGRES_PASSWORD in .env}
+      POSTGRES_DB: ${POSTGRES_DB:?Set POSTGRES_DB in .env}
+    ports:
+      - "127.0.0.1:${POSTGRES_PORT:-5432}:5432"
+    volumes:
+      # PostgreSQL 18 images keep data under /var/lib/postgresql/<major>/docker, so mount the parent.
+      - postgres-data:/var/lib/postgresql
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U $${POSTGRES_USER} -d $${POSTGRES_DB}"]
+      interval: 5s
+      timeout: 5s
+      retries: 12
+
+  api:
+    build:
+      context: ../backend
+      dockerfile: Dockerfile
+    depends_on:
+      postgres:
+        condition: service_healthy
+      identity-provider:
+        condition: service_started
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      ConnectionStrings__Default: Host=postgres;Port=5432;Database=${POSTGRES_DB};Username=${POSTGRES_USER};Password=${POSTGRES_PASSWORD}
+      Database__ApplyMigrationsOnStartup: "true"
+      # true: run against the demonstration database <POSTGRES_DB>_demo that `run --rm api db demo` builds (synthetic
+      # data, Development only, D-140). Build it before switching this on.
+      Database__UseDemonstrationDatabase: ${USE_DEMONSTRATION_DATABASE:-false}
+      # Dashboard exports are written inside the container (development only; lost when it is recreated).
+      Exports__LocalDirectory: /tmp/azwah-exports
+      Cors__AllowedOrigins__0: ${ADMIN_ORIGIN:-http://localhost:${ADMIN_PORT:-3000}}
+      OTEL_EXPORTER_OTLP_ENDPOINT: ${OTEL_EXPORTER_OTLP_ENDPOINT:-}
+      # The assistant, the consultant and the written score report (D-112, D-119); empty keeps them switched off.
+      Assistant__Model__ApiKey: ${OPENAI_API_KEY:-}
+      # Trust the identity provider. Keys come from http://identity-provider:5090 inside the Compose network;
+      # the tokens' issuer stays IDENTITY_PROVIDER_ISSUER (the provider's discovery says so).
+      Authentication__Schemes__Bearer__Authority: http://identity-provider:5090
+      Authentication__Schemes__Bearer__RequireHttpsMetadata: "false"
+      Authentication__Schemes__Bearer__ValidAudiences__0: azwah-api
+    ports:
+      # Published on all interfaces so a phone on the same Wi-Fi can reach the development API.
+      - "${API_PORT:-8080}:8080"
+
+  # The Azwah identity provider (D-129). Compose runs it in Development: UAE PASS staging (with the sandbox client
+  # below) plus simulated personas, where anyone can sign in as any test persona and no identity is checked. Deployed
+  # (any other environment) it offers UAE PASS only. See backend/FamilyResilience.IdentityProvider/README.md.
+  identity-provider:
+    build:
+      context: ../backend
+      dockerfile: FamilyResilience.IdentityProvider/Dockerfile
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      # Every client (browser, phone, API) must reach the provider under this same URL.
+      IdentityProvider__Issuer: ${IDENTITY_PROVIDER_ISSUER:-http://localhost:5090}
+      # No default: while it is empty, the admin dashboard's token requests fail with invalid_client.
+      IdentityProvider__Clients__azwah-admin__Secret: ${IDENTITY_PROVIDER_ADMIN_CLIENT_SECRET:-}
+      # The dashboard's sign-in and sign-out return addresses follow the address it is opened at (service admin).
+      IdentityProvider__Clients__azwah-admin__RedirectUris__0: ${ADMIN_ORIGIN:-http://localhost:${ADMIN_PORT:-3000}}/auth/callback
+      IdentityProvider__Clients__azwah-admin__PostLogoutRedirectUris__0: ${ADMIN_ORIGIN:-http://localhost:${ADMIN_PORT:-3000}}/sign-in?signedOut=1
+      # UAE PASS staging sign-in (staging test accounts only; production UAE PASS is refused, D-96, D-129). Enabled by
+      # default; while the client ID or secret is empty it stays off with a warning and only personas work.
+      IdentityProvider__UaePass__Enabled: ${IDENTITY_PROVIDER_UAEPASS_ENABLED:-true}
+      IdentityProvider__UaePass__ClientId: ${IDENTITY_PROVIDER_UAEPASS_CLIENT_ID:-}
+      IdentityProvider__UaePass__ClientSecret: ${IDENTITY_PROVIDER_UAEPASS_CLIENT_SECRET:-}
+      # Google sign-in (D-147), with the owner's own Google Cloud OAuth client. Enabled by default; while the client ID
+      # or secret is empty it stays off with a warning and nothing changes.
+      IdentityProvider__Google__Enabled: ${IDENTITY_PROVIDER_GOOGLE_ENABLED:-true}
+      IdentityProvider__Google__ClientId: ${IDENTITY_PROVIDER_GOOGLE_CLIENT_ID:-}
+      IdentityProvider__Google__ClientSecret: ${IDENTITY_PROVIDER_GOOGLE_CLIENT_SECRET:-}
+    ports:
+      # This computer only by default: anyone who reaches the provider can mint any persona's token for this API.
+      # A phone on the same Wi-Fi needs IDENTITY_PROVIDER_BIND=0.0.0.0 and a LAN issuer (an explicit opt-in); an emulator
+      # or USB phone can use adb reverse instead.
+      - "${IDENTITY_PROVIDER_BIND:-127.0.0.1}:${IDENTITY_PROVIDER_PORT:-5090}:5090"
+
+  # The admin dashboard (apps/admin), signing staff in through the identity provider above with its simulated
+  # Development personas (no identity is checked) and reading the API on the Compose network. ADMIN_ENVIRONMENT
+  # development only lets it accept the plain-HTTP local issuer; it never turns on mock data or development sign-in here.
+  # It runs inside admin-network's network namespace (below), which publishes its port.
+  admin:
+    build:
+      context: ../apps/admin
+    network_mode: "service:admin-network"
+    depends_on:
+      admin-network:
+        condition: service_started
+      api:
+        condition: service_started
+      identity-provider:
+        condition: service_started
+    environment:
+      ADMIN_ENVIRONMENT: development
+      # Exactly the address the dashboard is opened at (the sign-in return address and the CSRF origin check).
+      ADMIN_APP_ORIGIN: ${ADMIN_ORIGIN:-http://localhost:${ADMIN_PORT:-3000}}
+      ADMIN_AUTH_MODE: oidc
+      # The same issuer address as every other client; admin-network makes it reachable from this container.
+      OIDC_ISSUER: ${IDENTITY_PROVIDER_ISSUER:-http://localhost:5090}
+      OIDC_CLIENT_ID: azwah-admin
+      OIDC_CLIENT_SECRET: ${IDENTITY_PROVIDER_ADMIN_CLIENT_SECRET:-}
+      # Base64 of at least 32 random bytes; while it is empty the dashboard shows a configuration error page.
+      ADMIN_SESSION_SECRET: ${ADMIN_SESSION_SECRET:-}
+      ADMIN_DATA_SOURCE: api
+      ADMIN_API_URL: http://api:8080
+
+  # The dashboard's network namespace. The issuer must be the same URL for the browser, the phone and the dashboard's
+  # server (D-129), and the default one is http://localhost:5090; but inside a container, localhost is the container
+  # itself. So this small, long-lived process holds the namespace the dashboard joins, publishes the dashboard's port,
+  # and forwards the issuer's localhost port to the identity provider: the dashboard's server then reads discovery,
+  # redeems codes and refreshes tokens at the very address the browser uses. With an issuer that is not on localhost
+  # (a LAN address for a phone) it forwards nothing and only keeps the namespace. It owns the namespace, rather than
+  # joining the dashboard's, so that restarting or rebuilding the dashboard never cuts the forwarding.
+  admin-network:
+    image: node:24-slim
+    user: node
+    init: true
+    environment:
+      ISSUER: ${IDENTITY_PROVIDER_ISSUER:-http://localhost:5090}
+    ports:
+      - "127.0.0.1:${ADMIN_PORT:-3000}:3000"
+    command:
+      - node
+      - -e
+      - |
+        const net = require('node:net');
+        const issuer = new URL(process.env.ISSUER);
+        if (issuer.hostname !== 'localhost' && issuer.hostname !== '127.0.0.1') {
+          console.log('The issuer ' + issuer.origin + ' is not on localhost: nothing to forward.');
+          setInterval(() => {}, 1 << 30);
+        } else {
+          const port = Number(issuer.port || (issuer.protocol === 'https:' ? 443 : 80));
+          const forward = (client) => {
+            const upstream = net.connect(5090, 'identity-provider');
+            client.pipe(upstream).pipe(client);
+            client.on('error', () => upstream.destroy());
+            upstream.on('error', () => client.destroy());
+          };
+          for (const host of ['127.0.0.1', '::1']) {
+            net.createServer(forward).on('error', (error) => console.log(host + ': ' + error.code)).listen(port, host);
+          }
+          console.log('Forwarding ' + issuer.origin + ' to identity-provider:5090 for the dashboard.');
+        }
+
+volumes:
+  postgres-data:

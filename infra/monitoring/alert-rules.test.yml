@@ -1,0 +1,320 @@
+# promtool test rules infra/monitoring/alert-rules.test.yml
+# Synthetic series only: proves each rule fires on the inputs it is meant for and stays quiet otherwise. A series
+# starts absent (`_`) and appears already at 1, as an OpenTelemetry counter does on its first increment.
+
+rule_files:
+  - alert-rules.yml
+
+evaluation_interval: 1m
+
+tests:
+  - name: the first staff role after a restart alerts at once; a participant role does not
+    interval: 1m
+    input_series:
+      - series: 'azwah_identity_role_changes_total{change="added", role="system_administrator", first_seen="false"}'
+        values: "_ _ 1 1 1"
+      - series: 'azwah_identity_role_changes_total{change="added", role="participant", first_seen="true"}'
+        values: "_ 5 40 90 150"
+    alert_rule_test:
+      - eval_time: 1m
+        alertname: AzwahStaffRoleAdded
+        exp_alerts: []
+      - eval_time: 3m
+        alertname: AzwahStaffRoleAdded
+        exp_alerts:
+          - exp_labels:
+              severity: critical
+              role: system_administrator
+            exp_annotations:
+              summary: "The staff role system_administrator appeared on an account"
+              description: >-
+                Roles are granted in the identity provider. Check the grant against an approved access request: audit_events
+                with action identity.role.added and resource_id system_administrator. Silence this alert in Alertmanager for an
+                announced access change window; outside one, treat an unexplained grant as an incident.
+
+  - name: a later staff role on a series that already exists alerts; a steady series stops alerting
+    interval: 1m
+    input_series:
+      - series: 'azwah_identity_role_changes_total{change="added", role="researcher", first_seen="false"}'
+        values: "1 1 1 1 1 1 1 1 2 2 2 2 2 2 2 2 2 2 2 2"
+    alert_rule_test:
+      - eval_time: 7m
+        alertname: AzwahStaffRoleAdded
+        exp_alerts: []
+      - eval_time: 9m
+        alertname: AzwahStaffRoleAdded
+        exp_alerts:
+          - exp_labels:
+              severity: critical
+              role: researcher
+            exp_annotations:
+              summary: "The staff role researcher appeared on an account"
+              description: >-
+                Roles are granted in the identity provider. Check the grant against an approved access request: audit_events
+                with action identity.role.added and resource_id researcher. Silence this alert in Alertmanager for an
+                announced access change window; outside one, treat an unexplained grant as an incident.
+      - eval_time: 19m
+        alertname: AzwahStaffRoleAdded
+        exp_alerts: []
+
+  - name: refusals alert above 50 in ten minutes, per kind, also on a new series
+    interval: 1m
+    input_series:
+      - series: 'azwah_authorization_denied_total{kind="resource"}'
+        values: "_ 10+10x9"
+      - series: 'azwah_authorization_denied_total{kind="role"}'
+        values: "_ 1+1x9"
+    alert_rule_test:
+      - eval_time: 6m
+        alertname: AzwahAuthorizationRefusalBurst
+        exp_alerts:
+          - exp_labels:
+              severity: warning
+              kind: resource
+            exp_annotations:
+              summary: "More than 50 signed-in requests refused (resource) in 10 minutes"
+              description: >-
+                kind=resource means requests for other households' resources (answered 404); kind=role means staff routes
+                requested without the role (403). A burst usually means one account probing IDs or routes. Find it in
+                audit_events: action authorization.resource.denied or authorization.role.denied, outcome Denied, grouped
+                by actor_id over the last 10 minutes.
+
+  - name: the first development token after a restart alerts; ordinary expiries below the surge threshold do not
+    interval: 1m
+    input_series:
+      - series: 'azwah_auth_tokens_rejected_total{reason="development_token"}'
+        values: "_ _ 1 1"
+      - series: 'azwah_auth_tokens_rejected_total{reason="expired"}'
+        values: "_ 3 6 9"
+    alert_rule_test:
+      - eval_time: 3m
+        alertname: AzwahDevelopmentTokenPresented
+        exp_alerts:
+          - exp_labels:
+              severity: critical
+            exp_annotations:
+              summary: "A deployed API received a token from the development identity provider"
+              description: >-
+                The token was refused, but a deployed client or proxy is pointing at, or replaying tokens from, the
+                development identity provider. Find the configuration that produces it.
+      - eval_time: 3m
+        alertname: AzwahTokenRejectionSurge
+        exp_alerts: []
+
+  - name: rate limiting alerts only once it is sustained for 15 minutes
+    interval: 1m
+    input_series:
+      - series: 'azwah_requests_rate_limited_total{endpoint_policy="participant-writes"}'
+        values: "_ 60+60x30"
+    alert_rule_test:
+      - eval_time: 10m
+        alertname: AzwahSustainedRateLimiting
+        exp_alerts: []
+      - eval_time: 25m
+        alertname: AzwahSustainedRateLimiting
+        exp_alerts:
+          - exp_labels:
+              severity: warning
+              endpoint_policy: participant-writes
+            exp_annotations:
+              summary: "Requests refused by the participant-writes rate limit for 15 minutes"
+              description: >-
+                Sustained 429s mean automated traffic or a client retry loop. endpoint_policy=none means the global
+                per-caller limit. If legitimate use hits the limit, change RateLimiting:Policies and record why.
+
+  - name: the first failed retention erasure alerts, and so does the first erased household
+    interval: 1m
+    input_series:
+      - series: "azwah_retention_erasure_failures_total"
+        values: "_ _ 1 1"
+      - series: "azwah_retention_households_erased_total"
+        values: "_ _ 3 3"
+    alert_rule_test:
+      - eval_time: 3m
+        alertname: AzwahRetentionErasureFailures
+        exp_alerts:
+          - exp_labels:
+              severity: warning
+            exp_annotations:
+              summary: "The retention job failed to erase a household"
+              description: >-
+                The failed erasure was rolled back and will be tried again at the next run. The API logs event 2008 with the
+                error codes (an exception's type, never its message); investigate before the household's data outlives its
+                approved period.
+      - eval_time: 3m
+        alertname: AzwahRetentionErasedHouseholds
+        exp_alerts:
+          - exp_labels:
+              severity: info
+            exp_annotations:
+              summary: "The retention job erased withdrawn households in the last hour"
+              description: "Expected only once retention is switched on with approved periods (D-88). Each erasure is audited as households.household.erased."
+
+  - name: the first critical safety alert alerts at once, and the score-band alert is a warning only
+    interval: 1m
+    input_series:
+      - series: 'azwah_safeguarding_alerts_raised_total{concern="suicide_or_self_harm", severity="critical", source="assistant_chat"}'
+        values: "_ _ 1 1 1 1 1 1 1 1 1 1 1 1 1 1"
+      - series: 'azwah_safeguarding_alerts_raised_total{concern="low_resilience_score", severity="high", source="household_assessment"}'
+        values: "_ _ 1 1 1 1 1 1 1 1 1 1 1 1 1 1"
+    alert_rule_test:
+      - eval_time: 1m
+        alertname: SafetyAlertRaised
+        exp_alerts: []
+      - eval_time: 3m
+        alertname: SafetyAlertRaised
+        exp_alerts:
+          - exp_labels:
+              severity: critical
+              concern: suicide_or_self_harm
+              source: assistant_chat
+            exp_annotations:
+              summary: "A critical safety alert was raised (suicide_or_self_harm, from assistant_chat)"
+              description: >-
+                A participant's words or a detector flagged a possible crisis. Open the admin dashboard page Safety alerts
+                (/safety-alerts) and follow the organisation's safeguarding procedure (open question 59). The alert holds
+                no conversation text. The person usually saw the crisis support card, but not always: a line still being
+                spoken at hang-up, a phone timeout or a closed app can leave them without it.
+      - eval_time: 14m
+        alertname: SafetyAlertRaised
+        exp_alerts: []
+      - eval_time: 3m
+        alertname: LowResilienceScoreAlertRaised
+        exp_alerts:
+          - exp_labels:
+              severity: warning
+              concern: low_resilience_score
+              source: household_assessment
+            exp_annotations:
+              summary: "A household's score fell in the lowest approved band (low_resilience_score)"
+              description: >-
+                Lower urgency than a crisis signal. Review it on the admin dashboard page Safety alerts (/safety-alerts).
+                Only system administrators can see it; programme administrators never see scores (D-62).
+
+  - name: a second critical alert on an existing series alerts
+    interval: 1m
+    input_series:
+      - series: 'azwah_safeguarding_alerts_raised_total{concern="harm_to_others", severity="critical", source="consultant_voice"}'
+        values: "1 1 1 1 1 1 1 1 1 1 1 1 1 2 2 2"
+    alert_rule_test:
+      - eval_time: 12m
+        alertname: SafetyAlertRaised
+        exp_alerts: []
+      - eval_time: 14m
+        alertname: SafetyAlertRaised
+        exp_alerts:
+          - exp_labels:
+              severity: critical
+              concern: harm_to_others
+              source: consultant_voice
+            exp_annotations:
+              summary: "A critical safety alert was raised (harm_to_others, from consultant_voice)"
+              description: >-
+                A participant's words or a detector flagged a possible crisis. Open the admin dashboard page Safety alerts
+                (/safety-alerts) and follow the organisation's safeguarding procedure (open question 59). The alert holds
+                no conversation text. The person usually saw the crisis support card, but not always: a line still being
+                spoken at hang-up, a phone timeout or a closed app can leave them without it.
+
+  - name: recording failures alert per source, on a new series, and stay quiet when steady
+    interval: 1m
+    input_series:
+      - series: 'azwah_safeguarding_recording_failures_total{source="assistant_chat"}'
+        values: "_ _ 1 1 1 1 1 1 1 1 1 1 1 1 1 1"
+    alert_rule_test:
+      - eval_time: 1m
+        alertname: SafetyAlertRecordingFailing
+        exp_alerts: []
+      - eval_time: 3m
+        alertname: SafetyAlertRecordingFailing
+        exp_alerts:
+          - exp_labels:
+              severity: warning
+              source: assistant_chat
+            exp_annotations:
+              summary: "Safety alerts from assistant_chat could not be recorded"
+              description: >-
+                The person usually still saw the crisis support card, but no alert reached the dashboard, so staff may not
+                know, and this alert may be lost. The API logs the fixed code safety_alert_failed with the exception type or
+                error code (never the text). Check the database and the Safeguarding module. Notices are not logged, so
+                there is no list to compare: correlate the failure time with assistant.reply.generated audit events in the
+                same minutes to see which households were chatting.
+      - eval_time: 14m
+        alertname: SafetyAlertRecordingFailing
+        exp_alerts: []
+
+  - name: a repeated critical alert alerts on a new series and on an existing one, and a high repeat does not
+    interval: 1m
+    input_series:
+      - series: 'azwah_safeguarding_alerts_repeated_total{concern="suicide_or_self_harm", severity="critical", source="assistant_chat"}'
+        values: "_ _ 1 1 1 1 1 1 1 1 1 1 1 1 1 1"
+      - series: 'azwah_safeguarding_alerts_repeated_total{concern="low_resilience_score", severity="high", source="household_assessment"}'
+        values: "_ _ 1 1 1 1 1 1 1 1 1 1 1 1 1 1"
+    alert_rule_test:
+      - eval_time: 1m
+        alertname: SafetyAlertRepeated
+        exp_alerts: []
+      - eval_time: 3m
+        alertname: SafetyAlertRepeated
+        exp_alerts:
+          - exp_labels:
+              severity: critical
+              concern: suicide_or_self_harm
+              source: assistant_chat
+            exp_annotations:
+              summary: "A critical safety alert was repeated (suicide_or_self_harm, from assistant_chat)"
+              description: >-
+                The same household signalled the same concern again, so its alert is open again (an Acknowledged alert
+                re-opens). Open the admin dashboard page Safety alerts (/safety-alerts) and follow the organisation's
+                safeguarding procedure (open question 59). The alert holds no conversation text.
+      - eval_time: 14m
+        alertname: SafetyAlertRepeated
+        exp_alerts: []
+
+  - name: a second repeat on an existing critical series alerts
+    interval: 1m
+    input_series:
+      - series: 'azwah_safeguarding_alerts_repeated_total{concern="abuse_or_danger", severity="critical", source="consultant_voice"}'
+        values: "1 1 1 1 1 1 1 1 1 1 1 1 1 2 2 2"
+    alert_rule_test:
+      - eval_time: 12m
+        alertname: SafetyAlertRepeated
+        exp_alerts: []
+      - eval_time: 14m
+        alertname: SafetyAlertRepeated
+        exp_alerts:
+          - exp_labels:
+              severity: critical
+              concern: abuse_or_danger
+              source: consultant_voice
+            exp_annotations:
+              summary: "A critical safety alert was repeated (abuse_or_danger, from consultant_voice)"
+              description: >-
+                The same household signalled the same concern again, so its alert is open again (an Acknowledged alert
+                re-opens). Open the admin dashboard page Safety alerts (/safety-alerts) and follow the organisation's
+                safeguarding procedure (open question 59). The alert holds no conversation text.
+
+  - name: skipped recordings alert per source, on a new series, and stay quiet when steady
+    interval: 1m
+    input_series:
+      - series: 'azwah_safeguarding_recording_skipped_total{source="assistant_chat"}'
+        values: "_ _ 1 1 1 1 1 1 1 1 1 1 1 1 1 1"
+    alert_rule_test:
+      - eval_time: 1m
+        alertname: SafetyAlertRecordingSkipped
+        exp_alerts: []
+      - eval_time: 3m
+        alertname: SafetyAlertRecordingSkipped
+        exp_alerts:
+          - exp_labels:
+              severity: warning
+              source: assistant_chat
+            exp_annotations:
+              summary: "Safety alerts from assistant_chat were skipped"
+              description: >-
+                A crisis signal was detected but the server has no platform user record for the signed-in caller, so no
+                alert exists and staff may not know. Notices are not logged: correlate the time with
+                assistant.reply.generated audit events to find the conversation, and check how the caller's account was
+                created (sign-in and the platform's own records).
+      - eval_time: 14m
+        alertname: SafetyAlertRecordingSkipped
+        exp_alerts: []

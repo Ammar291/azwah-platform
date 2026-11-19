@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+  <!--
+    The Azwah identity provider: the platform's OpenID Connect provider, brokering UAE PASS staging, with simulated
+    personas in Development only (D-129). It has no project references, nothing references it except the integration
+    tests, and the API's Dockerfile never copies it: it is a separate app, so the API image never contains a token issuer.
+  -->
+  <PropertyGroup>
+    <UserSecretsId>familyresilience-dev-identity</UserSecretsId>
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+  <ItemGroup>
+    <!-- The masking and userinfo parsing are tested directly. -->
+    <InternalsVisibleTo Include="FamilyResilience.IntegrationTests" />
+  </ItemGroup>
+</Project>

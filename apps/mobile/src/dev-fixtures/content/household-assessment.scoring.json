@@ -1,0 +1,16 @@
+{
+  "schema": "scoring.v1",
+  "target": null,
+  "policy": "summed_item_values",
+  "algorithmVersion": 1,
+  "parameters": {
+    "reverseScoring": "mirror_scale",
+    "unanswered": "reject",
+    "total": true,
+    "tierBands": [
+      { "code": "vulnerable", "min": 39, "max": 78 },
+      { "code": "transitional", "min": 79, "max": 117 },
+      { "code": "flourishing", "min": 118, "max": 156 }
+    ]
+  }
+}

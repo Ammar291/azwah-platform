@@ -1,0 +1,22 @@
+{
+  "name": "azwah-platform",
+  "private": true,
+  "description": "Azwah family resilience platform. Repository-level convenience scripts only; every app has its own package.json.",
+  "scripts": {
+    "admin:dev": "npm --prefix apps/admin run dev",
+    "mobile:start": "npm --prefix apps/mobile run start",
+    "api:run": "cd backend && dotnet run --project FamilyResilience.Api",
+    "identity:dev": "cd backend && dotnet run --project FamilyResilience.IdentityProvider",
+    "api:test": "cd backend && dotnet test --solution FamilyResilience.slnx",
+    "api:test:persistence": "cd backend && dotnet test --project FamilyResilience.IntegrationTests --filter-namespace FamilyResilience.IntegrationTests.Persistence",
+    "db:up": "docker compose --env-file .env -f infra/docker-compose.yml up -d postgres",
+    "db:migrate": "cd backend && dotnet run --project FamilyResilience.Api -- db migrate",
+    "db:seed": "cd backend && dotnet run --project FamilyResilience.Api -- db seed",
+    "db:reset": "docker compose --env-file .env -f infra/docker-compose.yml down -v && docker compose --env-file .env -f infra/docker-compose.yml up -d postgres",
+    "demo:db": "cd backend && dotnet run --project FamilyResilience.Api -- db demo",
+    "demo:reset": "cd backend && dotnet run --project FamilyResilience.Api -- db demo --reset",
+    "demo:api": "cd backend && dotnet run --project FamilyResilience.Api -- --Database:UseDemonstrationDatabase=true",
+    "infra:up": "docker compose --env-file .env -f infra/docker-compose.yml up --build -d",
+    "infra:down": "docker compose --env-file .env -f infra/docker-compose.yml down"
+  }
+}

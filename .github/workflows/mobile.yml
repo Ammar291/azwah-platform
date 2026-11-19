@@ -1,0 +1,41 @@
+name: mobile
+
+on:
+  push:
+    branches: [main]
+    paths: ["apps/mobile/**", "backend/FamilyResilience.Infrastructure/Content/**", ".github/workflows/mobile.yml", "scripts/npm-audit-gate.mjs", "scripts/npm-audit-gate.test.mjs"]
+  pull_request:
+    paths: ["apps/mobile/**", "backend/FamilyResilience.Infrastructure/Content/**", ".github/workflows/mobile.yml", "scripts/npm-audit-gate.mjs", "scripts/npm-audit-gate.test.mjs"]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: mobile-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    defaults:
+      run:
+        working-directory: apps/mobile
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: 24
+          cache: npm
+          cache-dependency-path: apps/mobile/package-lock.json
+      - run: npm ci
+      - name: Test the audit gate
+        run: node --test ../../scripts/npm-audit-gate.test.mjs
+      - name: Known vulnerabilities (high and critical, apart from the reviewed allowlist)
+        run: npm audit --json | node ../../scripts/npm-audit-gate.mjs audit-allowlist.json
+      - run: npm run typecheck
+      - run: npm run lint
+      - run: npm test -- --ci
+      - name: Bundle for Android and iOS
+        run: npx expo export --platform android --platform ios
+      - run: npm run doctor

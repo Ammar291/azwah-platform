@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="xunit.v3" />
+    <PackageReference Include="CsCheck" />
+  </ItemGroup>
+  <ItemGroup>
+    <Using Include="Xunit" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FamilyResilience.Domain\FamilyResilience.Domain.csproj" />
+    <ProjectReference Include="..\FamilyResilience.Application\FamilyResilience.Application.csproj" />
+    <ProjectReference Include="..\FamilyResilience.Infrastructure\FamilyResilience.Infrastructure.csproj" />
+    <ProjectReference Include="..\FamilyResilience.Api\FamilyResilience.Api.csproj" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,4 @@
+# Native build outputs of this module
+android/build/
+android/.cxx/
+android/.gradle/

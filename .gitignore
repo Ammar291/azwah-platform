@@ -1,0 +1,45 @@
+# Personal and hackathon material: never committed
+/materials/
+
+# Environment files (the .env.example files are committed)
+.env
+.env.*
+!.env.example
+
+# Node
+node_modules/
+coverage/
+*.tsbuildinfo
+
+# Next.js
+.next/
+out/
+next-env.d.ts
+
+# Expo
+.expo/
+dist/
+web-build/
+expo-env.d.ts
+apps/mobile/ios/
+apps/mobile/android/
+
+# .NET
+bin/
+obj/
+TestResults/
+*.user
+
+# Local databases and test output
+*.db
+*.db-*
+screenshots/
+
+# OS and editors
+.DS_Store
+Thumbs.db
+.vscode/*
+!.vscode/extensions.json
+
+# Written by `next dev` when it detects a coding agent; not part of the project
+apps/admin/AGENTS.md

@@ -1,0 +1,10 @@
+<Solution>
+  <Project Path="FamilyResilience.Api/FamilyResilience.Api.csproj" />
+  <Project Path="FamilyResilience.Application/FamilyResilience.Application.csproj" />
+  <Project Path="FamilyResilience.IdentityProvider/FamilyResilience.IdentityProvider.csproj" />
+  <Project Path="FamilyResilience.Domain/FamilyResilience.Domain.csproj" />
+  <Project Path="FamilyResilience.Evaluation/FamilyResilience.Evaluation.csproj" />
+  <Project Path="FamilyResilience.Infrastructure/FamilyResilience.Infrastructure.csproj" />
+  <Project Path="FamilyResilience.IntegrationTests/FamilyResilience.IntegrationTests.csproj" />
+  <Project Path="FamilyResilience.UnitTests/FamilyResilience.UnitTests.csproj" />
+</Solution>
